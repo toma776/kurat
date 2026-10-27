@@ -39,12 +39,14 @@ export function startGitSync(db, {root = process.cwd(), log = console.log, quiet
     busy = true; status.state = 'pushing';
     try {
       makeSeed(db, path.join(root, 'seed/brain.db'));
-      await git(['add', '-A', '--', ...PATHS], root);
-      const staged = await git(['diff', '--cached', '--quiet', '--', ...PATHS], root);
+      // doar dosarele care există: o cale lipsă ar face git add să eșueze și ar părea că nu e nimic de urcat
+      const paths = PATHS.filter(p => fs.existsSync(path.join(root, p)));
+      await git(['add', '-A', '--', ...paths], root);
+      const staged = await git(['diff', '--cached', '--quiet', '--', ...paths], root);
       if (staged.ok) { save(sig); Object.assign(status, {state: 'ok', pendingSince: null}); return; } // nimic nou de urcat
       const labels = db.prepare("SELECT DISTINCT label FROM change_events WHERE label IS NOT NULL ORDER BY id DESC LIMIT 3").all().map(r => r.label);
       const msg = `Conținut actualizat din panou${labels.length ? `: ${labels.join(', ').slice(0, 120)}` : ''}`;
-      const c = await git(['commit', '-q', '-m', msg, '--', ...PATHS], root);
+      const c = await git(['commit', '-q', '-m', msg, '--', ...paths], root);
       if (!c.ok) { fail(`commit eșuat — ${c.err || c.out}`); return; }
       let p = await git(['push', '-q'], root);
       if (!p.ok) { await git(['pull', '--rebase', '--autostash', '-q'], root); p = await git(['push', '-q'], root); }
