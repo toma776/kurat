@@ -1,5 +1,5 @@
 // Serverul site-ului public kurat.ro: randat pe server din Brain, cu propagare live (§3).
-// Rulare: node src/server.mjs  (PORT, BRAIN_DB, MEDIA_DIR, BACKUP_DIR, CRON_KEY, SITE_ORIGIN, BRAIN_INDEXING din mediu)
+// Rulare: node src/server.mjs  (PORT, BRAIN_DB, MEDIA_DIR, BACKUP_DIR, CRON_KEY, SITE_ORIGIN, BRAIN_INDEXING, BRAIN_GIT_SYNC din mediu)
 import http from 'node:http';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -10,6 +10,7 @@ import {createStore, onChange, ValidationError} from './core/store.mjs';
 import {serve, scan, processEvents, publicPaths, syncStatus} from './core/sync.mjs';
 import {refreshGraph} from './core/graph.mjs';
 import {maybeAutoBackup} from './core/backup.mjs';
+import {startGitSync} from './core/gitsync.mjs';
 import {createManage} from './manage/routes.mjs';
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
@@ -189,4 +190,6 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === path.resolve(process.a
   if (s.events) console.log(`la pornire: ${s.events} evenimente procesate`);
   const port = +(process.env.PORT ?? 3000);
   createServer(db, {autoBackup: true}).listen(port, () => console.log(`kurat.ro din Brain: http://localhost:${port}`));
+  // conținutul și imaginile ajung singure pe GitHub (doar serverul local; pe serverul clientului rămâne oprit)
+  if (process.env.BRAIN_GIT_SYNC === '1') startGitSync(db);
 }
