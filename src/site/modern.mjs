@@ -143,7 +143,7 @@ function homeHero(ctx, s, {first}) {
         ${!google ? ctx.gap('rating verificabil', 'Ratingul de 4,9/5 nu are sursă: fără număr de recenzii și fără link. Când adaugi în Date firmă profilul Google, ratingul și numărul de recenzii, apar aici cu link, iar Google îl primește și în datele structurate.') : ''}</div>
       ${pic ? `<div class="ds-hero-media"><div class="ds-hero-photo">${img(pic, {eager: first})}</div>
         ${s.card_titlu ? `<div class="ds-float bl"><span class="ds-icon ok sm">${icon('shield', 18)}</span><div><strong>${ctx.text(s.card_titlu)}</strong>${s.card_text ? `<span>${ctx.text(s.card_text)}</span>` : ''}</div></div>` : ''}
-        ${rating ? claimed(ctx, google ? {state: 'ok'} : ctx.claim('firma', f, 'rating'), `<div class="ds-float tr"><span class="ds-icon sm" style="background:var(--gold-50);color:var(--gold-600)">${icon('star', 18)}</span><div><strong>${r} din 5</strong><span>de la clienții noștri</span></div></div>`) : ''}</div>` : ''}
+        </div>` : ''}
       </div>
       ${logos.length ? `<div class="ds-logos" aria-label="Clienți Kurat"><p>Au avut încredere în noi</p><div class="ds-logos-track"><ul>${logos.map(({c, m}) => `<li>${img(m, {alt: c.nume})}</li>`).join('')}</ul>
         <ul class="dup" aria-hidden="true">${logos.map(({m}) => `<li>${img(m, {alt: ''})}</li>`).join('')}</ul></div></div>` : ''}
