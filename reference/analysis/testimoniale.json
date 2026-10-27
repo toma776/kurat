@@ -1,0 +1,222 @@
+[
+  {
+    "ref": "testimoniale:echipa kurat este alegerea noastra atunci cand vine vorba de curatenie in locatiile noastre datorita profesionalismului ",
+    "fields": {
+      "text": "Echipa Kurat este alegerea noastră atunci când vine vorba de curățenie în locațiile noastre, datorită profesionalismului de care dau dovadă.",
+      "client_id": "clienti:original barber shop",
+      "stele": 5,
+      "sursa": "site",
+      "data": null,
+      "ordine": 1
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "testimonial",
+        "excerpt": "Echipa Kurat este alegerea noastră atunci când vine vorba de curățenie în locațiile noastre, datorită profesionalismului"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "testimoniale:experienta noastra cu echipa kurat s a dovedit a fi minunata ne bucuram ca am apelat la serviciile lor si cu siguranta v",
+    "fields": {
+      "text": "Experiența noastră cu echipa Kurat s-a dovedit a fi minunată. Ne bucurăm că am apelat la serviciile lor și cu siguranță vom repeta experiența. Recomandăm cu încredere!",
+      "client_id": "clienti:barber deluxe",
+      "stele": 5,
+      "sursa": "site",
+      "data": null,
+      "ordine": 2
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "testimonial",
+        "excerpt": "Experiența noastră cu echipa Kurat s-a dovedit a fi minunată. Ne bucurăm că am apelat la serviciile lor și cu siguranță "
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "testimoniale:recomandam serviciile kurat pentru respectarea angajamentului de a duce curatenia la superlativ printr un raport calitat",
+    "fields": {
+      "text": "Recomandăm serviciile Kurat pentru respectarea angajamentului de a duce curățenia la superlativ, printr-un raport calitate-preț excelent și o echipă de nota 10!",
+      "client_id": "clienti:lensa",
+      "stele": 5,
+      "sursa": "site",
+      "data": null,
+      "ordine": 3
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "testimonial",
+        "excerpt": "Recomandăm serviciile Kurat pentru respectarea angajamentului de a duce curățenia la superlativ, printr-un raport calita"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "testimoniale:kurat a devenit partenerul nostru de incredere pentru mentinerea curateniei in sediul companiei sunt dedicati eficienti ",
+    "fields": {
+      "text": "Kurat a devenit partenerul nostru de încredere pentru menținerea curățeniei în sediul companiei. Sunt dedicați, eficienți și mereu gata să răspundă cerințelor noastre. Ne bucurăm că am găsit o echipă pe care ne putem baza!",
+      "client_id": "clienti:unika",
+      "stele": 5,
+      "sursa": "site",
+      "data": null,
+      "ordine": 4
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "testimonial",
+        "excerpt": "Kurat a devenit partenerul nostru de încredere pentru menținerea curățeniei în sediul companiei. Sunt dedicați, eficienț"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "testimoniale:echipa autonom recomanda serviciile kurat pentru calitatea acestora si profesionalismul de care au dat dovada",
+    "fields": {
+      "text": "Echipa Autonom recomandă serviciile Kurat pentru calitatea acestora și profesionalismul de care au dat dovadă.",
+      "client_id": "clienti:autonom",
+      "stele": 5,
+      "sursa": "site",
+      "data": null,
+      "ordine": 5
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "testimonial",
+        "excerpt": "Echipa Autonom recomandă serviciile Kurat pentru calitatea acestora și profesionalismul de care au dat dovadă."
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "testimoniale:suntem foarte multumiti de colaborarea cu kurat serviciile lor de curatenie au ridicat standardele noastre iar echipa es",
+    "fields": {
+      "text": "Suntem foarte mulțumiți de colaborarea cu Kurat! Serviciile lor de curățenie au ridicat standardele noastre, iar echipa este mereu punctuală și dedicată. Recomandăm cu încredere această firmă pentru profesionalismul și eficiența de care au dat dovadă.",
+      "client_id": "clienti:google",
+      "stele": 5,
+      "sursa": "site",
+      "data": null,
+      "ordine": 6
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/portofoliu",
+        "file": "pages\\portofoliu.html",
+        "method": "testimonial",
+        "excerpt": "Suntem foarte mulțumiți de colaborarea cu Kurat! Serviciile lor de curățenie au ridicat standardele noastre, iar echipa "
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "testimoniale:am ales kurat pentru curatenia birourilor noastre si nu am fost dezamagiti atentia lor la detalii si seriozitatea cu car",
+    "fields": {
+      "text": "Am ales Kurat pentru curățenia birourilor noastre și nu am fost dezamăgiți. Atenția lor la detalii și seriozitatea cu care își îndeplinesc sarcinile sunt remarcabile. Raportul calitate-preț este excelent, iar echipa lor merită toată aprecierea.",
+      "client_id": "clienti:autonom",
+      "stele": 5,
+      "sursa": "site",
+      "data": null,
+      "ordine": 7
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/portofoliu",
+        "file": "pages\\portofoliu.html",
+        "method": "testimonial",
+        "excerpt": "Am ales Kurat pentru curățenia birourilor noastre și nu am fost dezamăgiți. Atenția lor la detalii și seriozitatea cu ca"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "testimoniale:profesionalismul echipei kurat si angajamentul lor fata de calitate ne au convins ca am facut alegerea potrivita curaten",
+    "fields": {
+      "text": "Profesionalismul echipei Kurat și angajamentul lor față de calitate ne-au convins că am făcut alegerea potrivită. Curățenia birourilor noastre este întotdeauna impecabilă, iar prețurile sunt extrem de competitive. Îi recomandăm fără ezitare!",
+      "client_id": "clienti:dwf",
+      "stele": 5,
+      "sursa": "site",
+      "data": null,
+      "ordine": 9
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/portofoliu",
+        "file": "pages\\portofoliu.html",
+        "method": "testimonial",
+        "excerpt": "Profesionalismul echipei Kurat și angajamentul lor față de calitate ne-au convins că am făcut alegerea potrivită. Curățe"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "testimoniale:echipa kurat este de un profesionalism exemplar am apreciat flexibilitatea si promptitudinea lor precum si faptul ca ras",
+    "fields": {
+      "text": "Echipa Kurat este de un profesionalism exemplar! Am apreciat flexibilitatea și promptitudinea lor, precum și faptul că răspund cu succes tuturor cerințelor noastre. Raportul calitate-preț este imbatabil, iar noi suntem foarte mulțumiți de rezultatele obținute.",
+      "client_id": "clienti:igiena",
+      "stele": 5,
+      "sursa": "site",
+      "data": null,
+      "ordine": 12
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/portofoliu",
+        "file": "pages\\portofoliu.html",
+        "method": "testimonial",
+        "excerpt": "Echipa Kurat este de un profesionalism exemplar! Am apreciat flexibilitatea și promptitudinea lor, precum și faptul că r"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "testimoniale:kurat a fost si mereu va fi alegerea noastra cand vine vorba de curatenia sediului nostru atentia la detalii si produsel",
+    "fields": {
+      "text": "Kurat a fost și mereu va fi alegerea noastră când vine vorba de curățenia sediului nostru. Atenția la detalii și produsele de curățenie folosite sunt punctele forte ale acestei minunate echipe. Recomandăm!",
+      "client_id": "clienti:vexio",
+      "stele": 5,
+      "sursa": "site",
+      "data": null,
+      "ordine": 14
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/portofoliu",
+        "file": "pages\\portofoliu.html",
+        "method": "testimonial",
+        "excerpt": "Kurat a fost și mereu va fi alegerea noastră când vine vorba de curățenia sediului nostru. Atenția la detalii și produse"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "testimoniale:experienta echipei kurat se reflecta in modul ireprosabil in care isi desfasoara activitatea cu siguranta recomandam ser",
+    "fields": {
+      "text": "Experiența echipei Kurat se reflectă în modul ireproșabil în care își desfășoară activitatea. Cu siguranță recomandăm serviciile prestate de aceștia!",
+      "client_id": "clienti:make hot",
+      "stele": 5,
+      "sursa": "site",
+      "data": null,
+      "ordine": 15
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/portofoliu",
+        "file": "pages\\portofoliu.html",
+        "method": "testimonial",
+        "excerpt": "Experiența echipei Kurat se reflectă în modul ireproșabil în care își desfășoară activitatea. Cu siguranță recomandăm se"
+      }
+    },
+    "links": {}
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "kurat-site",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["src/server.mjs"],
+      "port": 3000,
+      "env": {"BRAIN_DEV_LOGIN": "1"}
+    }
+  ]
+}

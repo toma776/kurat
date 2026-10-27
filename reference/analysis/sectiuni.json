@@ -1,0 +1,1152 @@
+[
+  {
+    "ref": "sectiuni:/#top",
+    "fields": {
+      "kind": "hero",
+      "eticheta": null,
+      "titlu": "Timpul tău este prețios!\nLasă curățenia în grija noastră.",
+      "intro": "Redescoperă plăcerea timpului liber și bucură-te de o echipă atentă la fiecare detaliu. Transformăm casa sau biroul tău într-un spațiu curat, ordonat și plin de prospețime. Noi facem treaba, iar tu te bucuri de rezultate!",
+      "continut": null,
+      "puncte": null,
+      "butoane": [
+        {
+          "label": "Contactează-ne",
+          "href": "tel:{telefon}",
+          "stil": "btn-brand"
+        },
+        {
+          "label": "Descoperă servicii",
+          "href": "ref:pagini:/servicii",
+          "stil": "btn-outline"
+        }
+      ],
+      "imagine_id": "media:7004ee52f9ffeba529b70ddd4057114600bdbe30",
+      "filtru": null,
+      "accent": "curățenia",
+      "insigna": "Garanție sau banii înapoi",
+      "card_titlu": "100% garanție",
+      "card_text": "sau primești banii înapoi"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "secțiunea top",
+        "excerpt": "Timpul tău este prețios!\nLasă curățenia în grija noastră."
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sectiuni:/#servicii-h",
+    "fields": {
+      "kind": "servicii",
+      "eticheta": "Servicii",
+      "titlu": "Tot ce ține de curat, într-un singur loc",
+      "intro": "De la apartamentul tău la sediul firmei — alegi serviciul, noi trimitem echipa potrivită.",
+      "continut": null,
+      "puncte": null,
+      "butoane": [
+        {
+          "label": "Calculează prețul",
+          "href": "#calculator",
+          "stil": "btn-brand"
+        }
+      ],
+      "imagine_id": null,
+      "filtru": null,
+      "nota": null,
+      "intro_companii": "Birouri, spații comerciale și industriale — igienizate la standard profesional.",
+      "intro_persoane": "De la curățenia de zi cu zi la cea după evenimente sau renovări — ne ocupăm noi."
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "secțiunea servicii-h",
+        "excerpt": "Tot ce ține de curat, într-un singur loc"
+      }
+    },
+    "links": {
+      "servicii_companii": [
+        {
+          "ref": "servicii:birouri",
+          "status": "inferred",
+          "confidence": 0.6,
+          "attrs": {
+            "titlu": "Birouri și spații comerciale",
+            "text": "Igienizare completă pentru birouri, recepții și spații cu public.",
+            "puncte": [
+              "Birouri & recepții",
+              "Toalete igienizate"
+            ],
+            "icon": "building",
+            "imagine": "media:b277a0da13bc539eac9dca62c9b7572bad82d890"
+          },
+          "evidence": {
+            "url": "https://kurat.ro/",
+            "file": "pages\\index.html",
+            "method": "regulă: potrivire după nume — cardul „Birouri și spații comerciale” acoperă două servicii; legat de Birouri, Spații comerciale e candidat separat",
+            "excerpt": "Birouri și spații comerciale: Igienizare completă pentru birouri, recepții și spații cu public."
+          },
+          "oldCount": 8
+        },
+        {
+          "ref": "servicii:industriale",
+          "status": "confirmed",
+          "attrs": {
+            "titlu": "Spații de producție și industriale",
+            "text": "Degresare, dezinfecție și organizare pentru hale și linii de producție.",
+            "puncte": [
+              "Degresare hale",
+              "Dezinfecție utilaje"
+            ],
+            "icon": "factory",
+            "imagine": "media:d6a393169cb412d0a4e3d339c44fa64ddabe32c7"
+          },
+          "evidence": {
+            "url": "https://kurat.ro/",
+            "file": "pages\\index.html",
+            "method": "card homepage",
+            "excerpt": "Spații de producție și industriale"
+          },
+          "oldCount": 8
+        },
+        {
+          "ref": "servicii:dupa-constructor",
+          "status": "inferred",
+          "confidence": 0.85,
+          "attrs": {
+            "titlu": "Post-construcție sau renovare",
+            "text": "Îndepărtăm praful și resturile după lucrări, pentru predare impecabilă.",
+            "puncte": [
+              "Praf de șantier",
+              "Geamuri & rosturi"
+            ],
+            "icon": "construct",
+            "imagine": "media:ae3ebd08c0e983243d512f97eb44ba26f8dc5687"
+          },
+          "evidence": {
+            "url": "https://kurat.ro/",
+            "file": "pages\\index.html",
+            "method": "regulă: potrivire după nume — „post-construcție sau renovare” ≈ „curățenie după constructor”; descrierea („praful și resturile după lucrări”) repetă pagina",
+            "excerpt": "Post-construcție sau renovare: Îndepărtăm praful și resturile după lucrări, pentru predare impecabilă."
+          },
+          "oldCount": 4
+        }
+      ],
+      "servicii_persoane": [
+        {
+          "ref": "servicii:locuinte",
+          "status": "inferred",
+          "confidence": 0.9,
+          "attrs": {
+            "titlu": "Curățenie rezidențială",
+            "text": "Apartamente, case și vile — curățare completă, cameră cu cameră.",
+            "puncte": [
+              "Cameră cu cameră",
+              "Băi & bucătărie"
+            ],
+            "icon": "home",
+            "imagine": "media:f78dddc7f4843cdea2cd914c3ac4f86fb783011a"
+          },
+          "evidence": {
+            "url": "https://kurat.ro/",
+            "file": "pages\\index.html",
+            "method": "regulă: potrivire după nume — „rezidențial” = locuințe; descrierea cardului („apartamente, case și vile… cameră cu cameră”) repetă pagina Locuințe",
+            "excerpt": "Curățenie rezidențială: Apartamente, case și vile — curățare completă, cameră cu cameră."
+          },
+          "oldCount": 13
+        },
+        {
+          "ref": "servicii:dupa-evenimente",
+          "status": "confirmed",
+          "attrs": {
+            "titlu": "Curățenie după petreceri/evenimente",
+            "text": "Readucem spațiul la normal după evenimente, rapid și complet.",
+            "puncte": [
+              "Strângere completă",
+              "Eliminare mirosuri"
+            ],
+            "icon": "party",
+            "imagine": "media:74e8364445c17787782a422dbb4329c76e4ebbf3"
+          },
+          "evidence": {
+            "url": "https://kurat.ro/",
+            "file": "pages\\index.html",
+            "method": "card homepage",
+            "excerpt": "Curățenie după petreceri/evenimente"
+          },
+          "oldCount": 8
+        },
+        {
+          "ref": "servicii:dupa-constructor",
+          "status": "inferred",
+          "confidence": 0.85,
+          "attrs": {
+            "titlu": "Post-construcție sau renovare",
+            "text": "Curățare amănunțită după renovarea locuinței.",
+            "puncte": [
+              "Praf de renovare",
+              "Vopsea & adeziv"
+            ],
+            "icon": "construct",
+            "imagine": "media:855baaaba5fbdca69f0cbe03e60de2575e6e6ae9"
+          },
+          "evidence": {
+            "url": "https://kurat.ro/",
+            "file": "pages\\index.html",
+            "method": "regulă: potrivire după nume — „post-construcție sau renovare” ≈ „curățenie după constructor”; descrierea („praful și resturile după lucrări”) repetă pagina",
+            "excerpt": "Post-construcție sau renovare: Curățare amănunțită după renovarea locuinței."
+          },
+          "oldCount": 4
+        },
+        {
+          "ref": "servicii:canapele-mocheta",
+          "status": "confirmed",
+          "attrs": {
+            "titlu": "Canapele & mochetă",
+            "text": "Spălare profesională cu injecție-extracție pentru textile.",
+            "puncte": [
+              "Injecție-extracție",
+              "Uscare rapidă"
+            ],
+            "icon": "sofa",
+            "imagine": "media:38802f16d029199e2d27a28250d1503b809a7a3a"
+          },
+          "evidence": {
+            "url": "https://kurat.ro/",
+            "file": "pages\\index.html",
+            "method": "card homepage",
+            "excerpt": "Canapele & mochetă"
+          },
+          "oldCount": 5
+        }
+      ]
+    }
+  },
+  {
+    "ref": "sectiuni:/#deceka-h",
+    "fields": {
+      "kind": "avantaje",
+      "eticheta": "De ce Kurat",
+      "titlu": "De ce să alegi Kurat",
+      "intro": "Aceeași curățenie, două experiențe diferite. Vezi ce câștigi alături de noi — și ce riști fără un partener de încredere.",
+      "continut": null,
+      "puncte": null,
+      "butoane": [
+        {
+          "label": "Cere o ofertă",
+          "href": "#calculator",
+          "stil": "btn-brand"
+        }
+      ],
+      "imagine_id": null,
+      "filtru": null,
+      "nota": "Lasă curățenia pe mâini bune și bucură-te de rezultat — fără griji, fără riscuri."
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "secțiunea deceka-h",
+        "excerpt": "De ce să alegi Kurat"
+      }
+    },
+    "links": {
+      "avantaje": [
+        {
+          "ref": "avantaje:profesionalism si experienta",
+          "status": "confirmed"
+        },
+        {
+          "ref": "avantaje:curatenie eficienta si durabila",
+          "status": "confirmed"
+        },
+        {
+          "ref": "avantaje:servicii personalizate",
+          "status": "confirmed"
+        },
+        {
+          "ref": "avantaje:incredere si siguranta",
+          "status": "confirmed"
+        },
+        {
+          "ref": "avantaje:optimizarea timpului",
+          "status": "confirmed"
+        }
+      ]
+    }
+  },
+  {
+    "ref": "sectiuni:/#valori-h",
+    "fields": {
+      "kind": "valori",
+      "eticheta": "Valorile noastre",
+      "titlu": "Valorile care ne ghidează",
+      "intro": "Numele nostru le spune pe toate — fiecare literă din KURAT e o promisiune.",
+      "continut": null,
+      "puncte": null,
+      "butoane": null,
+      "imagine_id": null,
+      "filtru": null
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "secțiunea valori-h",
+        "excerpt": "Valorile care ne ghidează"
+      }
+    },
+    "links": {
+      "valori": [
+        {
+          "ref": "valori:cunostinte",
+          "status": "confirmed"
+        },
+        {
+          "ref": "valori:utilitate",
+          "status": "confirmed"
+        },
+        {
+          "ref": "valori:respect",
+          "status": "confirmed"
+        },
+        {
+          "ref": "valori:asumare",
+          "status": "confirmed"
+        },
+        {
+          "ref": "valori:transparenta",
+          "status": "confirmed"
+        }
+      ]
+    }
+  },
+  {
+    "ref": "sectiuni:/#cum-h",
+    "fields": {
+      "kind": "pasi",
+      "eticheta": "Cum funcționează",
+      "titlu": "Curățenie în 4 pași",
+      "intro": "Un proces simplu și rapid, de la primul mesaj până la spațiul impecabil.",
+      "continut": null,
+      "puncte": null,
+      "butoane": null,
+      "imagine_id": null,
+      "filtru": null
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "secțiunea cum-h",
+        "excerpt": "Curățenie în 4 pași"
+      }
+    },
+    "links": {
+      "pasi": [
+        {
+          "ref": "pasi:proces:1",
+          "status": "confirmed"
+        },
+        {
+          "ref": "pasi:proces:2",
+          "status": "confirmed"
+        },
+        {
+          "ref": "pasi:proces:3",
+          "status": "confirmed"
+        },
+        {
+          "ref": "pasi:proces:4",
+          "status": "confirmed"
+        },
+        {
+          "ref": "pasi:etape:1",
+          "status": "confirmed"
+        },
+        {
+          "ref": "pasi:etape:2",
+          "status": "confirmed"
+        },
+        {
+          "ref": "pasi:etape:3",
+          "status": "confirmed"
+        }
+      ]
+    }
+  },
+  {
+    "ref": "sectiuni:/#calc-heading",
+    "fields": {
+      "kind": "calculator",
+      "eticheta": "Calculator preț",
+      "titlu": "Oferta ta în 60 de secunde",
+      "intro": "Fără apeluri, fără așteptare. Completezi câțiva pași și vezi pe loc estimarea — apoi te sunăm pentru confirmare.",
+      "continut": null,
+      "puncte": [
+        "Preț transparent, fără costuri ascunse",
+        "Echipe verificate și asigurate",
+        "Plată după ce verifici rezultatul"
+      ],
+      "butoane": null,
+      "imagine_id": null,
+      "filtru": null
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "secțiunea calc-heading",
+        "excerpt": "Oferta ta în 60 de secunde"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sectiuni:/#garantie-h",
+    "fields": {
+      "kind": "garantie",
+      "eticheta": "Garanția Kurat",
+      "titlu": "Curățenia pe care o meriți, sau banii înapoi.",
+      "intro": "Dacă nu ești 100% mulțumit, ne întoarcem și refacem gratuit zonele semnalate. Simplu și fără discuții.",
+      "continut": null,
+      "puncte": [
+        "Echipe verificate și asigurate",
+        "Produse profesionale, sigure pentru copii și animale",
+        "Plată după ce verifici rezultatul"
+      ],
+      "butoane": [
+        {
+          "label": "Rezervă cu garanție",
+          "href": "#calculator",
+          "stil": "btn-green"
+        }
+      ],
+      "imagine_id": null,
+      "filtru": null
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "secțiunea garantie-h",
+        "excerpt": "Curățenia pe care o meriți, sau banii înapoi."
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sectiuni:/#recenzii-h",
+    "fields": {
+      "kind": "testimoniale",
+      "eticheta": "Recenzii",
+      "titlu": "Peste 1.100 de clienți mulțumiți",
+      "intro": "Companii care au ales Kurat și recomandă echipa noastră.",
+      "continut": null,
+      "puncte": null,
+      "butoane": null,
+      "imagine_id": null,
+      "filtru": null
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "secțiunea recenzii-h",
+        "excerpt": "Peste 1.100 de clienți mulțumiți"
+      }
+    },
+    "links": {
+      "testimoniale": [
+        {
+          "ref": "testimoniale:echipa kurat este alegerea noastra atunci cand vine vorba de curatenie in locatiile noastre datorita profesionalismului ",
+          "status": "confirmed"
+        },
+        {
+          "ref": "testimoniale:experienta noastra cu echipa kurat s a dovedit a fi minunata ne bucuram ca am apelat la serviciile lor si cu siguranta v",
+          "status": "confirmed"
+        },
+        {
+          "ref": "testimoniale:recomandam serviciile kurat pentru respectarea angajamentului de a duce curatenia la superlativ printr un raport calitat",
+          "status": "confirmed"
+        },
+        {
+          "ref": "testimoniale:kurat a devenit partenerul nostru de incredere pentru mentinerea curateniei in sediul companiei sunt dedicati eficienti ",
+          "status": "confirmed"
+        },
+        {
+          "ref": "testimoniale:echipa autonom recomanda serviciile kurat pentru calitatea acestora si profesionalismul de care au dat dovada",
+          "status": "confirmed"
+        }
+      ]
+    }
+  },
+  {
+    "ref": "sectiuni:/#faq-h",
+    "fields": {
+      "kind": "faq",
+      "eticheta": "Întrebări frecvente",
+      "titlu": "Tot ce trebuie să știi",
+      "intro": null,
+      "continut": null,
+      "puncte": null,
+      "butoane": null,
+      "imagine_id": null,
+      "filtru": null
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "secțiunea faq-h",
+        "excerpt": "Tot ce trebuie să știi"
+      }
+    },
+    "links": {
+      "intrebari": [
+        {
+          "ref": "intrebari:aduceti voi produsele si echipamentele",
+          "status": "confirmed"
+        },
+        {
+          "ref": "intrebari:cum functioneaza garantia satisfactiei",
+          "status": "confirmed"
+        },
+        {
+          "ref": "intrebari:produsele sunt sigure pentru copii si animale",
+          "status": "confirmed"
+        },
+        {
+          "ref": "intrebari:pot programa curatenie recurenta",
+          "status": "confirmed"
+        }
+      ]
+    }
+  },
+  {
+    "ref": "sectiuni:/#contact-h",
+    "fields": {
+      "kind": "contact",
+      "eticheta": "Contact",
+      "titlu": "Suntem la dispoziția ta",
+      "intro": null,
+      "continut": null,
+      "puncte": null,
+      "butoane": [
+        {
+          "label": "Calculează prețul",
+          "href": "#calculator",
+          "stil": "btn-brand"
+        }
+      ],
+      "imagine_id": null,
+      "filtru": null
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "secțiunea contact-h",
+        "excerpt": "Suntem la dispoziția ta"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sectiuni:/servicii#svc-h",
+    "fields": {
+      "kind": "hero",
+      "eticheta": "Servicii",
+      "titlu": "Servicii de curățenie pentru orice spațiu",
+      "intro": "De la apartamentul tău la sediul firmei — alegi serviciul potrivit, iar noi trimitem echipa și echipamentele profesionale. Vezi exact ce includem la fiecare.",
+      "continut": null,
+      "puncte": null,
+      "butoane": [
+        {
+          "label": "Cere o ofertă",
+          "href": "ref:pagini:/contact",
+          "stil": "btn-brand"
+        },
+        {
+          "label": "0742 293 391",
+          "href": "tel:{telefon}",
+          "stil": "btn-outline"
+        }
+      ],
+      "imagine_id": null,
+      "filtru": null,
+      "accent": null,
+      "insigna": null
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii",
+        "file": "pages\\servicii.html",
+        "method": "secțiunea svc-h",
+        "excerpt": "Servicii de curățenie pentru orice spațiu"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sectiuni:/servicii#svc-spatiu-h",
+    "fields": {
+      "kind": "servicii-lista",
+      "eticheta": null,
+      "titlu": "După tipul spațiului",
+      "intro": "Locuințe, birouri și spații comerciale.",
+      "continut": null,
+      "puncte": null,
+      "butoane": null,
+      "imagine_id": null,
+      "filtru": "spatiu"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii",
+        "file": "pages\\servicii.html",
+        "method": "secțiunea svc-spatiu-h",
+        "excerpt": "După tipul spațiului"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sectiuni:/servicii#svc-tip-h",
+    "fields": {
+      "kind": "servicii-lista",
+      "eticheta": null,
+      "titlu": "După tipul curățeniei",
+      "intro": "Mentenanță, curățenie generală sau după constructor — cu prețuri orientative.",
+      "continut": null,
+      "puncte": null,
+      "butoane": null,
+      "imagine_id": null,
+      "filtru": "curatenie"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii",
+        "file": "pages\\servicii.html",
+        "method": "secțiunea svc-tip-h",
+        "excerpt": "După tipul curățeniei"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sectiuni:/servicii#svc-cta-h",
+    "fields": {
+      "kind": "text",
+      "eticheta": null,
+      "titlu": "Nu ești sigur ce serviciu ți se potrivește?",
+      "intro": null,
+      "continut": "<p>Spune-ne câteva detalii despre spațiul tău și primești o ofertă personalizată.</p>",
+      "puncte": null,
+      "butoane": [
+        {
+          "label": "Contactează-ne",
+          "href": "ref:pagini:/contact",
+          "stil": "btn-brand"
+        },
+        {
+          "label": "0742 293 391",
+          "href": "tel:{telefon}",
+          "stil": "link"
+        }
+      ],
+      "imagine_id": null,
+      "filtru": null
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii",
+        "file": "pages\\servicii.html",
+        "method": "secțiunea svc-cta-h",
+        "excerpt": "Nu ești sigur ce serviciu ți se potrivește?"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sectiuni:/portofoliu#pf-h",
+    "fields": {
+      "kind": "hero",
+      "eticheta": "Portofoliu clienți",
+      "titlu": "Companiile care au ales Kurat",
+      "intro": "De la branduri internaționale la afaceri locale — peste 1.100 de clienți ne-au încredințat curățenia spațiilor lor. Iată câteva dintre poveștile lor.",
+      "continut": null,
+      "puncte": null,
+      "butoane": null,
+      "imagine_id": null,
+      "filtru": null,
+      "accent": null,
+      "insigna": null
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/portofoliu",
+        "file": "pages\\portofoliu.html",
+        "method": "secțiunea pf-h",
+        "excerpt": "Companiile care au ales Kurat"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sectiuni:/portofoliu#pf-logos-h",
+    "fields": {
+      "kind": "clienti",
+      "eticheta": null,
+      "titlu": "Au avut încredere în noi",
+      "intro": null,
+      "continut": null,
+      "puncte": null,
+      "butoane": null,
+      "imagine_id": null,
+      "filtru": null
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/portofoliu",
+        "file": "pages\\portofoliu.html",
+        "method": "secțiunea pf-logos-h",
+        "excerpt": "Au avut încredere în noi"
+      }
+    },
+    "links": {
+      "clienti": [
+        {
+          "ref": "clienti:google",
+          "status": "confirmed"
+        },
+        {
+          "ref": "clienti:autonom",
+          "status": "confirmed"
+        },
+        {
+          "ref": "clienti:lensa",
+          "status": "confirmed"
+        },
+        {
+          "ref": "clienti:dwf",
+          "status": "confirmed"
+        },
+        {
+          "ref": "clienti:original barber shop",
+          "status": "confirmed"
+        },
+        {
+          "ref": "clienti:unika",
+          "status": "confirmed"
+        },
+        {
+          "ref": "clienti:igiena",
+          "status": "confirmed"
+        },
+        {
+          "ref": "clienti:barber deluxe",
+          "status": "confirmed"
+        },
+        {
+          "ref": "clienti:vexio",
+          "status": "confirmed"
+        },
+        {
+          "ref": "clienti:make hot",
+          "status": "confirmed"
+        }
+      ]
+    }
+  },
+  {
+    "ref": "sectiuni:/portofoliu#pf-rev-h",
+    "fields": {
+      "kind": "testimoniale",
+      "eticheta": null,
+      "titlu": "Ce spun clienții noștri",
+      "intro": "Recenzii reale de la companiile cu care colaborăm.",
+      "continut": null,
+      "puncte": null,
+      "butoane": null,
+      "imagine_id": null,
+      "filtru": null
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/portofoliu",
+        "file": "pages\\portofoliu.html",
+        "method": "secțiunea pf-rev-h",
+        "excerpt": "Ce spun clienții noștri"
+      }
+    },
+    "links": {
+      "testimoniale": [
+        {
+          "ref": "testimoniale:suntem foarte multumiti de colaborarea cu kurat serviciile lor de curatenie au ridicat standardele noastre iar echipa es",
+          "status": "confirmed"
+        },
+        {
+          "ref": "testimoniale:am ales kurat pentru curatenia birourilor noastre si nu am fost dezamagiti atentia lor la detalii si seriozitatea cu car",
+          "status": "confirmed"
+        },
+        {
+          "ref": "testimoniale:recomandam serviciile kurat pentru respectarea angajamentului de a duce curatenia la superlativ printr un raport calitat",
+          "status": "confirmed"
+        },
+        {
+          "ref": "testimoniale:profesionalismul echipei kurat si angajamentul lor fata de calitate ne au convins ca am facut alegerea potrivita curaten",
+          "status": "confirmed"
+        },
+        {
+          "ref": "testimoniale:echipa kurat este alegerea noastra atunci cand vine vorba de curatenie in locatiile noastre datorita profesionalismului ",
+          "status": "confirmed"
+        },
+        {
+          "ref": "testimoniale:kurat a devenit partenerul nostru de incredere pentru mentinerea curateniei in sediul companiei sunt dedicati eficienti ",
+          "status": "confirmed"
+        },
+        {
+          "ref": "testimoniale:echipa kurat este de un profesionalism exemplar am apreciat flexibilitatea si promptitudinea lor precum si faptul ca ras",
+          "status": "confirmed"
+        },
+        {
+          "ref": "testimoniale:experienta noastra cu echipa kurat s a dovedit a fi minunata ne bucuram ca am apelat la serviciile lor si cu siguranta v",
+          "status": "confirmed"
+        },
+        {
+          "ref": "testimoniale:kurat a fost si mereu va fi alegerea noastra cand vine vorba de curatenia sediului nostru atentia la detalii si produsel",
+          "status": "confirmed"
+        },
+        {
+          "ref": "testimoniale:experienta echipei kurat se reflecta in modul ireprosabil in care isi desfasoara activitatea cu siguranta recomandam ser",
+          "status": "confirmed"
+        }
+      ]
+    }
+  },
+  {
+    "ref": "sectiuni:/portofoliu#pf-cta-h",
+    "fields": {
+      "kind": "text",
+      "eticheta": null,
+      "titlu": "Vrei să faci parte din portofoliul nostru?",
+      "intro": null,
+      "continut": "<p>Hai să discutăm despre spațiul tău și cum te putem ajuta.</p>",
+      "puncte": null,
+      "butoane": [
+        {
+          "label": "Contactează-ne",
+          "href": "ref:pagini:/contact",
+          "stil": "btn-brand"
+        },
+        {
+          "label": "0742 293 391",
+          "href": "tel:{telefon}",
+          "stil": "link"
+        }
+      ],
+      "imagine_id": null,
+      "filtru": null
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/portofoliu",
+        "file": "pages\\portofoliu.html",
+        "method": "secțiunea pf-cta-h",
+        "excerpt": "Vrei să faci parte din portofoliul nostru?"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sectiuni:/despre-noi#ab-h",
+    "fields": {
+      "kind": "hero",
+      "eticheta": "Despre noi",
+      "titlu": "Curățenie de cea mai înaltă calitate",
+      "intro": "Cu mândrie, Kurat este o emblemă a serviciilor de curățenie premium. Ne remarcăm prin atenția la detalii și angajamentul de a oferi rezultate superioare, de fiecare dată.",
+      "continut": null,
+      "puncte": null,
+      "butoane": [
+        {
+          "label": "Contactează-ne",
+          "href": "ref:pagini:/contact",
+          "stil": "btn-brand"
+        },
+        {
+          "label": "Vezi serviciile",
+          "href": "ref:pagini:/servicii",
+          "stil": "btn-outline"
+        }
+      ],
+      "imagine_id": "media:4626be37700590c2f04ee9a681fbe663ba1700d5",
+      "filtru": null,
+      "accent": null,
+      "insigna": null
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/despre-noi",
+        "file": "pages\\despre-noi.html",
+        "method": "secțiunea ab-h",
+        "excerpt": "Curățenie de cea mai înaltă calitate"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sectiuni:/despre-noi#ab-story-h",
+    "fields": {
+      "kind": "text",
+      "eticheta": null,
+      "titlu": "Povestea noastră",
+      "intro": null,
+      "continut": "<p>Am avut onoarea de a servi o clientelă selectă, inclusiv unele dintre cele mai mari companii din țară, ceea ce subliniază calitatea și profesionalismul serviciilor noastre.</p><p>Noi înțelegem că fiecare client are nevoi specifice, și tocmai de aceea oferim soluții de curățenie personalizate, care răspund cerințelor și așteptărilor lor.</p><p>Indiferent de domeniul de activitate sau de dimensiunea proiectului, ne angajăm să livrăm servicii de excepție, menținând un standard înalt de curățenie și igienă.</p><p>Cu o istorie solidă de succes și clienți fideli care atestă calitatea serviciilor noastre, suntem mândri să fim recunoscuți ca un furnizor de top în industria curățeniei. La Kurat, calitatea este reperul nostru, iar satisfacția clienților noștri rămâne prioritatea noastră principală.</p>",
+      "puncte": null,
+      "butoane": [
+        {
+          "label": "Vezi prezentarea companiei",
+          "href": "https://drive.google.com/file/d/1ASilHAZ0cnLhnY_jPJMW8Bbx0aPs1q6s/view",
+          "stil": "link"
+        }
+      ],
+      "imagine_id": null,
+      "filtru": null
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/despre-noi",
+        "file": "pages\\despre-noi.html",
+        "method": "secțiunea ab-story-h",
+        "excerpt": "Povestea noastră"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sectiuni:/despre-noi#cifrele-kurat",
+    "fields": {
+      "kind": "cifre",
+      "eticheta": null,
+      "titlu": null,
+      "intro": null,
+      "continut": null,
+      "puncte": null,
+      "butoane": null,
+      "imagine_id": null,
+      "filtru": null
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/despre-noi",
+        "file": "pages\\despre-noi.html",
+        "method": "secțiunea cifrele-kurat",
+        "excerpt": null
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sectiuni:/despre-noi#ab-val-h",
+    "fields": {
+      "kind": "valori",
+      "eticheta": "Valorile noastre",
+      "titlu": "Valorile care ne ghidează",
+      "intro": "Numele nostru le spune pe toate — fiecare literă din KURAT e o promisiune.",
+      "continut": null,
+      "puncte": null,
+      "butoane": null,
+      "imagine_id": null,
+      "filtru": null
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/despre-noi",
+        "file": "pages\\despre-noi.html",
+        "method": "secțiunea ab-val-h",
+        "excerpt": "Valorile care ne ghidează"
+      }
+    },
+    "links": {
+      "valori": [
+        {
+          "ref": "valori:cunostinte",
+          "status": "confirmed"
+        },
+        {
+          "ref": "valori:utilitate",
+          "status": "confirmed"
+        },
+        {
+          "ref": "valori:respect",
+          "status": "confirmed"
+        },
+        {
+          "ref": "valori:asumare",
+          "status": "confirmed"
+        },
+        {
+          "ref": "valori:transparenta",
+          "status": "confirmed"
+        }
+      ]
+    }
+  },
+  {
+    "ref": "sectiuni:/despre-noi#ab-cta-h",
+    "fields": {
+      "kind": "text",
+      "eticheta": null,
+      "titlu": "Lasă curățenia în grija noastră",
+      "intro": null,
+      "continut": "<p>Spune-ne de ce ai nevoie și îți pregătim o ofertă personalizată.</p>",
+      "puncte": null,
+      "butoane": [
+        {
+          "label": "Contactează-ne",
+          "href": "ref:pagini:/contact",
+          "stil": "btn-brand"
+        },
+        {
+          "label": "0742 293 391",
+          "href": "tel:{telefon}",
+          "stil": "link"
+        }
+      ],
+      "imagine_id": null,
+      "filtru": null
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/despre-noi",
+        "file": "pages\\despre-noi.html",
+        "method": "secțiunea ab-cta-h",
+        "excerpt": "Lasă curățenia în grija noastră"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sectiuni:/contact#ct-h",
+    "fields": {
+      "kind": "hero",
+      "eticheta": "Contact",
+      "titlu": "Hai să discutăm despre spațiul tău",
+      "intro": "Sună-ne, scrie-ne pe WhatsApp sau completează formularul — îți răspundem rapid cu o ofertă personalizată.",
+      "continut": null,
+      "puncte": null,
+      "butoane": null,
+      "imagine_id": null,
+      "filtru": null,
+      "accent": null,
+      "insigna": null
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/contact",
+        "file": "pages\\contact.html",
+        "method": "secțiunea ct-h",
+        "excerpt": "Hai să discutăm despre spațiul tău"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sectiuni:/contact#ct-form-h",
+    "fields": {
+      "kind": "formular",
+      "eticheta": null,
+      "titlu": "Trimite-ne un mesaj",
+      "intro": "Completează datele și deschidem un email pre-completat către echipa noastră.",
+      "continut": null,
+      "puncte": null,
+      "butoane": null,
+      "imagine_id": null,
+      "filtru": null
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/contact",
+        "file": "pages\\contact.html",
+        "method": "secțiunea ct-form-h",
+        "excerpt": "Trimite-ne un mesaj"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sectiuni:/contact#locatia-biroului-kurat",
+    "fields": {
+      "kind": "harta",
+      "eticheta": null,
+      "titlu": null,
+      "intro": null,
+      "continut": null,
+      "puncte": null,
+      "butoane": null,
+      "imagine_id": null,
+      "filtru": null
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/contact",
+        "file": "pages\\contact.html",
+        "method": "secțiunea locatia-biroului-kurat",
+        "excerpt": null
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sectiuni:/shop#s1",
+    "fields": {
+      "kind": "hero",
+      "eticheta": null,
+      "titlu": "Produsele cu care\ncurățăm și noi.",
+      "intro": "Soluții profesionale, sigure pentru copii și animale — aceleași pe care le folosesc echipele Kurat. Livrate la tine acasă în 1–3 zile.",
+      "continut": null,
+      "puncte": null,
+      "butoane": null,
+      "imagine_id": "media:339144d37ed4c0f6f518904799f3b87ff3de4fc4",
+      "filtru": null,
+      "accent": null,
+      "insigna": null
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/shop",
+        "file": "pages\\shop.html",
+        "method": "secțiunea s1",
+        "excerpt": "Produsele cu care\ncurățăm și noi."
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sectiuni:/shop#s3",
+    "fields": {
+      "kind": "produse",
+      "eticheta": null,
+      "titlu": "Toate produsele",
+      "intro": "Momentan nu sunt produse disponibile. Revino curând.",
+      "continut": null,
+      "puncte": null,
+      "butoane": null,
+      "imagine_id": null,
+      "filtru": null
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/shop",
+        "file": "pages\\shop.html",
+        "method": "secțiunea s3",
+        "excerpt": "Toate produsele"
+      }
+    },
+    "links": {}
+  }
+]

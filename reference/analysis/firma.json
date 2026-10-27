@@ -1,0 +1,121 @@
+[
+  {
+    "ref": "firma:kurat",
+    "fields": {
+      "nume": "Kurat",
+      "telefon": "0742 293 391",
+      "whatsapp": "0742 293 391",
+      "email": "cezar@kurat.ro",
+      "email_comenzi": "comenzi@kurat.ro",
+      "adresa": "Strada Ialomicioarei 25",
+      "cod_postal": null,
+      "oras": "București",
+      "tara": "România",
+      "slogan": "Curățenie premium pentru locuințe, birouri și spații comerciale în toată România.",
+      "rating": 4.9,
+      "locuinte_curatate": 955,
+      "clienti_multumiti": 1100,
+      "birouri_curatate": 145,
+      "prezentare_url": "https://drive.google.com/file/d/1ASilHAZ0cnLhnY_jPJMW8Bbx0aPs1q6s/view",
+      "anpc_sal": "https://reclamatiisal.anpc.ro/",
+      "anpc_sol": "https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&lng=RO"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "secțiunea Contact",
+        "excerpt": "Strada Ialomicioarei 25, 01127 București, România"
+      },
+      "telefon": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "link tel:",
+        "excerpt": "tel:+40742293391",
+        "confirmedBy": {
+          "url": "https://kurat.ro/chunk-7HAY54XQ.js",
+          "file": "chunk-7HAY54XQ.js",
+          "method": "constantă în bundle",
+          "excerpt": "=\"0742 293 391\""
+        }
+      },
+      "email": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "link mailto:",
+        "excerpt": "mailto:cezar@kurat.ro"
+      },
+      "whatsapp": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "link wa.me",
+        "excerpt": "https://wa.me/40742293391"
+      },
+      "rating": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "hero, aria-label",
+        "excerpt": "4,9 din 5 stele",
+        "certainty": "unverified",
+        "note": "Rating fără număr de recenzii și fără sursă (Google?); de confirmat."
+      },
+      "slogan": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "subsol",
+        "excerpt": "Curățenie premium pentru locuințe, birouri și spații comerciale în toată România."
+      },
+      "prezentare_url": {
+        "url": "https://kurat.ro/despre-noi",
+        "file": "pages\\despre-noi.html",
+        "method": "link „Vezi prezentarea companiei”",
+        "excerpt": "https://drive.google.com/file/d/1ASilHAZ0cnLhnY_jPJMW8Bbx0aPs1q6s/view"
+      },
+      "email_comenzi": {
+        "url": "https://kurat.ro/shop",
+        "file": "pages\\shop.html",
+        "method": "link mailto: (magazin)",
+        "excerpt": "mailto:comenzi@kurat.ro"
+      },
+      "locuinte_curatate": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "hero, cifre",
+        "excerpt": "955",
+        "certainty": "unverified",
+        "note": "Cifră de marketing fără sursă; de confirmat."
+      },
+      "clienti_multumiti": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "hero, cifre",
+        "excerpt": "1100",
+        "certainty": "unverified",
+        "note": "Cifră de marketing fără sursă; de confirmat."
+      },
+      "birouri_curatate": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "hero, cifre",
+        "excerpt": "145",
+        "certainty": "unverified",
+        "note": "Cifră de marketing fără sursă; de confirmat."
+      },
+      "cod_postal": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "secțiunea Contact",
+        "excerpt": "Strada Ialomicioarei 25, 01127 București, România",
+        "certainty": "unverified",
+        "note": "Codul „01127” are 5 cifre; în România are 6."
+      },
+      "adresa": {
+        "url": "https://kurat.ro/chunk-7HAY54XQ.js",
+        "file": "chunk-7HAY54XQ.js",
+        "method": "constantă în bundle",
+        "excerpt": "Strada Ialomicioarei 25, 01127 București, România"
+      }
+    },
+    "links": {}
+  }
+]

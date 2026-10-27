@@ -1,0 +1,47 @@
+/* Completările Brain peste stilurile originale Kurat (kurat.css): accesibilitate, antetul la derulare,
+   întrebările frecvente, calculatorul, prețurile cu TVA și marcajele din previzualizare. */
+.skip{position:absolute;left:-9999px}.skip:focus{left:16px;top:16px;z-index:100;background:var(--surface-card);padding:8px 12px;border-radius:8px}
+:focus-visible{outline:3px solid color-mix(in srgb,var(--brand) 55%,transparent);outline-offset:2px}
+body{background:var(--surface-page);color:var(--text-body);font-family:var(--font-body);margin:0}
+img{max-width:100%}
+
+/* antetul: transparent sus, cu fundal și blur după derulare (ca în original) */
+.kh-header.is-scrolled{background:color-mix(in srgb,var(--surface-page) 86%,transparent)!important;-webkit-backdrop-filter:saturate(1.4) blur(14px)!important;backdrop-filter:saturate(1.4) blur(14px)!important;border-bottom-color:var(--border-subtle)!important;box-shadow:var(--shadow-xs)}
+.kh-mobile-menu[hidden]{display:none}
+@media (min-width:881px){.kh-mobile-menu{display:none!important}}
+
+/* întrebările frecvente: <details> nativ, cu chevronul rotit când e deschis */
+.k-faq summary::-webkit-details-marker{display:none}
+.k-faq[open]{border-color:var(--brand)!important}
+.k-faq[open] .k-faq-chev{transform:rotate(180deg)}
+.k-faq p{margin:0 0 10px}.k-faq p:last-child{margin:0}
+
+/* calculatorul */
+.lk-choice{font-family:var(--font-body);transition:border-color .15s var(--ease-out),background .15s var(--ease-out)}
+.lk-choice:hover{border-color:var(--brand)!important}
+.k-calc-field{display:block;font-size:13.5px;font-weight:700;color:var(--text-strong)}
+.k-calc-field input{display:block;width:100%;height:52px;margin-top:8px;padding:0 16px;border:1.5px solid var(--border-default);border-radius:var(--radius-md);background:var(--surface-card);color:var(--text-strong);font-family:var(--font-display);font-size:20px;font-weight:800;box-sizing:border-box}
+.k-calc-field input:focus,.lk-input:focus{border-color:var(--brand)!important;outline:none;box-shadow:0 0 0 4px color-mix(in srgb,var(--brand) 18%,transparent)}
+.k-calc-range{width:100%;margin:18px 0 6px;accent-color:var(--brand)}
+.k-calc-hints{display:flex;justify-content:space-between;font-size:12.5px;color:var(--text-muted);font-weight:600}
+.form-msg.ok{color:var(--green-600)}.form-msg.err{color:var(--red-600)}
+.lk-btn-outline[disabled],.lk-btn-brand[disabled]{opacity:.6;cursor:default}
+
+/* prețurile: brut cu TVA pentru persoane fizice, net pentru firme */
+.vat{font-size:.6em;font-weight:700;color:var(--text-muted);font-family:var(--font-body)}
+.net{display:block;font-size:13px;font-weight:600;color:var(--text-muted);font-family:var(--font-body);margin-top:2px}
+
+/* golurile și dovezile neconfirmate: DOAR în previzualizare */
+.gap{display:flex;flex-direction:column;gap:4px;margin:14px 0;padding:14px 16px;border:2px dashed #f0a91e;border-radius:12px;background:repeating-linear-gradient(135deg,#fffaf0,#fffaf0 10px,#fff4dc 10px,#fff4dc 20px);color:#7a4b00;font-size:14.5px;line-height:1.5;text-align:left;font-family:var(--font-body);font-weight:500;letter-spacing:0;text-transform:none}
+.gap b{color:#7a4b00}.gap::before{content:"GOL DE COMPLETAT";font-size:11px;font-weight:800;letter-spacing:.08em;color:#b26b00}
+.lk-guarantee .gap{grid-column:1/-1;position:relative}
+.unconfirmed{outline:2px dotted #f0a91e;outline-offset:3px;border-radius:4px}
+mark.de-validat{background:#f0a91e;color:#1e1300;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;padding:1px 6px;border-radius:4px;margin-left:6px;vertical-align:middle;overflow-wrap:anywhere}
+.gap-inline{color:#b26b00!important;font-weight:700}
+.preview-bar{position:relative;z-index:60;background:#f0a91e;color:#1e1300;text-align:center;font-weight:700;padding:8px;font-family:var(--font-body)}
+
+/* pagina de serviciu: textul lângă imagine, una sub alta pe ecrane înguste (regula de răspuns e în kurat.css) */
+.sd-hero-split{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+@media (max-width:880px){.lk-2>div[style*="sticky"]{position:static!important}.mg-hero{grid-template-columns:1fr!important}.mg-grid{grid-template-columns:repeat(2,1fr)!important}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+.form-msg:empty{display:none}

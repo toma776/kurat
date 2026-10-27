@@ -1,0 +1,212 @@
+[
+  {
+    "ref": "tarife:mentenanta:1 2 camere",
+    "fields": {
+      "serviciu_id": "servicii:mentenanta",
+      "eticheta": "1–2 camere",
+      "pret": 350,
+      "pret_max": null,
+      "la_cerere": false,
+      "plus_tva": true,
+      "ordine": 1
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/mentenanta",
+        "file": "pages\\servicii\\mentenanta.html",
+        "method": "tabel „Prețuri orientative”",
+        "excerpt": "1–2 camere: 350 lei + TVA"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "tarife:mentenanta:3 camere",
+    "fields": {
+      "serviciu_id": "servicii:mentenanta",
+      "eticheta": "3+ camere",
+      "pret": 400,
+      "pret_max": null,
+      "la_cerere": false,
+      "plus_tva": true,
+      "ordine": 2
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/mentenanta",
+        "file": "pages\\servicii\\mentenanta.html",
+        "method": "tabel „Prețuri orientative”",
+        "excerpt": "3+ camere: 400 lei + TVA"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "tarife:mentenanta:casa",
+    "fields": {
+      "serviciu_id": "servicii:mentenanta",
+      "eticheta": "Casă",
+      "pret": 700,
+      "pret_max": null,
+      "la_cerere": false,
+      "plus_tva": true,
+      "ordine": 3
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/mentenanta",
+        "file": "pages\\servicii\\mentenanta.html",
+        "method": "tabel „Prețuri orientative”",
+        "excerpt": "Casă: 700 lei + TVA"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "tarife:generala:1 2 camere",
+    "fields": {
+      "serviciu_id": "servicii:generala",
+      "eticheta": "1–2 camere",
+      "pret": 450,
+      "pret_max": null,
+      "la_cerere": false,
+      "plus_tva": true,
+      "ordine": 1
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/generala",
+        "file": "pages\\servicii\\generala.html",
+        "method": "tabel „Prețuri orientative”",
+        "excerpt": "1–2 camere: 450 lei + TVA"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "tarife:generala:3 camere",
+    "fields": {
+      "serviciu_id": "servicii:generala",
+      "eticheta": "3+ camere",
+      "pret": 800,
+      "pret_max": null,
+      "la_cerere": false,
+      "plus_tva": true,
+      "ordine": 2
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/generala",
+        "file": "pages\\servicii\\generala.html",
+        "method": "tabel „Prețuri orientative”",
+        "excerpt": "3+ camere: 800 lei + TVA"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "tarife:generala:casa",
+    "fields": {
+      "serviciu_id": "servicii:generala",
+      "eticheta": "Casă",
+      "pret": 800,
+      "pret_max": 1200,
+      "la_cerere": false,
+      "plus_tva": true,
+      "ordine": 3
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/generala",
+        "file": "pages\\servicii\\generala.html",
+        "method": "tabel „Prețuri orientative”",
+        "excerpt": "Casă: 800–1200 lei + TVA"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "tarife:dupa-constructor:20 60 mp",
+    "fields": {
+      "serviciu_id": "servicii:dupa-constructor",
+      "eticheta": "20–60 mp",
+      "pret": 800,
+      "pret_max": null,
+      "la_cerere": false,
+      "plus_tva": true,
+      "ordine": 1
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/dupa-constructor",
+        "file": "pages\\servicii\\dupa-constructor.html",
+        "method": "tabel „Prețuri orientative”",
+        "excerpt": "20–60 mp: 800 lei + TVA"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "tarife:dupa-constructor:60 100 mp",
+    "fields": {
+      "serviciu_id": "servicii:dupa-constructor",
+      "eticheta": "60–100 mp",
+      "pret": 1200,
+      "pret_max": null,
+      "la_cerere": false,
+      "plus_tva": true,
+      "ordine": 2
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/dupa-constructor",
+        "file": "pages\\servicii\\dupa-constructor.html",
+        "method": "tabel „Prețuri orientative”",
+        "excerpt": "60–100 mp: 1200 lei + TVA"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "tarife:dupa-constructor:100 150 mp",
+    "fields": {
+      "serviciu_id": "servicii:dupa-constructor",
+      "eticheta": "100–150 mp",
+      "pret": 1600,
+      "pret_max": null,
+      "la_cerere": false,
+      "plus_tva": true,
+      "ordine": 3
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/dupa-constructor",
+        "file": "pages\\servicii\\dupa-constructor.html",
+        "method": "tabel „Prețuri orientative”",
+        "excerpt": "100–150 mp: 1600 lei + TVA"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "tarife:dupa-constructor:peste 150 mp",
+    "fields": {
+      "serviciu_id": "servicii:dupa-constructor",
+      "eticheta": "Peste 150 mp",
+      "pret": null,
+      "pret_max": null,
+      "la_cerere": true,
+      "plus_tva": false,
+      "ordine": 4
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/dupa-constructor",
+        "file": "pages\\servicii\\dupa-constructor.html",
+        "method": "tabel „Prețuri orientative”",
+        "excerpt": "Peste 150 mp: La cerere"
+      }
+    },
+    "links": {}
+  }
+]

@@ -1,0 +1,128 @@
+[
+  {
+    "ref": "pasi:proces:1",
+    "fields": {
+      "grup": "proces",
+      "titlu": "Ne contactezi",
+      "text": "Comandă serviciul dorit la 0742 293 391 sau pe www.kurat.ro.",
+      "ordine": 1
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "secțiunea „Curățenie în 4 pași”",
+        "excerpt": "01 Ne contactezi Comandă serviciul dorit la 0742 293 391 sau pe www.kurat.ro."
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "pasi:proces:2",
+    "fields": {
+      "grup": "proces",
+      "titlu": "Venim la tine",
+      "text": "Discutăm despre nevoi și efectuăm o evaluare a spațiului pentru a înțelege cerințele specifice.",
+      "ordine": 2
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "secțiunea „Curățenie în 4 pași”",
+        "excerpt": "02 Venim la tine Discutăm despre nevoi și efectuăm o evaluare a spațiului pentru a înțelege cerințele specifice."
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "pasi:proces:3",
+    "fields": {
+      "grup": "proces",
+      "titlu": "Primești ofertă personalizată",
+      "text": "Elaborăm o ofertă personalizată, aliniată nevoilor și bugetului tău, care detaliază serviciile propuse și costurile aferente.",
+      "ordine": 3
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "secțiunea „Curățenie în 4 pași”",
+        "excerpt": "03 Primești ofertă personalizată Elaborăm o ofertă personalizată, aliniată nevoilor și bugetului tău, care detaliază serviciile propuse și costurile aferente."
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "pasi:proces:4",
+    "fields": {
+      "grup": "proces",
+      "titlu": "Începem colaborarea",
+      "text": "După aprobarea ofertei, urmează programarea curățeniei conform preferințelor și disponibilității tale.",
+      "ordine": 4
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "secțiunea „Curățenie în 4 pași”",
+        "excerpt": "04 Începem colaborarea După aprobarea ofertei, urmează programarea curățeniei conform preferințelor și disponibilității tale."
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "pasi:etape:1",
+    "fields": {
+      "grup": "etape",
+      "titlu": "Pregătire",
+      "text": "Echipa noastră va pregăti echipamentele și produsele necesare pentru a realiza curățenia în mod eficient.",
+      "ordine": 1
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "secțiunea „Etapele fiecărei curățenii”",
+        "excerpt": "Etapa 1 Pregătire Echipa noastră va pregăti echipamentele și produsele necesare pentru a realiza curățenia în mod eficient."
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "pasi:etape:2",
+    "fields": {
+      "grup": "etape",
+      "titlu": "Curățenie",
+      "text": "Vom efectua o curățenie minuțioasă, respectând fiecare etapă și utilizând tehnici și produse adecvate pentru a obține rezultate excelente.",
+      "ordine": 2
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "secțiunea „Etapele fiecărei curățenii”",
+        "excerpt": "Etapa 2 Curățenie Vom efectua o curățenie minuțioasă, respectând fiecare etapă și utilizând tehnici și produse adecvate pentru a obține rezultate excelente."
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "pasi:etape:3",
+    "fields": {
+      "grup": "etape",
+      "titlu": "Verificare",
+      "text": "Procesul se încheie printr-o inspecție detaliată a spațiului, pentru a confirma respectarea standardelor KURAT și calitatea impecabilă a rezultatului.",
+      "ordine": 3
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "secțiunea „Etapele fiecărei curățenii”",
+        "excerpt": "Etapa 3 Verificare Procesul se încheie printr-o inspecție detaliată a spațiului, pentru a confirma respectarea standardelor KURAT și calitatea impecabilă a rezultatului."
+      }
+    },
+    "links": {}
+  }
+]

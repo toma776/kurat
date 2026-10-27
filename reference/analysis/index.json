@@ -1,0 +1,43 @@
+{
+  "snapshot": "reference\\snapshot",
+  "base": "https://kurat.ro",
+  "crawled_at": "2026-10-26T12:07:28.320Z",
+  "counts": {
+    "media": 22,
+    "firma": 1,
+    "sarcini": 56,
+    "extra": 7,
+    "servicii": 9,
+    "tarife": 10,
+    "clienti": 10,
+    "testimoniale": 11,
+    "valori": 5,
+    "avantaje": 5,
+    "pasi": 7,
+    "intrebari": 4,
+    "calculator": 1,
+    "sectiuni": 28,
+    "pagini": 6,
+    "meniuri": 3
+  },
+  "order": [
+    "media",
+    "firma",
+    "sarcini",
+    "extra",
+    "servicii",
+    "tarife",
+    "clienti",
+    "testimoniale",
+    "valori",
+    "avantaje",
+    "pasi",
+    "intrebari",
+    "calculator",
+    "sectiuni",
+    "pagini",
+    "meniuri"
+  ],
+  "observations": 27,
+  "mentions": 5
+}

@@ -1,0 +1,92 @@
+[
+  {
+    "ref": "valori:cunostinte",
+    "fields": {
+      "litera": "K",
+      "titlu": "Cunoștințe",
+      "text": "Evoluăm constant și împărtășim ceea ce știm! Învățarea continuă și colaborarea ne ajută să creștem împreună, zi de zi.",
+      "ordine": 1
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "secțiunea „Valorile care ne ghidează”",
+        "excerpt": "Cunoștințe"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "valori:utilitate",
+    "fields": {
+      "litera": "U",
+      "titlu": "Utilitate",
+      "text": "Fiecare acțiune contează! Ne concentrăm pe eficiență, pe sprijin reciproc și pe soluții care aduc valoare reală clienților noștri.",
+      "ordine": 2
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "secțiunea „Valorile care ne ghidează”",
+        "excerpt": "Utilitate"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "valori:respect",
+    "fields": {
+      "litera": "R",
+      "titlu": "Respect",
+      "text": "Respectul stă la baza relațiilor noastre! Ne tratăm colegii și clienții cu profesionalism, deschidere și empatie. Credem că succesul se construiește prin încredere și respect reciproc.",
+      "ordine": 3
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "secțiunea „Valorile care ne ghidează”",
+        "excerpt": "Respect"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "valori:asumare",
+    "fields": {
+      "litera": "A",
+      "titlu": "Asumare",
+      "text": "Suntem aici pentru a ne asuma responsabilitățile și rezultatele. Suntem o echipă care caută soluții, nu scuze.",
+      "ordine": 4
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "secțiunea „Valorile care ne ghidează”",
+        "excerpt": "Asumare"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "valori:transparenta",
+    "fields": {
+      "litera": "T",
+      "titlu": "Transparență",
+      "text": "Transparența creează încredere! Comunicăm clar, sincer și construim relații solide bazate pe corectitudine și încredere.",
+      "ordine": 5
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "secțiunea „Valorile care ne ghidează”",
+        "excerpt": "Transparență"
+      }
+    },
+    "links": {}
+  }
+]

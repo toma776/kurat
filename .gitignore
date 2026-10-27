@@ -1,0 +1,5 @@
+node_modules/
+# doar la rădăcină (§4, greșeala 20): /media/ nu trebuie să prindă src/media/
+/data/
+/media/
+*.db-journal

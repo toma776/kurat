@@ -1,0 +1,587 @@
+{
+  "base": "https://kurat.ro",
+  "started_at": "2026-10-26T12:07:28.320Z",
+  "items": [
+    {
+      "url": "https://kurat.ro/",
+      "kind": "page",
+      "status": 200,
+      "content_type": "text/html;charset=UTF-8",
+      "fetched_at": "2026-10-26T12:07:28.505Z",
+      "file": "pages\\index.html",
+      "sha1": "ae2bacb55d54a3e5a4646b4e247d8d47b37e5d16",
+      "size": 171422
+    },
+    {
+      "url": "https://kurat.ro/servicii",
+      "kind": "page",
+      "status": 200,
+      "content_type": "text/html;charset=UTF-8",
+      "fetched_at": "2026-10-26T12:07:28.727Z",
+      "file": "pages\\servicii.html",
+      "sha1": "e09b7c2588cf698285c80242ffbff64cabf3ff6d",
+      "size": 71337
+    },
+    {
+      "url": "https://kurat.ro/portofoliu",
+      "kind": "page",
+      "status": 200,
+      "content_type": "text/html;charset=UTF-8",
+      "fetched_at": "2026-10-26T12:07:28.847Z",
+      "file": "pages\\portofoliu.html",
+      "sha1": "ddeee8758dc3057f2720aed9570f7b8066315ca2",
+      "size": 99607
+    },
+    {
+      "url": "https://kurat.ro/despre-noi",
+      "kind": "page",
+      "status": 200,
+      "content_type": "text/html;charset=UTF-8",
+      "fetched_at": "2026-10-26T12:07:28.905Z",
+      "file": "pages\\despre-noi.html",
+      "sha1": "572fd7f50ccb58438f93a13452bb8363a4fd2f16",
+      "size": 60231
+    },
+    {
+      "url": "https://kurat.ro/shop",
+      "kind": "page",
+      "status": 200,
+      "content_type": "text/html;charset=UTF-8",
+      "fetched_at": "2026-10-26T12:07:28.952Z",
+      "file": "pages\\shop.html",
+      "sha1": "3050ecddc2e26d8b8122c3cb3434fc341eede329",
+      "size": 55625
+    },
+    {
+      "url": "https://kurat.ro/contact",
+      "kind": "page",
+      "status": 200,
+      "content_type": "text/html;charset=UTF-8",
+      "fetched_at": "2026-10-26T12:07:29.003Z",
+      "file": "pages\\contact.html",
+      "sha1": "1d163bc45438569c26b029bd581dd7dc46463ee3",
+      "size": 55732
+    },
+    {
+      "url": "https://kurat.ro/servicii/birouri",
+      "kind": "page",
+      "status": 200,
+      "content_type": "text/html;charset=UTF-8",
+      "fetched_at": "2026-10-26T12:07:29.059Z",
+      "file": "pages\\servicii\\birouri.html",
+      "sha1": "45918d01c778235609d42324b28d3c2ba7c22c65",
+      "size": 65640
+    },
+    {
+      "url": "https://kurat.ro/servicii/spatii-comerciale",
+      "kind": "page",
+      "status": 200,
+      "content_type": "text/html;charset=UTF-8",
+      "fetched_at": "2026-10-26T12:07:29.121Z",
+      "file": "pages\\servicii\\spatii-comerciale.html",
+      "sha1": "2fab0e8198b69e3019c737420e5093fda85e0a00",
+      "size": 64389
+    },
+    {
+      "url": "https://kurat.ro/servicii/locuinte",
+      "kind": "page",
+      "status": 200,
+      "content_type": "text/html;charset=UTF-8",
+      "fetched_at": "2026-10-26T12:07:29.176Z",
+      "file": "pages\\servicii\\locuinte.html",
+      "sha1": "445d3693441efc2a6cb96007e3332537aa5d3d6f",
+      "size": 69021
+    },
+    {
+      "url": "https://kurat.ro/servicii/dupa-constructor",
+      "kind": "page",
+      "status": 200,
+      "content_type": "text/html;charset=UTF-8",
+      "fetched_at": "2026-10-26T12:07:29.224Z",
+      "file": "pages\\servicii\\dupa-constructor.html",
+      "sha1": "1c52ef3a5b1c3710b2427de64ba0053292809dee",
+      "size": 71908
+    },
+    {
+      "url": "https://kurat.ro/servicii/mentenanta",
+      "kind": "page",
+      "status": 200,
+      "content_type": "text/html;charset=UTF-8",
+      "fetched_at": "2026-10-26T12:07:29.276Z",
+      "file": "pages\\servicii\\mentenanta.html",
+      "sha1": "2fd440b156e3b5d266408f4a1d81b94f09361099",
+      "size": 68682
+    },
+    {
+      "url": "https://kurat.ro/servicii/generala",
+      "kind": "page",
+      "status": 200,
+      "content_type": "text/html;charset=UTF-8",
+      "fetched_at": "2026-10-26T12:07:29.324Z",
+      "file": "pages\\servicii\\generala.html",
+      "sha1": "764da5ea237c2af6c4795d4142ab9c54b4a9d03c",
+      "size": 72176
+    },
+    {
+      "url": "https://kurat.ro/chunk-IWXHAV37.js",
+      "kind": "js",
+      "status": 200,
+      "content_type": "text/javascript; charset=utf-8",
+      "fetched_at": "2026-10-26T12:07:29.373Z",
+      "file": "chunk-IWXHAV37.js",
+      "sha1": "d5368135db3488663184015a9a767eeb0e09b9d8",
+      "size": 554
+    },
+    {
+      "url": "https://kurat.ro/chunk-7HAY54XQ.js",
+      "kind": "js",
+      "status": 200,
+      "content_type": "text/javascript; charset=utf-8",
+      "fetched_at": "2026-10-26T12:07:29.418Z",
+      "file": "chunk-7HAY54XQ.js",
+      "sha1": "2646fab476a70dbfbe436c4019414047230c670f",
+      "size": 19034
+    },
+    {
+      "url": "https://kurat.ro/chunk-NTSGFION.js",
+      "kind": "js",
+      "status": 200,
+      "content_type": "text/javascript; charset=utf-8",
+      "fetched_at": "2026-10-26T12:07:29.481Z",
+      "file": "chunk-NTSGFION.js",
+      "sha1": "331427a2b87b60cbe85733921bc1890dd4d311d5",
+      "size": 304259
+    },
+    {
+      "url": "https://kurat.ro/main-PMM5BYF6.js",
+      "kind": "js",
+      "status": 200,
+      "content_type": "text/javascript; charset=utf-8",
+      "fetched_at": "2026-10-26T12:07:29.566Z",
+      "file": "main-PMM5BYF6.js",
+      "sha1": "353813f81b3a6b3c8962688b403c08d0698a8b60",
+      "size": 4001
+    },
+    {
+      "url": "https://kurat.ro/chunk-MLOCOVGZ.js",
+      "kind": "js",
+      "status": 200,
+      "content_type": "text/javascript; charset=utf-8",
+      "fetched_at": "2026-10-26T12:07:29.625Z",
+      "file": "chunk-MLOCOVGZ.js",
+      "sha1": "9a579cb1722ffa1c998c7bf80f8db16570a8f422",
+      "size": 63274
+    },
+    {
+      "url": "https://kurat.ro/chunk-POGF446A.js",
+      "kind": "js",
+      "status": 200,
+      "content_type": "text/javascript; charset=utf-8",
+      "fetched_at": "2026-10-26T12:07:29.668Z",
+      "file": "chunk-POGF446A.js",
+      "sha1": "c628239806e8f00ebfa9331bad8a4cf23154d850",
+      "size": 2700
+    },
+    {
+      "url": "https://kurat.ro/chunk-FDDDSY6G.js",
+      "kind": "js",
+      "status": 200,
+      "content_type": "text/javascript; charset=utf-8",
+      "fetched_at": "2026-10-26T12:07:29.723Z",
+      "file": "chunk-FDDDSY6G.js",
+      "sha1": "92eba3c712c2912db15d5eeaf9164b4e9287a73d",
+      "size": 1654
+    },
+    {
+      "url": "https://kurat.ro/chunk-SG4SSRIQ.js",
+      "kind": "js",
+      "status": 200,
+      "content_type": "text/javascript; charset=utf-8",
+      "fetched_at": "2026-10-26T12:07:29.766Z",
+      "file": "chunk-SG4SSRIQ.js",
+      "sha1": "5a190f56574d11e81707e8256affd0fdabb758ab",
+      "size": 9834
+    },
+    {
+      "url": "https://kurat.ro/chunk-TJTUHVIV.js",
+      "kind": "js",
+      "status": 200,
+      "content_type": "text/javascript; charset=utf-8",
+      "fetched_at": "2026-10-26T12:07:29.821Z",
+      "file": "chunk-TJTUHVIV.js",
+      "sha1": "1af263eeaea071ea93e7be4cec9783da29610f99",
+      "size": 1088
+    },
+    {
+      "url": "https://kurat.ro/chunk-F22CDJAJ.js",
+      "kind": "js",
+      "status": 200,
+      "content_type": "text/javascript; charset=utf-8",
+      "fetched_at": "2026-10-26T12:07:29.868Z",
+      "file": "chunk-F22CDJAJ.js",
+      "sha1": "8565e624aedac237ff6c0fb401fc29761d79055a",
+      "size": 4505
+    },
+    {
+      "url": "https://kurat.ro/chunk-5KIJMGO6.js",
+      "kind": "js",
+      "status": 200,
+      "content_type": "text/javascript; charset=utf-8",
+      "fetched_at": "2026-10-26T12:07:29.908Z",
+      "file": "chunk-5KIJMGO6.js",
+      "sha1": "f6d4a4e2be209caec00f19451b91f14a33abb149",
+      "size": 11101
+    },
+    {
+      "url": "https://kurat.ro/chunk-N5NR5CXF.js",
+      "kind": "js",
+      "status": 200,
+      "content_type": "text/javascript; charset=utf-8",
+      "fetched_at": "2026-10-26T12:07:29.951Z",
+      "file": "chunk-N5NR5CXF.js",
+      "sha1": "6b14339f66c125bbe7fda7553853d567d079a542",
+      "size": 11928
+    },
+    {
+      "url": "https://kurat.ro/chunk-JF5NDZN2.js",
+      "kind": "js",
+      "status": 200,
+      "content_type": "text/javascript; charset=utf-8",
+      "fetched_at": "2026-10-26T12:07:30.007Z",
+      "file": "chunk-JF5NDZN2.js",
+      "sha1": "ddc4bde383afd8a854de74d771ebcb60d4a54f1a",
+      "size": 8213
+    },
+    {
+      "url": "https://kurat.ro/chunk-X4ZC6YMB.js",
+      "kind": "js",
+      "status": 200,
+      "content_type": "text/javascript; charset=utf-8",
+      "fetched_at": "2026-10-26T12:07:30.051Z",
+      "file": "chunk-X4ZC6YMB.js",
+      "sha1": "04ad98256cd72485e74caab46bce532b0e6e1507",
+      "size": 11349
+    },
+    {
+      "url": "https://kurat.ro/chunk-UQM57GJ4.js",
+      "kind": "js",
+      "status": 200,
+      "content_type": "text/javascript; charset=utf-8",
+      "fetched_at": "2026-10-26T12:07:30.106Z",
+      "file": "chunk-UQM57GJ4.js",
+      "sha1": "8d282400c98591b5eabed62a9f81b6d2e89667b3",
+      "size": 60252
+    },
+    {
+      "url": "https://kurat.ro/chunk-IOMKJVIR.js",
+      "kind": "js",
+      "status": 200,
+      "content_type": "text/javascript; charset=utf-8",
+      "fetched_at": "2026-10-26T12:07:30.150Z",
+      "file": "chunk-IOMKJVIR.js",
+      "sha1": "78bdcb940ef9ac604307a9f376e78dce67454832",
+      "size": 9177
+    },
+    {
+      "url": "https://kurat.ro/chunk-56ENOWJ7.js",
+      "kind": "js",
+      "status": 200,
+      "content_type": "text/javascript; charset=utf-8",
+      "fetched_at": "2026-10-26T12:07:30.206Z",
+      "file": "chunk-56ENOWJ7.js",
+      "sha1": "4457507353a79d2b9d59f664317431dfec7d9ba3",
+      "size": 13022
+    },
+    {
+      "url": "https://kurat.ro/chunk-FKXG36RI.js",
+      "kind": "js",
+      "status": 200,
+      "content_type": "text/javascript; charset=utf-8",
+      "fetched_at": "2026-10-26T12:07:30.251Z",
+      "file": "chunk-FKXG36RI.js",
+      "sha1": "5c6b3bceda6accac255f2e519a860c9cf1733366",
+      "size": 14092
+    },
+    {
+      "url": "https://kurat.ro/chunk-YQLCY7DH.js",
+      "kind": "js",
+      "status": 200,
+      "content_type": "text/javascript; charset=utf-8",
+      "fetched_at": "2026-10-26T12:07:30.306Z",
+      "file": "chunk-YQLCY7DH.js",
+      "sha1": "0f3c81c2d43342e0e4659a0d5fde999fa5a7ff00",
+      "size": 8146
+    },
+    {
+      "url": "https://kurat.ro/assets/about-cleaning.webp",
+      "kind": "asset",
+      "status": 200,
+      "content_type": "image/webp",
+      "fetched_at": "2026-10-26T12:07:30.351Z",
+      "file": "assets/about-cleaning.webp",
+      "sha1": "4626be37700590c2f04ee9a681fbe663ba1700d5",
+      "size": 21614
+    },
+    {
+      "url": "https://kurat.ro/assets/badges/sal.webp",
+      "kind": "asset",
+      "status": 200,
+      "content_type": "image/webp",
+      "fetched_at": "2026-10-26T12:07:30.405Z",
+      "file": "assets/badges/sal.webp",
+      "sha1": "11f88e4c25f8b0aa7a580c42331e40651fddb765",
+      "size": 8498
+    },
+    {
+      "url": "https://kurat.ro/assets/badges/sol.webp",
+      "kind": "asset",
+      "status": 200,
+      "content_type": "image/webp",
+      "fetched_at": "2026-10-26T12:07:30.450Z",
+      "file": "assets/badges/sol.webp",
+      "sha1": "2d9d8aecf616f78b3de7df2aca3b85d33428e526",
+      "size": 6566
+    },
+    {
+      "url": "https://kurat.ro/assets/clients/autonom.png",
+      "kind": "asset",
+      "status": 200,
+      "content_type": "image/png",
+      "fetched_at": "2026-10-26T12:07:30.504Z",
+      "file": "assets/clients/autonom.png",
+      "sha1": "69bf67d320e176375b397cd72dd31942a0516e4f",
+      "size": 26455
+    },
+    {
+      "url": "https://kurat.ro/assets/clients/barber-deluxe.jpg",
+      "kind": "asset",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "fetched_at": "2026-10-26T12:07:30.551Z",
+      "file": "assets/clients/barber-deluxe.jpg",
+      "sha1": "9b5022ef03dd0a6c8542d007e69f854958d944ba",
+      "size": 10249
+    },
+    {
+      "url": "https://kurat.ro/assets/clients/dwf.png",
+      "kind": "asset",
+      "status": 200,
+      "content_type": "image/png",
+      "fetched_at": "2026-10-26T12:07:30.606Z",
+      "file": "assets/clients/dwf.png",
+      "sha1": "11200acb29aa5eb2511e7b129015291ad7c0bc85",
+      "size": 25243
+    },
+    {
+      "url": "https://kurat.ro/assets/clients/google.png",
+      "kind": "asset",
+      "status": 200,
+      "content_type": "image/png",
+      "fetched_at": "2026-10-26T12:07:30.651Z",
+      "file": "assets/clients/google.png",
+      "sha1": "d8f3a0b5bf0e2fe062e6f4c5f09bd739d823d360",
+      "size": 15975
+    },
+    {
+      "url": "https://kurat.ro/assets/clients/igiena.png",
+      "kind": "asset",
+      "status": 200,
+      "content_type": "image/png",
+      "fetched_at": "2026-10-26T12:07:30.705Z",
+      "file": "assets/clients/igiena.png",
+      "sha1": "b562e88ebb33f2d00ea520e2aac90d86a06f272a",
+      "size": 45354
+    },
+    {
+      "url": "https://kurat.ro/assets/clients/lensa.jpg",
+      "kind": "asset",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "fetched_at": "2026-10-26T12:07:30.751Z",
+      "file": "assets/clients/lensa.jpg",
+      "sha1": "19eee96145c47405bb3a4ced3bee7abcd95cc159",
+      "size": 8661
+    },
+    {
+      "url": "https://kurat.ro/assets/clients/make-hot.jpg",
+      "kind": "asset",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "fetched_at": "2026-10-26T12:07:30.806Z",
+      "file": "assets/clients/make-hot.jpg",
+      "sha1": "b0e7939e0e2851533738fb5c46a0e7ed8e1b8be9",
+      "size": 13128
+    },
+    {
+      "url": "https://kurat.ro/assets/clients/original-barber-shop.png",
+      "kind": "asset",
+      "status": 200,
+      "content_type": "image/png",
+      "fetched_at": "2026-10-26T12:07:30.851Z",
+      "file": "assets/clients/original-barber-shop.png",
+      "sha1": "904c888b607e2c547b7eab9d4b1ed4245a5daf90",
+      "size": 20017
+    },
+    {
+      "url": "https://kurat.ro/assets/clients/unika.png",
+      "kind": "asset",
+      "status": 200,
+      "content_type": "image/png",
+      "fetched_at": "2026-10-26T12:07:30.891Z",
+      "file": "assets/clients/unika.png",
+      "sha1": "926ea3e4149ee46bdea8e9fed2b2b5937ce773a6",
+      "size": 59677
+    },
+    {
+      "url": "https://kurat.ro/assets/clients/vexio.jpg",
+      "kind": "asset",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "fetched_at": "2026-10-26T12:07:30.936Z",
+      "file": "assets/clients/vexio.jpg",
+      "sha1": "40932d70708219cffae914a02efdff26c3ee4f55",
+      "size": 8350
+    },
+    {
+      "url": "https://kurat.ro/assets/images/birou.webp",
+      "kind": "asset",
+      "status": 200,
+      "content_type": "image/webp",
+      "fetched_at": "2026-10-26T12:07:30.989Z",
+      "file": "assets/images/birou.webp",
+      "sha1": "b277a0da13bc539eac9dca62c9b7572bad82d890",
+      "size": 329990
+    },
+    {
+      "url": "https://kurat.ro/assets/images/canapele.webp",
+      "kind": "asset",
+      "status": 200,
+      "content_type": "image/webp",
+      "fetched_at": "2026-10-26T12:07:31.069Z",
+      "file": "assets/images/canapele.webp",
+      "sha1": "38802f16d029199e2d27a28250d1503b809a7a3a",
+      "size": 130256
+    },
+    {
+      "url": "https://kurat.ro/assets/images/com.webp",
+      "kind": "asset",
+      "status": 200,
+      "content_type": "image/webp",
+      "fetched_at": "2026-10-26T12:07:31.156Z",
+      "file": "assets/images/com.webp",
+      "sha1": "37cf2c58d617232c5baab99ec27cad6043a3cec9",
+      "size": 210368
+    },
+    {
+      "url": "https://kurat.ro/assets/images/hero-team.webp",
+      "kind": "asset",
+      "status": 200,
+      "content_type": "image/webp",
+      "fetched_at": "2026-10-26T12:07:31.204Z",
+      "file": "assets/images/hero-team.webp",
+      "sha1": "7004ee52f9ffeba529b70ddd4057114600bdbe30",
+      "size": 48054
+    },
+    {
+      "url": "https://kurat.ro/assets/images/home.webp",
+      "kind": "asset",
+      "status": 200,
+      "content_type": "image/webp",
+      "fetched_at": "2026-10-26T12:07:31.259Z",
+      "file": "assets/images/home.webp",
+      "sha1": "f78dddc7f4843cdea2cd914c3ac4f86fb783011a",
+      "size": 265942
+    },
+    {
+      "url": "https://kurat.ro/assets/images/industrial.webp",
+      "kind": "asset",
+      "status": 200,
+      "content_type": "image/webp",
+      "fetched_at": "2026-10-26T12:07:31.306Z",
+      "file": "assets/images/industrial.webp",
+      "sha1": "d6a393169cb412d0a4e3d339c44fa64ddabe32c7",
+      "size": 257142
+    },
+    {
+      "url": "https://kurat.ro/assets/images/market-hero.webp",
+      "kind": "asset",
+      "status": 200,
+      "content_type": "image/webp",
+      "fetched_at": "2026-10-26T12:07:31.389Z",
+      "file": "assets/images/market-hero.webp",
+      "sha1": "339144d37ed4c0f6f518904799f3b87ff3de4fc4",
+      "size": 41902
+    },
+    {
+      "url": "https://kurat.ro/assets/images/petrecere.webp",
+      "kind": "asset",
+      "status": 200,
+      "content_type": "image/webp",
+      "fetched_at": "2026-10-26T12:07:31.435Z",
+      "file": "assets/images/petrecere.webp",
+      "sha1": "74e8364445c17787782a422dbb4329c76e4ebbf3",
+      "size": 128176
+    },
+    {
+      "url": "https://kurat.ro/assets/images/post-construct.webp",
+      "kind": "asset",
+      "status": 200,
+      "content_type": "image/webp",
+      "fetched_at": "2026-10-26T12:07:31.489Z",
+      "file": "assets/images/post-construct.webp",
+      "sha1": "ae3ebd08c0e983243d512f97eb44ba26f8dc5687",
+      "size": 83516
+    },
+    {
+      "url": "https://kurat.ro/assets/images/post-renov.webp",
+      "kind": "asset",
+      "status": 200,
+      "content_type": "image/webp",
+      "fetched_at": "2026-10-26T12:07:31.535Z",
+      "file": "assets/images/post-renov.webp",
+      "sha1": "855baaaba5fbdca69f0cbe03e60de2575e6e6ae9",
+      "size": 143276
+    },
+    {
+      "url": "https://kurat.ro/assets/images/service-placeholder.webp",
+      "kind": "asset",
+      "status": 200,
+      "content_type": "image/webp",
+      "fetched_at": "2026-10-26T12:07:31.590Z",
+      "file": "assets/images/service-placeholder.webp",
+      "sha1": "c2bf77365df9f55410a1ababcebdaab47d31fffb",
+      "size": 9892
+    },
+    {
+      "url": "https://kurat.ro/favicon.ico",
+      "kind": "asset",
+      "status": 200,
+      "content_type": "image/vnd.microsoft.icon",
+      "fetched_at": "2026-10-26T12:07:31.647Z",
+      "file": "favicon.ico",
+      "sha1": "9c39f434fe1261f68c5e3eefdf734630d99c5670",
+      "size": 15086
+    },
+    {
+      "url": "https://kurat.ro/styles-PCNU2MLD.css",
+      "kind": "asset",
+      "status": 200,
+      "content_type": "text/css; charset=utf-8",
+      "fetched_at": "2026-10-26T12:07:31.688Z",
+      "file": "styles-PCNU2MLD.css",
+      "sha1": "d5f4cff6ac7945acc57fa0eceabd8cd181610540",
+      "size": 18308
+    },
+    {
+      "url": "https://api.kurat.ro/api/calculator/config",
+      "kind": "api",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "fetched_at": "2026-10-26T12:07:31.861Z",
+      "file": "api\\api_calculator_config.json",
+      "sha1": "b758f045c34b8cbba45c5ceaf37507387a7b5623",
+      "size": 864
+    }
+  ],
+  "finished_at": "2026-10-26T12:07:31.863Z"
+}

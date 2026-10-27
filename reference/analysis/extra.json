@@ -1,0 +1,160 @@
+[
+  {
+    "ref": "extra:curatare canapea",
+    "fields": {
+      "nume": "Curățare canapea (injecție/extracție)",
+      "pret": 200,
+      "unitate": null,
+      "in_calculator": true
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/mentenanta",
+        "file": "pages\\servicii\\mentenanta.html",
+        "method": "listă „Servicii suplimentare”",
+        "excerpt": "Curățare canapea (injecție/extracție): +200 lei"
+      },
+      "pret": {
+        "url": "https://kurat.ro/servicii/mentenanta",
+        "file": "pages\\servicii\\mentenanta.html",
+        "method": "listă „Servicii suplimentare” (pagină)",
+        "excerpt": "Curățare canapea (injecție/extracție): +200 lei",
+        "certainty": "unverified",
+        "note": "Calculatorul (API) cere 250 lei.",
+        "conflictsWith": {
+          "url": "https://api.kurat.ro/api/calculator/config",
+          "file": "api\\api_calculator_config.json",
+          "kind": "endpoint",
+          "method": "API /api/calculator/config",
+          "excerpt": "Curatare canapea - injectie/extractie: 250"
+        }
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "extra:curatare saltea",
+    "fields": {
+      "nume": "Curățare saltea",
+      "pret": 50,
+      "unitate": null,
+      "in_calculator": true
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/mentenanta",
+        "file": "pages\\servicii\\mentenanta.html",
+        "method": "listă „Servicii suplimentare”",
+        "excerpt": "Curățare saltea: +50 lei"
+      },
+      "pret": {
+        "url": "https://kurat.ro/servicii/mentenanta",
+        "file": "pages\\servicii\\mentenanta.html",
+        "method": "listă „Servicii suplimentare” (pagină)",
+        "excerpt": "Curățare saltea: +50 lei",
+        "certainty": "unverified",
+        "note": "Calculatorul (API) cere 150 lei.",
+        "conflictsWith": {
+          "url": "https://api.kurat.ro/api/calculator/config",
+          "file": "api\\api_calculator_config.json",
+          "kind": "endpoint",
+          "method": "API /api/calculator/config",
+          "excerpt": "Curatare saltea - injectie/extractie: 150"
+        }
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "extra:curatare cu aburi",
+    "fields": {
+      "nume": "Curățare cu aburi",
+      "pret": 100,
+      "unitate": null,
+      "in_calculator": false
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/mentenanta",
+        "file": "pages\\servicii\\mentenanta.html",
+        "method": "listă „Servicii suplimentare”",
+        "excerpt": "Curățare cu aburi: +100 lei"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "extra:curatare scaun textil",
+    "fields": {
+      "nume": "Curățare scaun textil",
+      "pret": 25,
+      "unitate": "scaun",
+      "in_calculator": false
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/mentenanta",
+        "file": "pages\\servicii\\mentenanta.html",
+        "method": "listă „Servicii suplimentare”",
+        "excerpt": "Curățare scaun textil: +25 lei / scaun"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "extra:calcat haine",
+    "fields": {
+      "nume": "Călcat haine",
+      "pret": 100,
+      "unitate": null,
+      "in_calculator": false
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/mentenanta",
+        "file": "pages\\servicii\\mentenanta.html",
+        "method": "listă „Servicii suplimentare”",
+        "excerpt": "Călcat haine: +100 lei"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "extra:interior frigider",
+    "fields": {
+      "nume": "Interior frigider",
+      "pret": 50,
+      "unitate": null,
+      "in_calculator": true
+    },
+    "prov": {
+      "": {
+        "url": "https://api.kurat.ro/api/calculator/config",
+        "file": "api\\api_calculator_config.json",
+        "kind": "endpoint",
+        "method": "API /api/calculator/config",
+        "excerpt": "Interior frigider: 50"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "extra:interior cuptor",
+    "fields": {
+      "nume": "Interior cuptor",
+      "pret": 100,
+      "unitate": null,
+      "in_calculator": true
+    },
+    "prov": {
+      "": {
+        "url": "https://api.kurat.ro/api/calculator/config",
+        "file": "api\\api_calculator_config.json",
+        "kind": "endpoint",
+        "method": "API /api/calculator/config",
+        "excerpt": "Interior cuptor: 100"
+      }
+    },
+    "links": {}
+  }
+]

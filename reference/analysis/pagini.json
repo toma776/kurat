@@ -1,0 +1,331 @@
+[
+  {
+    "ref": "pagini:/",
+    "fields": {
+      "titlu": "Timpul tău este prețios! Lasă curățenia în grija noastră.",
+      "nume_scurt": "Acasă",
+      "path": "/",
+      "meta_title": "Kurat — Curățenia pe care o meriți",
+      "meta_description": "Kurat — curățenie premium pentru locuințe, birouri și spații comerciale în toată România. Calculează prețul în 60 de secunde. Garanție sau banii înapoi."
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "pagină compusă",
+        "excerpt": "Kurat — Curățenia pe care o meriți"
+      },
+      "nume_scurt": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "implicit: pagina nu apare în meniu",
+        "excerpt": null,
+        "certainty": "inferred"
+      },
+      "meta_description": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "<meta name=\"description\">",
+        "excerpt": "Kurat — curățenie premium pentru locuințe, birouri și spații comerciale în toată România. Calculează prețul în 60 de secunde. Garanție sau banii înapoi.",
+        "certainty": "unverified",
+        "note": "Aceeași descriere pe toate paginile."
+      }
+    },
+    "links": {
+      "sectiuni": [
+        {
+          "ref": "sectiuni:/#top",
+          "status": "confirmed"
+        },
+        {
+          "ref": "sectiuni:/#servicii-h",
+          "status": "confirmed"
+        },
+        {
+          "ref": "sectiuni:/#deceka-h",
+          "status": "confirmed"
+        },
+        {
+          "ref": "sectiuni:/#valori-h",
+          "status": "confirmed"
+        },
+        {
+          "ref": "sectiuni:/#cum-h",
+          "status": "confirmed"
+        },
+        {
+          "ref": "sectiuni:/#calc-heading",
+          "status": "confirmed"
+        },
+        {
+          "ref": "sectiuni:/#garantie-h",
+          "status": "confirmed"
+        },
+        {
+          "ref": "sectiuni:/#recenzii-h",
+          "status": "confirmed"
+        },
+        {
+          "ref": "sectiuni:/#faq-h",
+          "status": "confirmed"
+        },
+        {
+          "ref": "sectiuni:/#contact-h",
+          "status": "confirmed"
+        }
+      ]
+    }
+  },
+  {
+    "ref": "pagini:/servicii",
+    "fields": {
+      "titlu": "Servicii de curățenie pentru orice spațiu",
+      "nume_scurt": "Servicii",
+      "path": "/servicii",
+      "meta_title": "Servicii de curățenie — Kurat",
+      "meta_description": "Kurat — curățenie premium pentru locuințe, birouri și spații comerciale în toată România. Calculează prețul în 60 de secunde. Garanție sau banii înapoi."
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii",
+        "file": "pages\\servicii.html",
+        "method": "pagină compusă",
+        "excerpt": "Servicii de curățenie — Kurat"
+      },
+      "nume_scurt": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "meniul principal",
+        "excerpt": "Servicii"
+      },
+      "meta_description": {
+        "url": "https://kurat.ro/servicii",
+        "file": "pages\\servicii.html",
+        "method": "<meta name=\"description\">",
+        "excerpt": "Kurat — curățenie premium pentru locuințe, birouri și spații comerciale în toată România. Calculează prețul în 60 de secunde. Garanție sau banii înapoi.",
+        "certainty": "unverified",
+        "note": "Aceeași descriere pe toate paginile."
+      }
+    },
+    "links": {
+      "sectiuni": [
+        {
+          "ref": "sectiuni:/servicii#svc-h",
+          "status": "confirmed"
+        },
+        {
+          "ref": "sectiuni:/servicii#svc-spatiu-h",
+          "status": "confirmed"
+        },
+        {
+          "ref": "sectiuni:/servicii#svc-tip-h",
+          "status": "confirmed"
+        },
+        {
+          "ref": "sectiuni:/servicii#svc-cta-h",
+          "status": "confirmed"
+        }
+      ]
+    }
+  },
+  {
+    "ref": "pagini:/portofoliu",
+    "fields": {
+      "titlu": "Companiile care au ales Kurat",
+      "nume_scurt": "Portofoliu",
+      "path": "/portofoliu",
+      "meta_title": "Portofoliu clienți — Kurat",
+      "meta_description": "Kurat — curățenie premium pentru locuințe, birouri și spații comerciale în toată România. Calculează prețul în 60 de secunde. Garanție sau banii înapoi."
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/portofoliu",
+        "file": "pages\\portofoliu.html",
+        "method": "pagină compusă",
+        "excerpt": "Portofoliu clienți — Kurat"
+      },
+      "nume_scurt": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "meniul principal",
+        "excerpt": "Portofoliu"
+      },
+      "meta_description": {
+        "url": "https://kurat.ro/portofoliu",
+        "file": "pages\\portofoliu.html",
+        "method": "<meta name=\"description\">",
+        "excerpt": "Kurat — curățenie premium pentru locuințe, birouri și spații comerciale în toată România. Calculează prețul în 60 de secunde. Garanție sau banii înapoi.",
+        "certainty": "unverified",
+        "note": "Aceeași descriere pe toate paginile."
+      }
+    },
+    "links": {
+      "sectiuni": [
+        {
+          "ref": "sectiuni:/portofoliu#pf-h",
+          "status": "confirmed"
+        },
+        {
+          "ref": "sectiuni:/portofoliu#pf-logos-h",
+          "status": "confirmed"
+        },
+        {
+          "ref": "sectiuni:/portofoliu#pf-rev-h",
+          "status": "confirmed"
+        },
+        {
+          "ref": "sectiuni:/portofoliu#pf-cta-h",
+          "status": "confirmed"
+        }
+      ]
+    }
+  },
+  {
+    "ref": "pagini:/despre-noi",
+    "fields": {
+      "titlu": "Curățenie de cea mai înaltă calitate",
+      "nume_scurt": "Despre noi",
+      "path": "/despre-noi",
+      "meta_title": "Despre noi — Kurat",
+      "meta_description": "Kurat — curățenie premium pentru locuințe, birouri și spații comerciale în toată România. Calculează prețul în 60 de secunde. Garanție sau banii înapoi."
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/despre-noi",
+        "file": "pages\\despre-noi.html",
+        "method": "pagină compusă",
+        "excerpt": "Despre noi — Kurat"
+      },
+      "nume_scurt": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "meniul principal",
+        "excerpt": "Despre noi"
+      },
+      "meta_description": {
+        "url": "https://kurat.ro/despre-noi",
+        "file": "pages\\despre-noi.html",
+        "method": "<meta name=\"description\">",
+        "excerpt": "Kurat — curățenie premium pentru locuințe, birouri și spații comerciale în toată România. Calculează prețul în 60 de secunde. Garanție sau banii înapoi.",
+        "certainty": "unverified",
+        "note": "Aceeași descriere pe toate paginile."
+      }
+    },
+    "links": {
+      "sectiuni": [
+        {
+          "ref": "sectiuni:/despre-noi#ab-h",
+          "status": "confirmed"
+        },
+        {
+          "ref": "sectiuni:/despre-noi#ab-story-h",
+          "status": "confirmed"
+        },
+        {
+          "ref": "sectiuni:/despre-noi#cifrele-kurat",
+          "status": "confirmed"
+        },
+        {
+          "ref": "sectiuni:/despre-noi#ab-val-h",
+          "status": "confirmed"
+        },
+        {
+          "ref": "sectiuni:/despre-noi#ab-cta-h",
+          "status": "confirmed"
+        }
+      ]
+    }
+  },
+  {
+    "ref": "pagini:/contact",
+    "fields": {
+      "titlu": "Hai să discutăm despre spațiul tău",
+      "nume_scurt": "Contact",
+      "path": "/contact",
+      "meta_title": "Contact — Kurat",
+      "meta_description": "Kurat — curățenie premium pentru locuințe, birouri și spații comerciale în toată România. Calculează prețul în 60 de secunde. Garanție sau banii înapoi."
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/contact",
+        "file": "pages\\contact.html",
+        "method": "pagină compusă",
+        "excerpt": "Contact — Kurat"
+      },
+      "nume_scurt": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "meniul principal",
+        "excerpt": "Contact"
+      },
+      "meta_description": {
+        "url": "https://kurat.ro/contact",
+        "file": "pages\\contact.html",
+        "method": "<meta name=\"description\">",
+        "excerpt": "Kurat — curățenie premium pentru locuințe, birouri și spații comerciale în toată România. Calculează prețul în 60 de secunde. Garanție sau banii înapoi.",
+        "certainty": "unverified",
+        "note": "Aceeași descriere pe toate paginile."
+      }
+    },
+    "links": {
+      "sectiuni": [
+        {
+          "ref": "sectiuni:/contact#ct-h",
+          "status": "confirmed"
+        },
+        {
+          "ref": "sectiuni:/contact#ct-form-h",
+          "status": "confirmed"
+        },
+        {
+          "ref": "sectiuni:/contact#locatia-biroului-kurat",
+          "status": "confirmed"
+        }
+      ]
+    }
+  },
+  {
+    "ref": "pagini:/shop",
+    "fields": {
+      "titlu": "Produsele cu care curățăm și noi.",
+      "nume_scurt": "Magazin",
+      "path": "/shop",
+      "meta_title": "Magazin — Kurat",
+      "meta_description": "Kurat — curățenie premium pentru locuințe, birouri și spații comerciale în toată România. Calculează prețul în 60 de secunde. Garanție sau banii înapoi."
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/shop",
+        "file": "pages\\shop.html",
+        "method": "pagină compusă",
+        "excerpt": "Magazin — Kurat"
+      },
+      "nume_scurt": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "meniul principal",
+        "excerpt": "Magazin"
+      },
+      "meta_description": {
+        "url": "https://kurat.ro/shop",
+        "file": "pages\\shop.html",
+        "method": "<meta name=\"description\">",
+        "excerpt": "Kurat — curățenie premium pentru locuințe, birouri și spații comerciale în toată România. Calculează prețul în 60 de secunde. Garanție sau banii înapoi.",
+        "certainty": "unverified",
+        "note": "Aceeași descriere pe toate paginile."
+      }
+    },
+    "links": {
+      "sectiuni": [
+        {
+          "ref": "sectiuni:/shop#s1",
+          "status": "confirmed"
+        },
+        {
+          "ref": "sectiuni:/shop#s3",
+          "status": "confirmed"
+        }
+      ]
+    }
+  }
+]

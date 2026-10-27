@@ -1,0 +1,45 @@
+[
+  {
+    "ref": "calculator:kurat",
+    "fields": {
+      "titlu": "Calculator preț",
+      "pret_minim": 400,
+      "multiplicatori": [
+        {
+          "nivel": "None",
+          "eticheta": "Fără mobilă",
+          "multiplicator": 1
+        },
+        {
+          "nivel": "Little",
+          "eticheta": "Puțin mobilat",
+          "multiplicator": 1.1
+        },
+        {
+          "nivel": "Full",
+          "eticheta": "Complet mobilat",
+          "multiplicator": 1.25
+        }
+      ]
+    },
+    "prov": {
+      "": {
+        "url": "https://api.kurat.ro/api/calculator/config",
+        "file": "api\\api_calculator_config.json",
+        "kind": "endpoint",
+        "method": "API /api/calculator/config",
+        "excerpt": "{\"serviceRates\":[{\"key\":\"maintenance\",\"name\":\"Mentenanță\",\"ratePerSqm\":10,\"icon\":null,\"description\":\"Curățenie de întreținere\"},{\"key\":\"general\",\"name\":\"Generală\",\"ratePerSqm\":15,\"icon\":null,\"descript"
+      },
+      "pret_minim": {
+        "url": "https://api.kurat.ro/api/calculator/config",
+        "file": "api\\api_calculator_config.json",
+        "kind": "endpoint",
+        "method": "API /api/calculator/config",
+        "excerpt": "minimumPrice: 400",
+        "certainty": "unverified",
+        "note": "Rezerva din bundle spune 150 lei."
+      }
+    },
+    "links": {}
+  }
+]

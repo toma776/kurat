@@ -1,0 +1,100 @@
+[
+  {
+    "ref": "meniuri:principal",
+    "fields": {
+      "cheie": "principal",
+      "titlu": "Meniul principal",
+      "linkuri": [
+        {
+          "href": "ref:pagini:/servicii"
+        },
+        {
+          "href": "ref:pagini:/portofoliu"
+        },
+        {
+          "href": "ref:pagini:/despre-noi"
+        },
+        {
+          "href": "ref:pagini:/shop"
+        },
+        {
+          "href": "ref:pagini:/contact"
+        }
+      ]
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "antet, <nav aria-label=\"Principal\">",
+        "excerpt": "Servicii · Portofoliu · Despre noi · Magazin · Contact"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "meniuri:subsol-servicii",
+    "fields": {
+      "cheie": "subsol-servicii",
+      "titlu": "Subsol — Servicii",
+      "linkuri": [
+        {
+          "href": "ref:servicii:birouri"
+        },
+        {
+          "href": "ref:servicii:spatii-comerciale"
+        },
+        {
+          "href": "ref:servicii:locuinte"
+        },
+        {
+          "href": "ref:servicii:dupa-constructor"
+        },
+        {
+          "href": "ref:pagini:/servicii",
+          "label": "Toate serviciile"
+        }
+      ]
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "subsol, coloana „Servicii”",
+        "excerpt": "Birouri · Spații comerciale · Locuințe · După constructor · Toate serviciile"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "meniuri:subsol-companie",
+    "fields": {
+      "cheie": "subsol-companie",
+      "titlu": "Subsol — Companie",
+      "linkuri": [
+        {
+          "href": "ref:pagini:/despre-noi"
+        },
+        {
+          "href": "ref:pagini:/portofoliu",
+          "label": "Portofoliu clienți"
+        },
+        {
+          "href": "ref:pagini:/shop"
+        },
+        {
+          "href": "ref:pagini:/contact"
+        }
+      ]
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "subsol, coloana „Companie”",
+        "excerpt": "Despre noi · Portofoliu clienți · Magazin · Contact"
+      }
+    },
+    "links": {}
+  }
+]

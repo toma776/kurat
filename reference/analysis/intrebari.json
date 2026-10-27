@@ -1,0 +1,70 @@
+[
+  {
+    "ref": "intrebari:aduceti voi produsele si echipamentele",
+    "fields": {
+      "intrebare": "Aduceți voi produsele și echipamentele?",
+      "raspuns": "<p>Da. Venim complet echipați cu produse profesionale și ustensile. Tu nu trebuie să pregătești nimic.</p>",
+      "ordine": 1
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/chunk-7HAY54XQ.js",
+        "file": "chunk-7HAY54XQ.js",
+        "method": "componenta FAQ (bundle)",
+        "excerpt": "Aduceți voi produsele și echipamentele? — Da. Venim complet echipați cu produse profesionale și ustensile. Tu nu trebuie să pregătești nimic."
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "intrebari:cum functioneaza garantia satisfactiei",
+    "fields": {
+      "intrebare": "Cum funcționează garanția satisfacției?",
+      "raspuns": "<p>Dacă nu ești 100% mulțumit, ne întorci în 48 de ore și refacem gratuit zonele semnalate sau primești banii înapoi.</p>",
+      "ordine": 2
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/chunk-7HAY54XQ.js",
+        "file": "chunk-7HAY54XQ.js",
+        "method": "componenta FAQ (bundle)",
+        "excerpt": "Cum funcționează garanția satisfacției? — Dacă nu ești 100% mulțumit, ne întorci în 48 de ore și refacem gratuit zonele semnalate sau primești banii înapoi."
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "intrebari:produsele sunt sigure pentru copii si animale",
+    "fields": {
+      "intrebare": "Produsele sunt sigure pentru copii și animale?",
+      "raspuns": "<p>Folosim produse profesionale, certificate și sigure pentru întreaga familie, inclusiv animalele de companie.</p>",
+      "ordine": 3
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/chunk-7HAY54XQ.js",
+        "file": "chunk-7HAY54XQ.js",
+        "method": "componenta FAQ (bundle)",
+        "excerpt": "Produsele sunt sigure pentru copii și animale? — Folosim produse profesionale, certificate și sigure pentru întreaga familie, inclusiv animalele de companie."
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "intrebari:pot programa curatenie recurenta",
+    "fields": {
+      "intrebare": "Pot programa curățenie recurentă?",
+      "raspuns": "<p>Da, oferim abonamente săptămânale, bilunare și lunare cu aceeași echipă și tarife preferențiale.</p>",
+      "ordine": 4
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/chunk-7HAY54XQ.js",
+        "file": "chunk-7HAY54XQ.js",
+        "method": "componenta FAQ (bundle)",
+        "excerpt": "Pot programa curățenie recurentă? — Da, oferim abonamente săptămânale, bilunare și lunare cu aceeași echipă și tarife preferențiale."
+      }
+    },
+    "links": {}
+  }
+]

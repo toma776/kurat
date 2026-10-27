@@ -1,0 +1,842 @@
+[
+  {
+    "ref": "sarcini:inlaturarea prafului de pe suprafetele accesibile si de pe electronice",
+    "fields": {
+      "text": "Înlăturarea prafului de pe suprafețele accesibile și de pe electronice"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/locuinte",
+        "file": "pages\\servicii\\locuinte.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Înlăturarea prafului de pe suprafețele accesibile și de pe electronice"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:aspirarea mochetei covoarelor si a parchetului",
+    "fields": {
+      "text": "Aspirarea mochetei, covoarelor și a parchetului"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/locuinte",
+        "file": "pages\\servicii\\locuinte.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Aspirarea mochetei, covoarelor și a parchetului"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:curatarea umeda a pardoselilor parchet gresie",
+    "fields": {
+      "text": "Curățarea umedă a pardoselilor (parchet/gresie)"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/locuinte",
+        "file": "pages\\servicii\\locuinte.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Curățarea umedă a pardoselilor (parchet/gresie)"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:indepartarea panzelor de paianjen daca este cazul",
+    "fields": {
+      "text": "Îndepărtarea pânzelor de păianjen (dacă este cazul)"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/locuinte",
+        "file": "pages\\servicii\\locuinte.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Îndepărtarea pânzelor de păianjen (dacă este cazul)"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:aerisirea incaperilor",
+    "fields": {
+      "text": "Aerisirea încăperilor"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/locuinte",
+        "file": "pages\\servicii\\locuinte.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Aerisirea încăperilor"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:degajarea deseurilor rezultate",
+    "fields": {
+      "text": "Degajarea deșeurilor rezultate"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/locuinte",
+        "file": "pages\\servicii\\locuinte.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Degajarea deșeurilor rezultate"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:curatarea oglinzilor",
+    "fields": {
+      "text": "Curățarea oglinzilor"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/locuinte",
+        "file": "pages\\servicii\\locuinte.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Curățarea oglinzilor"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:igienizarea si dezinfectarea grupurilor sanitare",
+    "fields": {
+      "text": "Igienizarea și dezinfectarea grupurilor sanitare"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/locuinte",
+        "file": "pages\\servicii\\locuinte.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Igienizarea și dezinfectarea grupurilor sanitare"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:spalarea manuala automata a vaselor",
+    "fields": {
+      "text": "Spălarea manuală/automată a vaselor"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/locuinte",
+        "file": "pages\\servicii\\locuinte.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Spălarea manuală/automată a vaselor"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:inlaturarea prafului si curatarea la suprafata a electrocasnicelor",
+    "fields": {
+      "text": "Înlăturarea prafului și curățarea la suprafață a electrocasnicelor"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/locuinte",
+        "file": "pages\\servicii\\locuinte.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Înlăturarea prafului și curățarea la suprafață a electrocasnicelor"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:curatarea chiuvetei",
+    "fields": {
+      "text": "Curățarea chiuvetei"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/locuinte",
+        "file": "pages\\servicii\\locuinte.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Curățarea chiuvetei"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:inlaturarea prafului si curatarea balustradei",
+    "fields": {
+      "text": "Înlăturarea prafului și curățarea balustradei"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/locuinte",
+        "file": "pages\\servicii\\locuinte.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Înlăturarea prafului și curățarea balustradei"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:curatarea si stergerea pervazelor",
+    "fields": {
+      "text": "Curățarea și ștergerea pervazelor"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/birouri",
+        "file": "pages\\servicii\\birouri.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Curățarea și ștergerea pervazelor"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:spalarea suprafetelor vitrate interioare si exterioare",
+    "fields": {
+      "text": "Spălarea suprafețelor vitrate interioare și exterioare"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/birouri",
+        "file": "pages\\servicii\\birouri.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Spălarea suprafețelor vitrate interioare și exterioare"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:curatarea panzelor de paianjen",
+    "fields": {
+      "text": "Curățarea pânzelor de păianjen"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/birouri",
+        "file": "pages\\servicii\\birouri.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Curățarea pânzelor de păianjen"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:curatarea jaluzelelor scaunelor si a plantelor",
+    "fields": {
+      "text": "Curățarea jaluzelelor, scaunelor și a plantelor"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/birouri",
+        "file": "pages\\servicii\\birouri.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Curățarea jaluzelelor, scaunelor și a plantelor"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:curatarea feroneriei si a caloriferelor",
+    "fields": {
+      "text": "Curățarea feroneriei și a caloriferelor"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/birouri",
+        "file": "pages\\servicii\\birouri.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Curățarea feroneriei și a caloriferelor"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:stergerea corpurilor de iluminat",
+    "fields": {
+      "text": "Ștergerea corpurilor de iluminat"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/birouri",
+        "file": "pages\\servicii\\birouri.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Ștergerea corpurilor de iluminat"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:curatarea aparatelor de aer conditionat",
+    "fields": {
+      "text": "Curățarea aparatelor de aer condiționat"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/birouri",
+        "file": "pages\\servicii\\birouri.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Curățarea aparatelor de aer condiționat"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:curatarea in detaliu a mobilierului si a aparaturii de birou",
+    "fields": {
+      "text": "Curățarea în detaliu a mobilierului și a aparaturii de birou"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/birouri",
+        "file": "pages\\servicii\\birouri.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Curățarea în detaliu a mobilierului și a aparaturii de birou"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:aspirarea tapiteriei canapelelor fotoliilor si scaunelor",
+    "fields": {
+      "text": "Aspirarea tapițeriei canapelelor, fotoliilor și scaunelor"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/birouri",
+        "file": "pages\\servicii\\birouri.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Aspirarea tapițeriei canapelelor, fotoliilor și scaunelor"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:curatarea cosurilor de gunoi",
+    "fields": {
+      "text": "Curățarea coșurilor de gunoi"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/birouri",
+        "file": "pages\\servicii\\birouri.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Curățarea coșurilor de gunoi"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:spalarea faiantei din grupurile sanitare",
+    "fields": {
+      "text": "Spălarea faianței din grupurile sanitare"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/birouri",
+        "file": "pages\\servicii\\birouri.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Spălarea faianței din grupurile sanitare"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:spalarea dezinfectarea si odorizarea grupurilor sanitare",
+    "fields": {
+      "text": "Spălarea, dezinfectarea și odorizarea grupurilor sanitare"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/birouri",
+        "file": "pages\\servicii\\birouri.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Spălarea, dezinfectarea și odorizarea grupurilor sanitare"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:indepartarea eventualelor panze de paianjen",
+    "fields": {
+      "text": "Îndepărtarea eventualelor pânze de păianjen"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/spatii-comerciale",
+        "file": "pages\\servicii\\spatii-comerciale.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Îndepărtarea eventualelor pânze de păianjen"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:stergerea usilor si a pervazurilor",
+    "fields": {
+      "text": "Ștergerea ușilor și a pervazurilor"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/spatii-comerciale",
+        "file": "pages\\servicii\\spatii-comerciale.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Ștergerea ușilor și a pervazurilor"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:stergerea prafului la exterior mobilier si electronice",
+    "fields": {
+      "text": "Ștergerea prafului la exterior (mobilier și electronice)"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/spatii-comerciale",
+        "file": "pages\\servicii\\spatii-comerciale.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Ștergerea prafului la exterior (mobilier și electronice)"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:curatarea si dezinfectarea bucatariei si a grupurilor sanitare",
+    "fields": {
+      "text": "Curățarea și dezinfectarea bucătăriei și a grupurilor sanitare"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/spatii-comerciale",
+        "file": "pages\\servicii\\spatii-comerciale.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Curățarea și dezinfectarea bucătăriei și a grupurilor sanitare"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:stergerea oglinzilor",
+    "fields": {
+      "text": "Ștergerea oglinzilor"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/spatii-comerciale",
+        "file": "pages\\servicii\\spatii-comerciale.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Ștergerea oglinzilor"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:stergerea umeda a pardoselilor parchet si gresie",
+    "fields": {
+      "text": "Ștergerea umedă a pardoselilor (parchet și gresie)"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/spatii-comerciale",
+        "file": "pages\\servicii\\spatii-comerciale.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Ștergerea umedă a pardoselilor (parchet și gresie)"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:colectarea si degajarea gunoiului",
+    "fields": {
+      "text": "Colectarea și degajarea gunoiului"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/spatii-comerciale",
+        "file": "pages\\servicii\\spatii-comerciale.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Colectarea și degajarea gunoiului"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:aerisirea si odorizarea incaperilor",
+    "fields": {
+      "text": "Aerisirea și odorizarea încăperilor"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/spatii-comerciale",
+        "file": "pages\\servicii\\spatii-comerciale.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Aerisirea și odorizarea încăperilor"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:curatare cu aburi",
+    "fields": {
+      "text": "Curățare cu aburi"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/generala",
+        "file": "pages\\servicii\\generala.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Curățare cu aburi"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:spalarea geamurilor accesibile pe ambele parti a tamplariei si a pervazurilor interior si exterior",
+    "fields": {
+      "text": "Spălarea geamurilor accesibile pe ambele părți, a tâmplăriei și a pervazurilor (interior și exterior)"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/generala",
+        "file": "pages\\servicii\\generala.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Spălarea geamurilor accesibile pe ambele părți, a tâmplăriei și a pervazurilor (interior și exterior)"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:detartrarea si spalarea faiantei si a obiectelor sanitare din bai",
+    "fields": {
+      "text": "Detartrarea și spălarea faianței și a obiectelor sanitare din băi"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/generala",
+        "file": "pages\\servicii\\generala.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Detartrarea și spălarea faianței și a obiectelor sanitare din băi"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:degresarea si spalarea faiantei in bucatarie",
+    "fields": {
+      "text": "Degresarea și spălarea faianței în bucătărie"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/generala",
+        "file": "pages\\servicii\\generala.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Degresarea și spălarea faianței în bucătărie"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:curatarea prizelor intrerupatoarelor si a corpurilor de iluminat",
+    "fields": {
+      "text": "Curățarea prizelor, întrerupătoarelor și a corpurilor de iluminat"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/generala",
+        "file": "pages\\servicii\\generala.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Curățarea prizelor, întrerupătoarelor și a corpurilor de iluminat"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:curatarea exterioara a caloriferelor si a tevilor",
+    "fields": {
+      "text": "Curățarea exterioară a caloriferelor și a țevilor"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/generala",
+        "file": "pages\\servicii\\generala.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Curățarea exterioară a caloriferelor și a țevilor"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:curatarea exterioara a electrocasnicelor",
+    "fields": {
+      "text": "Curățarea exterioară a electrocasnicelor"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/generala",
+        "file": "pages\\servicii\\generala.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Curățarea exterioară a electrocasnicelor"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:indepartarea prafului din locurile greu accesibile",
+    "fields": {
+      "text": "Îndepărtarea prafului din locurile greu accesibile"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/generala",
+        "file": "pages\\servicii\\generala.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Îndepărtarea prafului din locurile greu accesibile"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:indepartarea foliilor etichetelor si a resturilor de materiale de constructie adeziv chit silicon vopsea uscata etc",
+    "fields": {
+      "text": "Îndepărtarea foliilor, etichetelor și a resturilor de materiale de construcție (adeziv, chit, silicon, vopsea uscată etc.)"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/dupa-constructor",
+        "file": "pages\\servicii\\dupa-constructor.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Îndepărtarea foliilor, etichetelor și a resturilor de materiale de construcție (adeziv, chit, silicon, vopsea uscată etc.)"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:curatarea rosturilor de gresie si faianta",
+    "fields": {
+      "text": "Curățarea rosturilor de gresie și faianță"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/dupa-constructor",
+        "file": "pages\\servicii\\dupa-constructor.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Curățarea rosturilor de gresie și faianță"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:detartrarea si spalarea obiectelor sanitare si a faiantei in bai",
+    "fields": {
+      "text": "Detartrarea și spălarea obiectelor sanitare și a faianței în băi"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/dupa-constructor",
+        "file": "pages\\servicii\\dupa-constructor.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Detartrarea și spălarea obiectelor sanitare și a faianței în băi"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:curatarea tamplariei pervazurilor si a glafurilor interior si exterior",
+    "fields": {
+      "text": "Curățarea tâmplăriei, pervazurilor și a glafurilor (interior și exterior)"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/dupa-constructor",
+        "file": "pages\\servicii\\dupa-constructor.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Curățarea tâmplăriei, pervazurilor și a glafurilor (interior și exterior)"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:spalarea geamurilor accesibile pe ambele parti",
+    "fields": {
+      "text": "Spălarea geamurilor accesibile pe ambele părți"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/dupa-constructor",
+        "file": "pages\\servicii\\dupa-constructor.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Spălarea geamurilor accesibile pe ambele părți"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:curatarea colturilor plintelor tocurilor si a zonelor greu accesibile",
+    "fields": {
+      "text": "Curățarea colțurilor, plintelor, tocurilor și a zonelor greu accesibile"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/dupa-constructor",
+        "file": "pages\\servicii\\dupa-constructor.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Curățarea colțurilor, plintelor, tocurilor și a zonelor greu accesibile"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:aspirarea mochetei covoarelor parchetului si a spatiilor tehnice",
+    "fields": {
+      "text": "Aspirarea mochetei, covoarelor, parchetului și a spațiilor tehnice"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/dupa-constructor",
+        "file": "pages\\servicii\\dupa-constructor.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Aspirarea mochetei, covoarelor, parchetului și a spațiilor tehnice"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:curatarea si stergerea corpurilor de iluminat prizelor intrerupatoarelor si a elementelor decorative",
+    "fields": {
+      "text": "Curățarea și ștergerea corpurilor de iluminat, prizelor, întrerupătoarelor și a elementelor decorative"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/dupa-constructor",
+        "file": "pages\\servicii\\dupa-constructor.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Curățarea și ștergerea corpurilor de iluminat, prizelor, întrerupătoarelor și a elementelor decorative"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:curatarea exterioara a caloriferelor tevilor si a suprafetelor din inox sau sticla",
+    "fields": {
+      "text": "Curățarea exterioară a caloriferelor, țevilor și a suprafețelor din inox sau sticlă"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/dupa-constructor",
+        "file": "pages\\servicii\\dupa-constructor.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Curățarea exterioară a caloriferelor, țevilor și a suprafețelor din inox sau sticlă"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:curatarea exterioara a mobilierului si a electrocasnicelor montate",
+    "fields": {
+      "text": "Curățarea exterioară a mobilierului și a electrocasnicelor montate"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/dupa-constructor",
+        "file": "pages\\servicii\\dupa-constructor.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Curățarea exterioară a mobilierului și a electrocasnicelor montate"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:stergerea prafului fin de pe toate suprafetele mobilier usi pervazuri electronice",
+    "fields": {
+      "text": "Ștergerea prafului fin de pe toate suprafețele (mobilier, uși, pervazuri, electronice)"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/dupa-constructor",
+        "file": "pages\\servicii\\dupa-constructor.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Ștergerea prafului fin de pe toate suprafețele (mobilier, uși, pervazuri, electronice)"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:stergerea oglinzilor si lustruirea suprafetelor din sticla",
+    "fields": {
+      "text": "Ștergerea oglinzilor și lustruirea suprafețelor din sticlă"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/dupa-constructor",
+        "file": "pages\\servicii\\dupa-constructor.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Ștergerea oglinzilor și lustruirea suprafețelor din sticlă"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:curatare cu aburi pentru igienizare in profunzime",
+    "fields": {
+      "text": "Curățare cu aburi pentru igienizare în profunzime"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/dupa-constructor",
+        "file": "pages\\servicii\\dupa-constructor.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Curățare cu aburi pentru igienizare în profunzime"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:colectarea si degajarea resturilor si a gunoiului",
+    "fields": {
+      "text": "Colectarea și degajarea resturilor și a gunoiului"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/dupa-constructor",
+        "file": "pages\\servicii\\dupa-constructor.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Colectarea și degajarea resturilor și a gunoiului"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:curatarea si odorizarea balcoanelor si a teraselor",
+    "fields": {
+      "text": "Curățarea și odorizarea balcoanelor și a teraselor"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/dupa-constructor",
+        "file": "pages\\servicii\\dupa-constructor.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Curățarea și odorizarea balcoanelor și a teraselor"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "sarcini:aerisirea si odorizarea finala a incaperilor",
+    "fields": {
+      "text": "Aerisirea și odorizarea finală a încăperilor"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/dupa-constructor",
+        "file": "pages\\servicii\\dupa-constructor.html",
+        "method": "listă „Ce includem”",
+        "excerpt": "Aerisirea și odorizarea finală a încăperilor"
+      }
+    },
+    "links": {}
+  }
+]

@@ -1,0 +1,132 @@
+[
+  {
+    "impact": "mic",
+    "message": "Codul poștal din site-ul vechi („01127”) are 5 cifre; câmpul rămâne gol până la confirmare.",
+    "ref": "firma:kurat",
+    "url": "https://kurat.ro/"
+  },
+  {
+    "impact": "mediu",
+    "message": "Telefonul și emailul sunt scrise de mână de 102 ori în cele 12 pagini (linkuri tel:/mailto: și text). În Brain devin jetoane ({telefon}, {email})."
+  },
+  {
+    "impact": "mediu",
+    "message": "„Spații de producție și industriale” apare pe homepage, dar nu are pagină (cardul trimite la /servicii). În Brain e serviciu fără pagină; de decis dacă primește una.",
+    "ref": "servicii:industriale"
+  },
+  {
+    "impact": "mediu",
+    "message": "„Curățenie după petreceri/evenimente” apare pe homepage, dar nu are pagină (cardul trimite la /servicii). În Brain e serviciu fără pagină; de decis dacă primește una.",
+    "ref": "servicii:dupa-evenimente"
+  },
+  {
+    "impact": "mediu",
+    "message": "„Canapele & mochetă” apare pe homepage, dar nu are pagină (cardul trimite la /servicii). În Brain e serviciu fără pagină; de decis dacă primește una.",
+    "ref": "servicii:canapele-mocheta"
+  },
+  {
+    "impact": "mediu",
+    "message": "Cardul „Birouri și spații comerciale” de pe homepage spune 8 servicii incluse; „Servicii de curățenie pentru birouri” are 12.",
+    "ref": "servicii:birouri"
+  },
+  {
+    "impact": "mediu",
+    "message": "Cardul „Post-construcție sau renovare” de pe homepage spune 4 servicii incluse; „Curățenie după constructor” are 18.",
+    "ref": "servicii:dupa-constructor"
+  },
+  {
+    "impact": "mediu",
+    "message": "Cardul „Curățenie rezidențială” de pe homepage spune 13 servicii incluse; „Servicii de curățenie pentru locuințe” are 12.",
+    "ref": "servicii:locuinte"
+  },
+  {
+    "impact": "mediu",
+    "message": "Cardul „Post-construcție sau renovare” de pe homepage spune 4 servicii incluse; „Curățenie după constructor” are 18.",
+    "ref": "servicii:dupa-constructor"
+  },
+  {
+    "impact": "mare",
+    "message": "Tarif calculator „Curățenie de mentenanță”: API 10 lei/mp, rezerva din bundle 5 lei/mp.",
+    "ref": "servicii:mentenanta"
+  },
+  {
+    "impact": "mare",
+    "message": "Tarif calculator „Curățenie generală”: API 15 lei/mp, rezerva din bundle 12 lei/mp.",
+    "ref": "servicii:generala"
+  },
+  {
+    "impact": "mare",
+    "message": "Tarif calculator „Curățenie după constructor”: API 20 lei/mp, rezerva din bundle 25 lei/mp.",
+    "ref": "servicii:dupa-constructor"
+  },
+  {
+    "impact": "mare",
+    "message": "„Curățare canapea (injecție/extracție)”: pe pagini 200 lei, în calculator 250 lei.",
+    "ref": "extra:curatare canapea"
+  },
+  {
+    "impact": "mare",
+    "message": "„Curățare saltea”: pe pagini 50 lei, în calculator 150 lei.",
+    "ref": "extra:curatare saltea"
+  },
+  {
+    "impact": "mediu",
+    "message": "Rezerva calculatorului din bundle are alte servicii suplimentare/prețuri decât API-ul: Geamuri 50, Interior frigider 40, Interior cuptor 40, Balcon 30. Se folosește când API-ul nu răspunde."
+  },
+  {
+    "impact": "mare",
+    "message": "Prețul minim al calculatorului: API 400 lei, rezerva din bundle 150 lei.",
+    "ref": "calculator:kurat"
+  },
+  {
+    "impact": "mare",
+    "message": "Paginile au prețuri pe camere/suprafață (servicii:mentenanta 1–2 camere: 350; servicii:mentenanta 3+ camere: 400; servicii:mentenanta Casă: 700…), calculatorul calculează pe mp. Sunt două modele de preț pentru aceleași servicii; de decis care e sursa."
+  },
+  {
+    "impact": "mic",
+    "message": "Autonom are 2 testimoniale cu texte diferite (pe homepage și în portofoliu). Sunt păstrate amândouă; de ales dacă unul e versiunea corectă.",
+    "ref": "clienti:autonom"
+  },
+  {
+    "impact": "mic",
+    "message": "Valorile K-U-R-A-T sunt copiate identic pe homepage și pe /despre-noi; în Brain sunt o singură listă, la care trimit ambele pagini."
+  },
+  {
+    "impact": "mare",
+    "message": "Toate cele 12 pagini au aceeași meta description. Paginile compuse o primesc la import, dar trebuie rescrisă pe fiecare."
+  },
+  {
+    "impact": "mic",
+    "message": "Pagina Servicii de curățenie pentru locuințe nu are meta description proprie; se generează din descriere până e scrisă.",
+    "ref": "servicii:locuinte"
+  },
+  {
+    "impact": "mic",
+    "message": "Pagina Servicii de curățenie pentru birouri nu are meta description proprie; se generează din descriere până e scrisă.",
+    "ref": "servicii:birouri"
+  },
+  {
+    "impact": "mic",
+    "message": "Pagina Servicii de curățenie pentru spații comerciale nu are meta description proprie; se generează din descriere până e scrisă.",
+    "ref": "servicii:spatii-comerciale"
+  },
+  {
+    "impact": "mic",
+    "message": "Pagina Curățenie de mentenanță nu are meta description proprie; se generează din descriere până e scrisă.",
+    "ref": "servicii:mentenanta"
+  },
+  {
+    "impact": "mic",
+    "message": "Pagina Curățenie generală nu are meta description proprie; se generează din descriere până e scrisă.",
+    "ref": "servicii:generala"
+  },
+  {
+    "impact": "mic",
+    "message": "Pagina Curățenie după constructor nu are meta description proprie; se generează din descriere până e scrisă.",
+    "ref": "servicii:dupa-constructor"
+  },
+  {
+    "impact": "mic",
+    "message": "Magazinul nu are niciun produs. Tipul `produse` există în registru, gol; de decis dacă produsele stau în Brain sau în api.kurat.ro."
+  }
+]

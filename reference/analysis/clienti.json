@@ -1,0 +1,237 @@
+[
+  {
+    "ref": "clienti:google",
+    "fields": {
+      "nume": "Google",
+      "aliasuri": null,
+      "logo_id": "media:d8f3a0b5bf0e2fe062e6f4c5f09bd739d823d360",
+      "site": null,
+      "in_portofoliu": true,
+      "ordine": 1
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/portofoliu",
+        "file": "pages\\portofoliu.html",
+        "method": "logo „Au avut încredere în noi”",
+        "excerpt": "Google — client Kurat"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "clienti:autonom",
+    "fields": {
+      "nume": "Autonom",
+      "aliasuri": null,
+      "logo_id": "media:69bf67d320e176375b397cd72dd31942a0516e4f",
+      "site": null,
+      "in_portofoliu": true,
+      "ordine": 2,
+      "culoare": "#0843a8"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/portofoliu",
+        "file": "pages\\portofoliu.html",
+        "method": "logo „Au avut încredere în noi”",
+        "excerpt": "Autonom — client Kurat"
+      },
+      "culoare": {
+        "url": "https://kurat.ro/chunk-7HAY54XQ.js",
+        "file": "chunk-7HAY54XQ.js",
+        "method": "componenta testimoniale (bundle)",
+        "excerpt": "{brand:\"Autonom\",stars:5,color:\"#0843a8\""
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "clienti:lensa",
+    "fields": {
+      "nume": "Lensa",
+      "aliasuri": null,
+      "logo_id": "media:19eee96145c47405bb3a4ced3bee7abcd95cc159",
+      "site": null,
+      "in_portofoliu": true,
+      "ordine": 3,
+      "culoare": "#8a6010"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/portofoliu",
+        "file": "pages\\portofoliu.html",
+        "method": "logo „Au avut încredere în noi”",
+        "excerpt": "Lensa — client Kurat"
+      },
+      "culoare": {
+        "url": "https://kurat.ro/chunk-7HAY54XQ.js",
+        "file": "chunk-7HAY54XQ.js",
+        "method": "componenta testimoniale (bundle)",
+        "excerpt": "{brand:\"Lensa\",stars:5,color:\"#8a6010\""
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "clienti:dwf",
+    "fields": {
+      "nume": "DWF",
+      "aliasuri": null,
+      "logo_id": "media:11200acb29aa5eb2511e7b129015291ad7c0bc85",
+      "site": null,
+      "in_portofoliu": true,
+      "ordine": 4
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/portofoliu",
+        "file": "pages\\portofoliu.html",
+        "method": "logo „Au avut încredere în noi”",
+        "excerpt": "DWF — client Kurat"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "clienti:original barber shop",
+    "fields": {
+      "nume": "Original Barber Shop",
+      "aliasuri": null,
+      "logo_id": "media:904c888b607e2c547b7eab9d4b1ed4245a5daf90",
+      "site": null,
+      "in_portofoliu": true,
+      "ordine": 5,
+      "culoare": "#0a54d1"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/portofoliu",
+        "file": "pages\\portofoliu.html",
+        "method": "logo „Au avut încredere în noi”",
+        "excerpt": "Original Barber Shop — client Kurat"
+      },
+      "culoare": {
+        "url": "https://kurat.ro/chunk-7HAY54XQ.js",
+        "file": "chunk-7HAY54XQ.js",
+        "method": "componenta testimoniale (bundle)",
+        "excerpt": "{brand:\"Original Barber Shop\",stars:5,color:\"#0a54d1\""
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "clienti:unika",
+    "fields": {
+      "nume": "Unika",
+      "aliasuri": null,
+      "logo_id": "media:926ea3e4149ee46bdea8e9fed2b2b5937ce773a6",
+      "site": null,
+      "in_portofoliu": true,
+      "ordine": 6,
+      "culoare": "#0e7490"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/portofoliu",
+        "file": "pages\\portofoliu.html",
+        "method": "logo „Au avut încredere în noi”",
+        "excerpt": "Unika — client Kurat"
+      },
+      "culoare": {
+        "url": "https://kurat.ro/chunk-7HAY54XQ.js",
+        "file": "chunk-7HAY54XQ.js",
+        "method": "componenta testimoniale (bundle)",
+        "excerpt": "{brand:\"Unika\",stars:5,color:\"#0e7490\""
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "clienti:igiena",
+    "fields": {
+      "nume": "Igiena",
+      "aliasuri": null,
+      "logo_id": "media:b562e88ebb33f2d00ea520e2aac90d86a06f272a",
+      "site": null,
+      "in_portofoliu": true,
+      "ordine": 7
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/portofoliu",
+        "file": "pages\\portofoliu.html",
+        "method": "logo „Au avut încredere în noi”",
+        "excerpt": "Igiena — client Kurat"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "clienti:barber deluxe",
+    "fields": {
+      "nume": "Barber Deluxe",
+      "aliasuri": null,
+      "logo_id": "media:9b5022ef03dd0a6c8542d007e69f854958d944ba",
+      "site": null,
+      "in_portofoliu": true,
+      "ordine": 8,
+      "culoare": "#167a43"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/portofoliu",
+        "file": "pages\\portofoliu.html",
+        "method": "logo „Au avut încredere în noi”",
+        "excerpt": "Barber Deluxe — client Kurat"
+      },
+      "culoare": {
+        "url": "https://kurat.ro/chunk-7HAY54XQ.js",
+        "file": "chunk-7HAY54XQ.js",
+        "method": "componenta testimoniale (bundle)",
+        "excerpt": "{brand:\"Barber Deluxe\",stars:5,color:\"#167a43\""
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "clienti:vexio",
+    "fields": {
+      "nume": "Vexio",
+      "aliasuri": null,
+      "logo_id": "media:40932d70708219cffae914a02efdff26c3ee4f55",
+      "site": null,
+      "in_portofoliu": true,
+      "ordine": 9
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/portofoliu",
+        "file": "pages\\portofoliu.html",
+        "method": "logo „Au avut încredere în noi”",
+        "excerpt": "Vexio — client Kurat"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "clienti:make hot",
+    "fields": {
+      "nume": "Make Hot",
+      "aliasuri": null,
+      "logo_id": "media:b0e7939e0e2851533738fb5c46a0e7ed8e1b8be9",
+      "site": null,
+      "in_portofoliu": true,
+      "ordine": 10
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/portofoliu",
+        "file": "pages\\portofoliu.html",
+        "method": "logo „Au avut încredere în noi”",
+        "excerpt": "Make Hot — client Kurat"
+      }
+    },
+    "links": {}
+  }
+]

@@ -1,0 +1,442 @@
+[
+  {
+    "ref": "media:f78dddc7f4843cdea2cd914c3ac4f86fb783011a",
+    "fields": {
+      "path": "/assets/images/home.webp",
+      "file": "assets/images/home.webp",
+      "sha1": "f78dddc7f4843cdea2cd914c3ac4f86fb783011a",
+      "mime": "image/webp",
+      "size": 265942,
+      "alt": "Living luminos dintr-o locuință curățată de echipa Kurat",
+      "original_url": "https://kurat.ro/assets/images/home.webp"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/assets/images/home.webp",
+        "file": "assets/images/home.webp",
+        "method": "crawl"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "media:b277a0da13bc539eac9dca62c9b7572bad82d890",
+    "fields": {
+      "path": "/assets/images/birou.webp",
+      "file": "assets/images/birou.webp",
+      "sha1": "b277a0da13bc539eac9dca62c9b7572bad82d890",
+      "mime": "image/webp",
+      "size": 329990,
+      "alt": "Spațiu de birou modern, curat și ordonat",
+      "original_url": "https://kurat.ro/assets/images/birou.webp"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/assets/images/birou.webp",
+        "file": "assets/images/birou.webp",
+        "method": "crawl"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "media:37cf2c58d617232c5baab99ec27cad6043a3cec9",
+    "fields": {
+      "path": "/assets/images/com.webp",
+      "file": "assets/images/com.webp",
+      "sha1": "37cf2c58d617232c5baab99ec27cad6043a3cec9",
+      "mime": "image/webp",
+      "size": 210368,
+      "alt": "Spațiu comercial curat și primitor, pregătit pentru clienți",
+      "original_url": "https://kurat.ro/assets/images/com.webp"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/assets/images/com.webp",
+        "file": "assets/images/com.webp",
+        "method": "crawl"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "media:c2bf77365df9f55410a1ababcebdaab47d31fffb",
+    "fields": {
+      "path": "/assets/images/service-placeholder.webp",
+      "file": "assets/images/service-placeholder.webp",
+      "sha1": "c2bf77365df9f55410a1ababcebdaab47d31fffb",
+      "mime": "image/webp",
+      "size": 9892,
+      "alt": "Spațiu menținut impecabil prin curățenia de mentenanță Kurat",
+      "original_url": "https://kurat.ro/assets/images/service-placeholder.webp"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/assets/images/service-placeholder.webp",
+        "file": "assets/images/service-placeholder.webp",
+        "method": "crawl"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "media:d6a393169cb412d0a4e3d339c44fa64ddabe32c7",
+    "fields": {
+      "path": "/assets/images/industrial.webp",
+      "file": "assets/images/industrial.webp",
+      "sha1": "d6a393169cb412d0a4e3d339c44fa64ddabe32c7",
+      "mime": "image/webp",
+      "size": 257142,
+      "alt": "Hală de producție igienizată profesional de Kurat",
+      "original_url": "https://kurat.ro/assets/images/industrial.webp"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/assets/images/industrial.webp",
+        "file": "assets/images/industrial.webp",
+        "method": "crawl"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "media:ae3ebd08c0e983243d512f97eb44ba26f8dc5687",
+    "fields": {
+      "path": "/assets/images/post-construct.webp",
+      "file": "assets/images/post-construct.webp",
+      "sha1": "ae3ebd08c0e983243d512f97eb44ba26f8dc5687",
+      "mime": "image/webp",
+      "size": 83516,
+      "alt": "Spațiu comercial curățat de praf și resturi după lucrări de construcție",
+      "original_url": "https://kurat.ro/assets/images/post-construct.webp"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/assets/images/post-construct.webp",
+        "file": "assets/images/post-construct.webp",
+        "method": "crawl"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "media:74e8364445c17787782a422dbb4329c76e4ebbf3",
+    "fields": {
+      "path": "/assets/images/petrecere.webp",
+      "file": "assets/images/petrecere.webp",
+      "sha1": "74e8364445c17787782a422dbb4329c76e4ebbf3",
+      "mime": "image/webp",
+      "size": 128176,
+      "alt": "Spațiu readus la normal de echipa Kurat după un eveniment",
+      "original_url": "https://kurat.ro/assets/images/petrecere.webp"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/assets/images/petrecere.webp",
+        "file": "assets/images/petrecere.webp",
+        "method": "crawl"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "media:855baaaba5fbdca69f0cbe03e60de2575e6e6ae9",
+    "fields": {
+      "path": "/assets/images/post-renov.webp",
+      "file": "assets/images/post-renov.webp",
+      "sha1": "855baaaba5fbdca69f0cbe03e60de2575e6e6ae9",
+      "mime": "image/webp",
+      "size": 143276,
+      "alt": "Locuință curățată complet de echipa Kurat după renovare",
+      "original_url": "https://kurat.ro/assets/images/post-renov.webp"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/assets/images/post-renov.webp",
+        "file": "assets/images/post-renov.webp",
+        "method": "crawl"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "media:38802f16d029199e2d27a28250d1503b809a7a3a",
+    "fields": {
+      "path": "/assets/images/canapele.webp",
+      "file": "assets/images/canapele.webp",
+      "sha1": "38802f16d029199e2d27a28250d1503b809a7a3a",
+      "mime": "image/webp",
+      "size": 130256,
+      "alt": "Canapea și mochetă curățate profesional prin injecție-extracție",
+      "original_url": "https://kurat.ro/assets/images/canapele.webp"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/assets/images/canapele.webp",
+        "file": "assets/images/canapele.webp",
+        "method": "crawl"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "media:d8f3a0b5bf0e2fe062e6f4c5f09bd739d823d360",
+    "fields": {
+      "path": "/assets/clients/google.png",
+      "file": "assets/clients/google.png",
+      "sha1": "d8f3a0b5bf0e2fe062e6f4c5f09bd739d823d360",
+      "mime": "image/png",
+      "size": 15975,
+      "alt": "Google — logo",
+      "original_url": "https://kurat.ro/assets/clients/google.png"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/assets/clients/google.png",
+        "file": "assets/clients/google.png",
+        "method": "crawl"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "media:69bf67d320e176375b397cd72dd31942a0516e4f",
+    "fields": {
+      "path": "/assets/clients/autonom.png",
+      "file": "assets/clients/autonom.png",
+      "sha1": "69bf67d320e176375b397cd72dd31942a0516e4f",
+      "mime": "image/png",
+      "size": 26455,
+      "alt": "Autonom — logo",
+      "original_url": "https://kurat.ro/assets/clients/autonom.png"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/assets/clients/autonom.png",
+        "file": "assets/clients/autonom.png",
+        "method": "crawl"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "media:19eee96145c47405bb3a4ced3bee7abcd95cc159",
+    "fields": {
+      "path": "/assets/clients/lensa.jpg",
+      "file": "assets/clients/lensa.jpg",
+      "sha1": "19eee96145c47405bb3a4ced3bee7abcd95cc159",
+      "mime": "image/jpeg",
+      "size": 8661,
+      "alt": "Lensa — logo",
+      "original_url": "https://kurat.ro/assets/clients/lensa.jpg"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/assets/clients/lensa.jpg",
+        "file": "assets/clients/lensa.jpg",
+        "method": "crawl"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "media:11200acb29aa5eb2511e7b129015291ad7c0bc85",
+    "fields": {
+      "path": "/assets/clients/dwf.png",
+      "file": "assets/clients/dwf.png",
+      "sha1": "11200acb29aa5eb2511e7b129015291ad7c0bc85",
+      "mime": "image/png",
+      "size": 25243,
+      "alt": "DWF — logo",
+      "original_url": "https://kurat.ro/assets/clients/dwf.png"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/assets/clients/dwf.png",
+        "file": "assets/clients/dwf.png",
+        "method": "crawl"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "media:904c888b607e2c547b7eab9d4b1ed4245a5daf90",
+    "fields": {
+      "path": "/assets/clients/original-barber-shop.png",
+      "file": "assets/clients/original-barber-shop.png",
+      "sha1": "904c888b607e2c547b7eab9d4b1ed4245a5daf90",
+      "mime": "image/png",
+      "size": 20017,
+      "alt": "Original Barber Shop — logo",
+      "original_url": "https://kurat.ro/assets/clients/original-barber-shop.png"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/assets/clients/original-barber-shop.png",
+        "file": "assets/clients/original-barber-shop.png",
+        "method": "crawl"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "media:926ea3e4149ee46bdea8e9fed2b2b5937ce773a6",
+    "fields": {
+      "path": "/assets/clients/unika.png",
+      "file": "assets/clients/unika.png",
+      "sha1": "926ea3e4149ee46bdea8e9fed2b2b5937ce773a6",
+      "mime": "image/png",
+      "size": 59677,
+      "alt": "Unika — logo",
+      "original_url": "https://kurat.ro/assets/clients/unika.png"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/assets/clients/unika.png",
+        "file": "assets/clients/unika.png",
+        "method": "crawl"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "media:b562e88ebb33f2d00ea520e2aac90d86a06f272a",
+    "fields": {
+      "path": "/assets/clients/igiena.png",
+      "file": "assets/clients/igiena.png",
+      "sha1": "b562e88ebb33f2d00ea520e2aac90d86a06f272a",
+      "mime": "image/png",
+      "size": 45354,
+      "alt": "Igiena — logo",
+      "original_url": "https://kurat.ro/assets/clients/igiena.png"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/assets/clients/igiena.png",
+        "file": "assets/clients/igiena.png",
+        "method": "crawl"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "media:9b5022ef03dd0a6c8542d007e69f854958d944ba",
+    "fields": {
+      "path": "/assets/clients/barber-deluxe.jpg",
+      "file": "assets/clients/barber-deluxe.jpg",
+      "sha1": "9b5022ef03dd0a6c8542d007e69f854958d944ba",
+      "mime": "image/jpeg",
+      "size": 10249,
+      "alt": "Barber Deluxe — logo",
+      "original_url": "https://kurat.ro/assets/clients/barber-deluxe.jpg"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/assets/clients/barber-deluxe.jpg",
+        "file": "assets/clients/barber-deluxe.jpg",
+        "method": "crawl"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "media:40932d70708219cffae914a02efdff26c3ee4f55",
+    "fields": {
+      "path": "/assets/clients/vexio.jpg",
+      "file": "assets/clients/vexio.jpg",
+      "sha1": "40932d70708219cffae914a02efdff26c3ee4f55",
+      "mime": "image/jpeg",
+      "size": 8350,
+      "alt": "Vexio — logo",
+      "original_url": "https://kurat.ro/assets/clients/vexio.jpg"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/assets/clients/vexio.jpg",
+        "file": "assets/clients/vexio.jpg",
+        "method": "crawl"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "media:b0e7939e0e2851533738fb5c46a0e7ed8e1b8be9",
+    "fields": {
+      "path": "/assets/clients/make-hot.jpg",
+      "file": "assets/clients/make-hot.jpg",
+      "sha1": "b0e7939e0e2851533738fb5c46a0e7ed8e1b8be9",
+      "mime": "image/jpeg",
+      "size": 13128,
+      "alt": "Make Hot — logo",
+      "original_url": "https://kurat.ro/assets/clients/make-hot.jpg"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/assets/clients/make-hot.jpg",
+        "file": "assets/clients/make-hot.jpg",
+        "method": "crawl"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "media:7004ee52f9ffeba529b70ddd4057114600bdbe30",
+    "fields": {
+      "path": "/assets/images/hero-team.webp",
+      "file": "assets/images/hero-team.webp",
+      "sha1": "7004ee52f9ffeba529b70ddd4057114600bdbe30",
+      "mime": "image/webp",
+      "size": 48054,
+      "alt": "Echipa Kurat în uniformă, gata de curățenie profesională",
+      "original_url": "https://kurat.ro/assets/images/hero-team.webp"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/assets/images/hero-team.webp",
+        "file": "assets/images/hero-team.webp",
+        "method": "crawl"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "media:4626be37700590c2f04ee9a681fbe663ba1700d5",
+    "fields": {
+      "path": "/assets/about-cleaning.webp",
+      "file": "assets/about-cleaning.webp",
+      "sha1": "4626be37700590c2f04ee9a681fbe663ba1700d5",
+      "mime": "image/webp",
+      "size": 21614,
+      "alt": "Echipă Kurat în timpul unei curățenii profesionale",
+      "original_url": "https://kurat.ro/assets/about-cleaning.webp"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/assets/about-cleaning.webp",
+        "file": "assets/about-cleaning.webp",
+        "method": "crawl"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "media:339144d37ed4c0f6f518904799f3b87ff3de4fc4",
+    "fields": {
+      "path": "/assets/images/market-hero.webp",
+      "file": "assets/images/market-hero.webp",
+      "sha1": "339144d37ed4c0f6f518904799f3b87ff3de4fc4",
+      "mime": "image/webp",
+      "size": 41902,
+      "alt": "Produse de curățenie Kurat — flacoane profesionale așezate pe un podium",
+      "original_url": "https://kurat.ro/assets/images/market-hero.webp"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/assets/images/market-hero.webp",
+        "file": "assets/images/market-hero.webp",
+        "method": "crawl"
+      }
+    },
+    "links": {}
+  }
+]

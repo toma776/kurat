@@ -1,0 +1,49 @@
+{
+  "mentions": [
+    {
+      "in": "sectiuni:/servicii#svc-spatiu-h",
+      "field": "intro",
+      "mentions": "servicii:locuinte",
+      "name": "locuinte",
+      "excerpt": "Locuințe, birouri și spații comerciale."
+    },
+    {
+      "in": "sectiuni:/servicii#svc-spatiu-h",
+      "field": "intro",
+      "mentions": "servicii:spatii-comerciale",
+      "name": "spatii comerciale",
+      "excerpt": "Locuințe, birouri și spații comerciale."
+    },
+    {
+      "in": "sectiuni:/servicii#svc-tip-h",
+      "field": "intro",
+      "mentions": "servicii:mentenanta",
+      "name": "mentenanta",
+      "excerpt": "Mentenanță, curățenie generală sau după constructo…"
+    },
+    {
+      "in": "sectiuni:/servicii#svc-tip-h",
+      "field": "intro",
+      "mentions": "servicii:generala",
+      "name": "curatenie generala",
+      "excerpt": "Mentenanță, curățenie generală sau după constructor — cu prețuri orien…"
+    },
+    {
+      "in": "sectiuni:/servicii#svc-tip-h",
+      "field": "intro",
+      "mentions": "servicii:dupa-constructor",
+      "name": "dupa constructor",
+      "excerpt": "Mentenanță, curățenie generală sau după constructor — cu prețuri orientative."
+    }
+  ],
+  "notSearched": [
+    "Birouri (servicii:birouri)",
+    "Google (clienti:google)",
+    "Autonom (clienti:autonom)",
+    "Lensa (clienti:lensa)",
+    "DWF (clienti:dwf)",
+    "Unika (clienti:unika)",
+    "Igiena (clienti:igiena)",
+    "Vexio (clienti:vexio)"
+  ]
+}

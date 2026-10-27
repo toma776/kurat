@@ -1,0 +1,922 @@
+[
+  {
+    "ref": "servicii:locuinte",
+    "fields": {
+      "fel": "spatiu",
+      "nume": "Servicii de curățenie pentru locuințe",
+      "nume_scurt": "Locuințe",
+      "aliasuri": null,
+      "slug": "locuinte",
+      "pagina": true,
+      "icon": "home",
+      "descriere": "Curățenie completă pentru apartamente, case și vile — cameră cu cameră, cu produse profesionale.",
+      "imagine_id": "media:f78dddc7f4843cdea2cd914c3ac4f86fb783011a",
+      "acopera": [
+        "Living",
+        "Dormitor",
+        "Bucătărie",
+        "Baie",
+        "Hol",
+        "Balcon"
+      ],
+      "tarif_mp": null,
+      "cheie_calculator": null
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/locuinte",
+        "file": "pages\\servicii\\locuinte.html",
+        "method": "pagina serviciului",
+        "excerpt": "Servicii de curățenie pentru locuințe"
+      },
+      "descriere": {
+        "url": "https://kurat.ro/servicii/locuinte",
+        "file": "pages\\servicii\\locuinte.html",
+        "method": "hero",
+        "excerpt": "Curățenie completă pentru apartamente, case și vile — cameră cu cameră, cu produse profesionale."
+      },
+      "nume_scurt": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "link în subsol",
+        "excerpt": "Locuințe"
+      }
+    },
+    "links": {
+      "sarcini": [
+        {
+          "ref": "sarcini:inlaturarea prafului de pe suprafetele accesibile si de pe electronice",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:aspirarea mochetei covoarelor si a parchetului",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:curatarea umeda a pardoselilor parchet gresie",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:indepartarea panzelor de paianjen daca este cazul",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:aerisirea incaperilor",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:degajarea deseurilor rezultate",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:curatarea oglinzilor",
+          "status": "confirmed",
+          "attrs": {
+            "grup": "Baie"
+          }
+        },
+        {
+          "ref": "sarcini:igienizarea si dezinfectarea grupurilor sanitare",
+          "status": "confirmed",
+          "attrs": {
+            "grup": "Baie"
+          }
+        },
+        {
+          "ref": "sarcini:spalarea manuala automata a vaselor",
+          "status": "confirmed",
+          "attrs": {
+            "grup": "Bucătărie"
+          }
+        },
+        {
+          "ref": "sarcini:inlaturarea prafului si curatarea la suprafata a electrocasnicelor",
+          "status": "confirmed",
+          "attrs": {
+            "grup": "Bucătărie"
+          }
+        },
+        {
+          "ref": "sarcini:curatarea chiuvetei",
+          "status": "confirmed",
+          "attrs": {
+            "grup": "Bucătărie"
+          }
+        },
+        {
+          "ref": "sarcini:inlaturarea prafului si curatarea balustradei",
+          "status": "confirmed",
+          "attrs": {
+            "grup": "Balcon"
+          }
+        }
+      ],
+      "extra": []
+    }
+  },
+  {
+    "ref": "servicii:birouri",
+    "fields": {
+      "fel": "spatiu",
+      "nume": "Servicii de curățenie pentru birouri",
+      "nume_scurt": "Birouri",
+      "aliasuri": null,
+      "slug": "birouri",
+      "pagina": true,
+      "icon": "building",
+      "descriere": "Igienizare profesională pentru birouri, recepții și spații de lucru — pentru o imagine impecabilă.",
+      "imagine_id": "media:b277a0da13bc539eac9dca62c9b7572bad82d890",
+      "acopera": null,
+      "tarif_mp": null,
+      "cheie_calculator": null
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/birouri",
+        "file": "pages\\servicii\\birouri.html",
+        "method": "pagina serviciului",
+        "excerpt": "Servicii de curățenie pentru birouri"
+      },
+      "descriere": {
+        "url": "https://kurat.ro/servicii/birouri",
+        "file": "pages\\servicii\\birouri.html",
+        "method": "hero",
+        "excerpt": "Igienizare profesională pentru birouri, recepții și spații de lucru — pentru o imagine impecabilă."
+      },
+      "nume_scurt": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "link în subsol",
+        "excerpt": "Birouri"
+      }
+    },
+    "links": {
+      "sarcini": [
+        {
+          "ref": "sarcini:curatarea si stergerea pervazelor",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:spalarea suprafetelor vitrate interioare si exterioare",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:curatarea panzelor de paianjen",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:curatarea jaluzelelor scaunelor si a plantelor",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:curatarea feroneriei si a caloriferelor",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:stergerea corpurilor de iluminat",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:curatarea aparatelor de aer conditionat",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:curatarea in detaliu a mobilierului si a aparaturii de birou",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:aspirarea tapiteriei canapelelor fotoliilor si scaunelor",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:curatarea cosurilor de gunoi",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:spalarea faiantei din grupurile sanitare",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:spalarea dezinfectarea si odorizarea grupurilor sanitare",
+          "status": "confirmed",
+          "attrs": null
+        }
+      ],
+      "extra": []
+    }
+  },
+  {
+    "ref": "servicii:spatii-comerciale",
+    "fields": {
+      "fel": "spatiu",
+      "nume": "Servicii de curățenie pentru spații comerciale",
+      "nume_scurt": "Spații comerciale",
+      "aliasuri": null,
+      "slug": "spatii-comerciale",
+      "pagina": true,
+      "icon": "store",
+      "descriere": "Curățenie de încredere pentru magazine, showroom-uri și spații cu public, adaptată programului tău.",
+      "imagine_id": "media:37cf2c58d617232c5baab99ec27cad6043a3cec9",
+      "acopera": null,
+      "tarif_mp": null,
+      "cheie_calculator": null
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/spatii-comerciale",
+        "file": "pages\\servicii\\spatii-comerciale.html",
+        "method": "pagina serviciului",
+        "excerpt": "Servicii de curățenie pentru spații comerciale"
+      },
+      "descriere": {
+        "url": "https://kurat.ro/servicii/spatii-comerciale",
+        "file": "pages\\servicii\\spatii-comerciale.html",
+        "method": "hero",
+        "excerpt": "Curățenie de încredere pentru magazine, showroom-uri și spații cu public, adaptată programului tău."
+      },
+      "nume_scurt": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "link în subsol",
+        "excerpt": "Spații comerciale"
+      }
+    },
+    "links": {
+      "sarcini": [
+        {
+          "ref": "sarcini:aspirarea mochetei covoarelor si a parchetului",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:indepartarea eventualelor panze de paianjen",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:stergerea usilor si a pervazurilor",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:stergerea prafului la exterior mobilier si electronice",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:curatarea si dezinfectarea bucatariei si a grupurilor sanitare",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:stergerea oglinzilor",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:stergerea umeda a pardoselilor parchet si gresie",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:colectarea si degajarea gunoiului",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:aerisirea si odorizarea incaperilor",
+          "status": "confirmed",
+          "attrs": null
+        }
+      ],
+      "extra": []
+    }
+  },
+  {
+    "ref": "servicii:mentenanta",
+    "fields": {
+      "fel": "curatenie",
+      "nume": "Curățenie de mentenanță",
+      "nume_scurt": null,
+      "aliasuri": [
+        "Mentenanță"
+      ],
+      "slug": "mentenanta",
+      "pagina": true,
+      "icon": "sparkle",
+      "descriere": "Întreținere periodică a unui spațiu deja curat, pentru a-l păstra impecabil zi de zi.",
+      "imagine_id": "media:c2bf77365df9f55410a1ababcebdaab47d31fffb",
+      "acopera": null,
+      "tarif_mp": 10,
+      "cheie_calculator": "maintenance",
+      "culoare": "#0f69f5",
+      "calc_eticheta": "Mentenanță",
+      "calc_descriere": "Curățenie de întreținere"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/mentenanta",
+        "file": "pages\\servicii\\mentenanta.html",
+        "method": "pagina serviciului",
+        "excerpt": "Curățenie de mentenanță"
+      },
+      "descriere": {
+        "url": "https://kurat.ro/servicii/mentenanta",
+        "file": "pages\\servicii\\mentenanta.html",
+        "method": "hero",
+        "excerpt": "Întreținere periodică a unui spațiu deja curat, pentru a-l păstra impecabil zi de zi."
+      },
+      "tarif_mp": {
+        "url": "https://api.kurat.ro/api/calculator/config",
+        "file": "api\\api_calculator_config.json",
+        "kind": "endpoint",
+        "method": "API /api/calculator/config",
+        "excerpt": "maintenance: 10 lei/mp",
+        "certainty": "unverified",
+        "note": "Rezerva din bundle spune 5 lei/mp.",
+        "conflictsWith": {
+          "url": "https://kurat.ro/chunk-7HAY54XQ.js",
+          "file": "chunk-7HAY54XQ.js",
+          "method": "rezervă în bundle",
+          "excerpt": "maintenance: 5"
+        }
+      },
+      "culoare": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "calculator, culoarea opțiunii",
+        "excerpt": "Mentenanță"
+      },
+      "calc_eticheta": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "calculator, eticheta opțiunii",
+        "excerpt": "Mentenanță"
+      },
+      "calc_descriere": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "calculator, descrierea opțiunii",
+        "excerpt": "Curățenie de întreținere"
+      }
+    },
+    "links": {
+      "sarcini": [
+        {
+          "ref": "sarcini:aspirarea mochetei covoarelor si a parchetului",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:indepartarea eventualelor panze de paianjen",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:stergerea usilor si a pervazurilor",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:stergerea prafului la exterior mobilier si electronice",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:curatarea si dezinfectarea bucatariei si a grupurilor sanitare",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:stergerea oglinzilor",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:stergerea umeda a pardoselilor parchet si gresie",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:colectarea si degajarea gunoiului",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:aerisirea si odorizarea incaperilor",
+          "status": "confirmed",
+          "attrs": null
+        }
+      ],
+      "extra": [
+        {
+          "ref": "extra:curatare canapea",
+          "status": "confirmed"
+        },
+        {
+          "ref": "extra:curatare saltea",
+          "status": "confirmed"
+        },
+        {
+          "ref": "extra:curatare cu aburi",
+          "status": "confirmed"
+        },
+        {
+          "ref": "extra:curatare scaun textil",
+          "status": "confirmed"
+        },
+        {
+          "ref": "extra:calcat haine",
+          "status": "confirmed"
+        }
+      ]
+    }
+  },
+  {
+    "ref": "servicii:generala",
+    "fields": {
+      "fel": "curatenie",
+      "nume": "Curățenie generală",
+      "nume_scurt": null,
+      "aliasuri": [
+        "Generală"
+      ],
+      "slug": "generala",
+      "pagina": true,
+      "icon": "broom",
+      "descriere": "Curățenie aprofundată a întregului spațiu, cu detartrare, degresare și curățare cu aburi.",
+      "imagine_id": "media:c2bf77365df9f55410a1ababcebdaab47d31fffb",
+      "acopera": null,
+      "tarif_mp": 15,
+      "cheie_calculator": "general",
+      "culoare": "#1f9d57",
+      "calc_eticheta": "Curățenie generală",
+      "calc_descriere": "Curățenie generală / în profunzime"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/generala",
+        "file": "pages\\servicii\\generala.html",
+        "method": "pagina serviciului",
+        "excerpt": "Curățenie generală"
+      },
+      "descriere": {
+        "url": "https://kurat.ro/servicii/generala",
+        "file": "pages\\servicii\\generala.html",
+        "method": "hero",
+        "excerpt": "Curățenie aprofundată a întregului spațiu, cu detartrare, degresare și curățare cu aburi."
+      },
+      "tarif_mp": {
+        "url": "https://api.kurat.ro/api/calculator/config",
+        "file": "api\\api_calculator_config.json",
+        "kind": "endpoint",
+        "method": "API /api/calculator/config",
+        "excerpt": "general: 15 lei/mp",
+        "certainty": "unverified",
+        "note": "Rezerva din bundle spune 12 lei/mp.",
+        "conflictsWith": {
+          "url": "https://kurat.ro/chunk-7HAY54XQ.js",
+          "file": "chunk-7HAY54XQ.js",
+          "method": "rezervă în bundle",
+          "excerpt": "general: 12"
+        }
+      },
+      "culoare": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "calculator, culoarea opțiunii",
+        "excerpt": "Curățenie generală"
+      },
+      "calc_eticheta": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "calculator, eticheta opțiunii",
+        "excerpt": "Curățenie generală"
+      },
+      "calc_descriere": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "calculator, descrierea opțiunii",
+        "excerpt": "Curățenie generală / în profunzime"
+      }
+    },
+    "links": {
+      "sarcini": [
+        {
+          "ref": "sarcini:curatare cu aburi",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:aspirarea mochetei covoarelor si a parchetului",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:indepartarea eventualelor panze de paianjen",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:stergerea usilor si a pervazurilor",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:stergerea prafului la exterior mobilier si electronice",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:curatarea si dezinfectarea bucatariei si a grupurilor sanitare",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:stergerea oglinzilor",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:stergerea umeda a pardoselilor parchet si gresie",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:colectarea si degajarea gunoiului",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:aerisirea si odorizarea incaperilor",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:spalarea geamurilor accesibile pe ambele parti a tamplariei si a pervazurilor interior si exterior",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:detartrarea si spalarea faiantei si a obiectelor sanitare din bai",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:degresarea si spalarea faiantei in bucatarie",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:curatarea prizelor intrerupatoarelor si a corpurilor de iluminat",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:curatarea exterioara a caloriferelor si a tevilor",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:curatarea exterioara a electrocasnicelor",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:indepartarea prafului din locurile greu accesibile",
+          "status": "confirmed",
+          "attrs": null
+        }
+      ],
+      "extra": [
+        {
+          "ref": "extra:curatare canapea",
+          "status": "confirmed"
+        },
+        {
+          "ref": "extra:curatare saltea",
+          "status": "confirmed"
+        },
+        {
+          "ref": "extra:curatare cu aburi",
+          "status": "confirmed"
+        },
+        {
+          "ref": "extra:curatare scaun textil",
+          "status": "confirmed"
+        },
+        {
+          "ref": "extra:calcat haine",
+          "status": "confirmed"
+        }
+      ]
+    }
+  },
+  {
+    "ref": "servicii:dupa-constructor",
+    "fields": {
+      "fel": "curatenie",
+      "nume": "Curățenie după constructor",
+      "nume_scurt": "După constructor",
+      "aliasuri": null,
+      "slug": "dupa-constructor",
+      "pagina": true,
+      "icon": "construct",
+      "descriere": "Îndepărtăm praful și resturile rămase după lucrări sau renovare, pentru o predare impecabilă.",
+      "imagine_id": "media:c2bf77365df9f55410a1ababcebdaab47d31fffb",
+      "acopera": null,
+      "tarif_mp": 20,
+      "cheie_calculator": "post-construction",
+      "culoare": "#8a6010",
+      "calc_eticheta": "După constructor",
+      "calc_descriere": "Curățenie după lucrări"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/servicii/dupa-constructor",
+        "file": "pages\\servicii\\dupa-constructor.html",
+        "method": "pagina serviciului",
+        "excerpt": "Curățenie după constructor"
+      },
+      "descriere": {
+        "url": "https://kurat.ro/servicii/dupa-constructor",
+        "file": "pages\\servicii\\dupa-constructor.html",
+        "method": "hero",
+        "excerpt": "Îndepărtăm praful și resturile rămase după lucrări sau renovare, pentru o predare impecabilă."
+      },
+      "nume_scurt": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "link în subsol",
+        "excerpt": "După constructor"
+      },
+      "tarif_mp": {
+        "url": "https://api.kurat.ro/api/calculator/config",
+        "file": "api\\api_calculator_config.json",
+        "kind": "endpoint",
+        "method": "API /api/calculator/config",
+        "excerpt": "post-construction: 20 lei/mp",
+        "certainty": "unverified",
+        "note": "Rezerva din bundle spune 25 lei/mp.",
+        "conflictsWith": {
+          "url": "https://kurat.ro/chunk-7HAY54XQ.js",
+          "file": "chunk-7HAY54XQ.js",
+          "method": "rezervă în bundle",
+          "excerpt": "post-construction: 25"
+        }
+      },
+      "culoare": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "calculator, culoarea opțiunii",
+        "excerpt": "După constructor"
+      },
+      "calc_eticheta": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "calculator, eticheta opțiunii",
+        "excerpt": "După constructor"
+      },
+      "calc_descriere": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "calculator, descrierea opțiunii",
+        "excerpt": "Curățenie după lucrări"
+      }
+    },
+    "links": {
+      "sarcini": [
+        {
+          "ref": "sarcini:indepartarea foliilor etichetelor si a resturilor de materiale de constructie adeziv chit silicon vopsea uscata etc",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:curatarea rosturilor de gresie si faianta",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:degresarea si spalarea faiantei in bucatarie",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:detartrarea si spalarea obiectelor sanitare si a faiantei in bai",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:curatarea tamplariei pervazurilor si a glafurilor interior si exterior",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:spalarea geamurilor accesibile pe ambele parti",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:curatarea colturilor plintelor tocurilor si a zonelor greu accesibile",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:aspirarea mochetei covoarelor parchetului si a spatiilor tehnice",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:curatarea si stergerea corpurilor de iluminat prizelor intrerupatoarelor si a elementelor decorative",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:curatarea exterioara a caloriferelor tevilor si a suprafetelor din inox sau sticla",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:curatarea exterioara a mobilierului si a electrocasnicelor montate",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:stergerea prafului fin de pe toate suprafetele mobilier usi pervazuri electronice",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:stergerea oglinzilor si lustruirea suprafetelor din sticla",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:stergerea umeda a pardoselilor parchet si gresie",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:curatare cu aburi pentru igienizare in profunzime",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:colectarea si degajarea resturilor si a gunoiului",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:curatarea si odorizarea balcoanelor si a teraselor",
+          "status": "confirmed",
+          "attrs": null
+        },
+        {
+          "ref": "sarcini:aerisirea si odorizarea finala a incaperilor",
+          "status": "confirmed",
+          "attrs": null
+        }
+      ],
+      "extra": [
+        {
+          "ref": "extra:curatare scaun textil",
+          "status": "confirmed"
+        }
+      ]
+    }
+  },
+  {
+    "ref": "servicii:industriale",
+    "fields": {
+      "fel": "spatiu",
+      "icon": "factory",
+      "nume": "Spații de producție și industriale",
+      "nume_scurt": "Industriale",
+      "slug": "industriale",
+      "pagina": false,
+      "descriere": "Degresare, dezinfecție și organizare pentru hale și linii de producție.",
+      "imagine_id": "media:d6a393169cb412d0a4e3d339c44fa64ddabe32c7",
+      "acopera": null,
+      "aliasuri": null,
+      "tarif_mp": null,
+      "cheie_calculator": null
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "card „Pentru companii” fără pagină proprie",
+        "excerpt": "Spații de producție și industriale: Degresare, dezinfecție și organizare pentru hale și linii de producție."
+      }
+    },
+    "links": {
+      "sarcini": [],
+      "extra": []
+    }
+  },
+  {
+    "ref": "servicii:dupa-evenimente",
+    "fields": {
+      "fel": "curatenie",
+      "icon": "party",
+      "nume": "Curățenie după petreceri/evenimente",
+      "nume_scurt": "După evenimente",
+      "slug": "dupa-evenimente",
+      "pagina": false,
+      "descriere": "Readucem spațiul la normal după evenimente, rapid și complet.",
+      "imagine_id": "media:74e8364445c17787782a422dbb4329c76e4ebbf3",
+      "acopera": null,
+      "aliasuri": null,
+      "tarif_mp": null,
+      "cheie_calculator": null
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "card „Pentru persoane” fără pagină proprie",
+        "excerpt": "Curățenie după petreceri/evenimente: Readucem spațiul la normal după evenimente, rapid și complet."
+      }
+    },
+    "links": {
+      "sarcini": [],
+      "extra": []
+    }
+  },
+  {
+    "ref": "servicii:canapele-mocheta",
+    "fields": {
+      "fel": "curatenie",
+      "icon": "sofa",
+      "nume": "Canapele & mochetă",
+      "nume_scurt": "Canapele & mochetă",
+      "slug": "canapele-mocheta",
+      "pagina": false,
+      "descriere": "Spălare profesională cu injecție-extracție pentru textile.",
+      "imagine_id": "media:38802f16d029199e2d27a28250d1503b809a7a3a",
+      "acopera": null,
+      "aliasuri": [
+        "Mochetă / tapițerie"
+      ],
+      "tarif_mp": 8,
+      "cheie_calculator": "carpet",
+      "culoare": "#0891b2",
+      "calc_eticheta": "Canapele & mochetă",
+      "calc_descriere": "Spălare mochetă și tapițerie"
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "card „Pentru persoane” fără pagină proprie",
+        "excerpt": "Canapele & mochetă: Spălare profesională cu injecție-extracție pentru textile."
+      },
+      "tarif_mp": {
+        "url": "https://api.kurat.ro/api/calculator/config",
+        "file": "api\\api_calculator_config.json",
+        "kind": "endpoint",
+        "method": "API /api/calculator/config",
+        "excerpt": "carpet: 8 lei/mp"
+      },
+      "culoare": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "calculator, culoarea opțiunii",
+        "excerpt": "Canapele & mochetă"
+      },
+      "calc_eticheta": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "calculator, eticheta opțiunii",
+        "excerpt": "Canapele & mochetă"
+      },
+      "calc_descriere": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "calculator, descrierea opțiunii",
+        "excerpt": "Spălare mochetă și tapițerie"
+      }
+    },
+    "links": {
+      "sarcini": [],
+      "extra": []
+    }
+  }
+]

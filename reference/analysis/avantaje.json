@@ -1,0 +1,107 @@
+[
+  {
+    "ref": "avantaje:profesionalism si experienta",
+    "fields": {
+      "categorie": "Calitate",
+      "icon": "sparkle",
+      "titlu": "Profesionalism și experiență",
+      "text": "Echipa noastră este alcătuită din specialiști cu experiență solidă în domeniul serviciilor de curățenie profesională.",
+      "risc_titlu": "Scăderea calității",
+      "risc_text": "Absența personalului calificat și a echipamentelor profesionale se reflectă direct în scăderea calității și eficienței procesului de curățenie.",
+      "ordine": 1
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "secțiunea „De ce să alegi Kurat”",
+        "excerpt": "Profesionalism și experiență"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "avantaje:curatenie eficienta si durabila",
+    "fields": {
+      "categorie": "Costuri",
+      "icon": "drop",
+      "titlu": "Curățenie eficientă și durabilă",
+      "text": "Ne bazăm pe echipamente moderne și soluții de curățenie de calitate superioară, care garantează eficiență și protecția suprafețelor.",
+      "risc_titlu": "Apariția costurilor mai mari",
+      "risc_text": "Achiziționarea produselor și echipamentelor de calitate poate fi costisitoare, iar lipsa experienței poate cauza risipa produselor.",
+      "ordine": 2
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "secțiunea „De ce să alegi Kurat”",
+        "excerpt": "Curățenie eficientă și durabilă"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "avantaje:servicii personalizate",
+    "fields": {
+      "categorie": "Suprafețe",
+      "icon": "sofa",
+      "titlu": "Servicii personalizate",
+      "text": "Fiecare client este unic, iar soluțiile noastre sunt create pe măsură, adică adaptate nevoilor, ritmului și stilului fiecărui spațiu.",
+      "risc_titlu": "Apariția daunelor",
+      "risc_text": "Folosirea necorespunzătoare a produselor sau tehnicilor de curățenie, în absența unui specialist, poate provoca deteriorări ireversibile pe suprafețe sau în încăperi.",
+      "ordine": 3
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "secțiunea „De ce să alegi Kurat”",
+        "excerpt": "Servicii personalizate"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "avantaje:incredere si siguranta",
+    "fields": {
+      "categorie": "Flexibilitate",
+      "icon": "calendar",
+      "titlu": "Încredere și siguranță",
+      "text": "Ne respectăm angajamentele și acționăm cu integritate, oferind clienților noștri transparență și încredere deplină în fiecare colaborare.",
+      "risc_titlu": "Lipsa flexibilității",
+      "risc_text": "Gestionarea individuală a curățeniei presupune un efort suplimentar de organizare, care poate interfera cu prioritățile tale profesionale sau personale.",
+      "ordine": 4
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "secțiunea „De ce să alegi Kurat”",
+        "excerpt": "Încredere și siguranță"
+      }
+    },
+    "links": {}
+  },
+  {
+    "ref": "avantaje:optimizarea timpului",
+    "fields": {
+      "categorie": "Timp",
+      "icon": "party",
+      "titlu": "Optimizarea timpului",
+      "text": "Preluăm integral responsabilitatea curățeniei, oferindu-ți libertatea de a-ți dedica timpul altor priorități.",
+      "risc_titlu": "Pierderea timpului",
+      "risc_text": "Fără un partener specializat, riști să consumi resurse esențiale, adică timp, energie și eficiență, toate în detrimentul activităților prioritare.",
+      "ordine": 5
+    },
+    "prov": {
+      "": {
+        "url": "https://kurat.ro/",
+        "file": "pages\\index.html",
+        "method": "secțiunea „De ce să alegi Kurat”",
+        "excerpt": "Optimizarea timpului"
+      }
+    },
+    "links": {}
+  }
+]
