@@ -13,6 +13,7 @@ import {findDuplicates} from '../core/duplicates.mjs';
 import {validationState, validationSummary} from '../core/validations.mjs';
 import {listBackups, AUTO_EVERY_HOURS} from '../core/backup.mjs';
 import {icon as siteIcon} from '../site/icons.mjs';
+import {gitSyncStatus} from '../core/gitsync.mjs';
 
 const esc = s => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const asset = name => { try { return `/manage/static/${name}?v=${sha1(fs.readFileSync(new URL(`./static/${name}`, import.meta.url))).slice(0, 10)}`; } catch { return `/manage/static/${name}`; } };
@@ -63,6 +64,23 @@ const ICON_PATHS = {
 export const ico = (name, cls = 'i') => ICON_PATHS[name] ? `<svg class="${cls}" viewBox="0 0 24 24" aria-hidden="true"><path d="${ICON_PATHS[name]}"/></svg>` : '';
 const catIcon = k => ENTITIES.find(e => e.category === k && e.icon && ICON_PATHS[e.icon])?.icon ?? 'layers';
 
+// ———————————————————————————————————————————— sincronizarea cu GitHub și Vercel (doar serverul local)
+
+function syncBox() {
+  const g = gitSyncStatus();
+  if (!g.enabled) return '';
+  const time = s => new Date(s).toLocaleTimeString('ro-RO', {hour: '2-digit', minute: '2-digit'});
+  const [dot, title, detail] = {
+    ok: ['', 'GitHub și Vercel: la zi', g.lastPushAt ? `ultima urcare la ${time(g.lastPushAt)}` : 'nicio modificare nouă'],
+    pending: ['warn', 'Modificări de urcat', 'pleacă singure după un minut fără alte modificări'],
+    pushing: ['warn', 'Se urcă pe GitHub…', 'Vercel publică apoi automat'],
+    error: ['bad', 'Urcarea a eșuat', 'reîncerc singur; detalii în jurnalul serverului']
+  }[g.state] ?? ['', 'Sincronizare', ''];
+  return `<div class="side-foot sync" data-sync-state="${esc(g.state)}"${g.lastError ? ` title="${esc(g.lastError)}"` : ''}><div class="who"><span class="dot ${dot}"></span>${esc(title)}</div>
+    <span class="muted-side">${esc(detail)}</span>
+    <div class="foot-row">${g.repoUrl ? `<a href="${esc(g.repoUrl)}/commits/main" target="_blank" rel="noopener">GitHub ↗</a>` : ''}${g.previewUrl ? `<a href="${esc(g.previewUrl)}" target="_blank" rel="noopener">Vercel ↗</a>` : ''}</div></div>`;
+}
+
 // ———————————————————————————————————————————— cadrul paginilor
 
 export function shell(db, user, {title, active = '', body, scripts = [], data = null}) {
@@ -93,7 +111,7 @@ export function shell(db, user, {title, active = '', body, scripts = [], data = 
   ${can(user, 'users.write') ? item('/manage/utilizatori/', 'utilizatori', 'users', 'Utilizatori') : ''}
   ${can(user, 'backups.create') ? item('/manage/setari/', 'setari', 'settings', 'Setări și copii') : ''}
 </nav>
-<div class="side-foot"><div class="who"><span class="dot${sync.failed ? ' bad' : ''}"></span>${esc(user.name)} · ${esc(ROLES[user.role]?.label ?? user.role)}</div>
+${syncBox()}<div class="side-foot"><div class="who"><span class="dot${sync.failed ? ' bad' : ''}"></span>${esc(user.name)} · ${esc(ROLES[user.role]?.label ?? user.role)}</div>
   <div class="foot-row"><a href="/" target="_blank" rel="noopener">Site public ↗</a>${user.dev ? '<span class="muted">local</span>' : '<button type="button" class="link" data-logout>Ieșire</button>'}</div></div>
 </aside>
 <main class="main"><div id="live" class="live" hidden></div>${body}</main></div>
