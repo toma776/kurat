@@ -204,10 +204,11 @@ if (isMain || onVercel) {
   if (s.events) console.log(`la pornire: ${s.events} evenimente procesate`);
   const port = +(process.env.PORT ?? 3000);
   server = createServer(db, {autoBackup: !onVercel, backupDir: onVercel ? path.join(os.tmpdir(), 'kurat-backups') : BACKUP_DIR});
-  server.listen(port, () => console.log(`kurat.ro din Brain: http://localhost:${port}`));
+  // pe Vercel runtime-ul primește serverul prin exportul implicit și îl pornește singur; local, pornim noi
+  if (!onVercel) server.listen(port, () => console.log(`kurat.ro din Brain: http://localhost:${port}`));
   // conținutul și imaginile ajung singure pe GitHub (doar serverul local; pe serverul clientului rămâne oprit)
   if (process.env.BRAIN_GIT_SYNC === '1' && !onVercel) startGitSync(db);
 }
 
-// Vercel caută serverul în exportul implicit (sau în apelul listen de mai sus)
+// Vercel caută serverul în exportul implicit
 export default server;
