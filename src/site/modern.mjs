@@ -380,7 +380,7 @@ const INNER = {
     const req = '<span class="req" aria-hidden="true">*</span>';
     return `<section class="ds-section tight" aria-labelledby="ct-form-h" style="padding-top:0"><div class="ds-wrap"><div class="ds-contact-page">
       <div class="ds-contact-rows" data-reveal>${row('phone', 'Telefon', ctx.text('{telefon}'), ctx.href('tel:{telefon}'))}${f.whatsapp ? row('whatsapp', 'WhatsApp', 'Scrie-ne pe WhatsApp', ctx.href('https://wa.me/{whatsapp}'), ' wa') : ''}${row('mail', 'Email', esc(f.email), `mailto:${f.email}`)}${addr ? row('pin', 'Adresă', esc(addr)) : ''}</div>
-      <div class="ds-card" data-reveal style="padding:clamp(28px,4vw,44px)"><h2 id="ct-form-h" class="ds-h3" style="font-size:1.5rem;font-weight:800">${ctx.text(s.titlu)}</h2>
+      <div id="formular" class="ds-card" data-reveal style="padding:clamp(28px,4vw,44px)"><h2 id="ct-form-h" class="ds-h3" style="font-size:1.5rem;font-weight:800">${ctx.text(s.titlu)}</h2>
         <p class="ds-muted" style="margin:8px 0 var(--ds-6)">Completează datele și te contactăm cu o ofertă personalizată.</p>
         <form method="post" action="/api/cerere" data-lead novalidate class="ds-form"><input type="hidden" name="sursa" value="formular">
           <div class="ds-grid c2"><div class="ds-field"><label for="ct-name">Nume ${req}</label><input id="ct-name" name="nume" type="text" autocomplete="name" required maxlength="120" class="ds-input"></div>
