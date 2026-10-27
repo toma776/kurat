@@ -157,6 +157,14 @@ export function createServer(db, {log = console.log, mediaDir = MEDIA_DIR, backu
       if (await manage.handle(req, res, url)) return;
       if (req.method !== 'GET' && req.method !== 'HEAD') return send(res, 405, '', {allow: 'GET, HEAD, POST'});
       if (p.startsWith('/static/')) { const f = inside(STATIC_DIR, p.slice(8)); return f ? sendFile(req, res, f, {immutable: url.searchParams.has('v')}) : send(res, 404, ''); }
+      // varianta mică a unei fotografii; dacă nu e generată încă (imagine nouă), primește originalul
+      if (p.startsWith('/media/variants/')) {
+        const v = inside(mediaDir, p.slice(7));
+        if (v && fs.existsSync(v)) return sendFile(req, res, v, {immutable: url.searchParams.has('v')});
+        const base = path.basename(p).replace(/\.webp$/, ''), up = path.join(mediaDir, 'uploads');
+        const orig = fs.existsSync(up) && fs.readdirSync(up).find(x => x.replace(/\.[^.]+$/, '') === base);
+        return orig ? sendFile(req, res, path.join(up, orig)) : send(res, 404, '');
+      }
       if (p.startsWith('/media/')) { const f = inside(mediaDir, p.slice(7)); return f ? sendFile(req, res, f, {immutable: url.searchParams.has('v')}) : send(res, 404, ''); }
       if (p === '/favicon.ico') return sendFile(req, res, path.join(STATIC_DIR, 'favicon.ico'));
       if (p === '/sitemap.xml') return indexing() ? sitemap(res) : send(res, 404, '');

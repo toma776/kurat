@@ -4,6 +4,7 @@ import {esc} from './context.mjs';
 import {icon} from './icons.mjs';
 import {fmt, jsonLd} from './ui.mjs';
 import {stars, priceHtml, vatGap} from './theme.mjs';
+import {WIDTHS, variantUrl} from '../core/images.mjs';
 
 const TONE = {'btn-brand': 'primary', 'btn-outline': 'secondary', 'btn-green': 'green', 'btn-soft': 'secondary', link: 'secondary'};
 
@@ -35,7 +36,15 @@ function head(ctx, s, {id, center = false, split = false, h = 'h2'} = {}) {
   if (split) return `<div class="ds-head split" data-reveal><div>${eyebrow}${title}</div>${intro}</div>`;
   return `<div class="ds-head${center ? ' center' : ''}" data-reveal>${eyebrow}${title}${intro}</div>`;
 }
-const img = (f, {eager = false, alt} = {}) => f ? `<img src="${esc(f.src)}" alt="${esc(alt ?? f.alt)}" ${eager ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"'} decoding="async">` : '';
+// fotografiile (nu logo-urile PNG) vin în trei mărimi; browserul o alege după ecran (sizes = cât ocupă imaginea în pagină)
+const PHOTO_SIZES = '(max-width: 880px) 100vw, 50vw';
+const img = (f, {eager = false, alt, sizes = PHOTO_SIZES} = {}) => {
+  if (!f) return '';
+  const photo = /^\/media\/uploads\/[^?]+\.(webp|jpe?g)(\?|$)/i.test(f.src);
+  const set = photo ? ` srcset="${WIDTHS.map(w => `${esc(variantUrl(f.src, w))} ${w}w`).join(', ')}" sizes="${esc(sizes)}"` : '';
+  return `<img src="${esc(f.src)}"${set} alt="${esc(alt ?? f.alt)}" ${eager ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"'} decoding="async">`;
+};
+const CARD_SIZES = '(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 380px';
 const logoMark = (size = 38) => `<span class="mark" style="width:${size}px;height:${size}px">${icon('logo-mark', Math.round(size * .55))}</span>`;
 const logo = (h = 22, size = 38) => `<span class="ds-logo" aria-hidden="true">${logoMark(size)}${icon('logo-word', h, 'display: block;')}</span>`;
 // Linkurile din meniuri, fără Magazin cât timp nu are niciun produs publicat (revine singur la primul produs).
@@ -156,7 +165,7 @@ const HOME = {
           const to = svc.pagina ? ctx.href(`ref:servicii:${svc.id}`) : fallback?.href;
           const title = a.titlu ?? svc.nume;
           const tag = to ? 'a' : 'div';
-          return `<${tag} class="ds-card ds-svc"${to ? ` href="${esc(to)}" aria-label="${esc(title)} — află mai mult"` : ''} data-reveal><div class="ds-svc-media">${img(pic)}${n ? `<span class="ds-chip">${icon('check', 13)}${n} servicii incluse</span>` : ''}</div>
+          return `<${tag} class="ds-card ds-svc"${to ? ` href="${esc(to)}" aria-label="${esc(title)} — află mai mult"` : ''} data-reveal><div class="ds-svc-media">${img(pic, {sizes: CARD_SIZES})}${n ? `<span class="ds-chip">${icon('check', 13)}${n} servicii incluse</span>` : ''}</div>
             <div class="ds-svc-body"><span class="ds-icon">${icon(a.icon ?? svc.icon ?? 'sparkle', 26)}</span><h4 class="ds-h3">${esc(title)}</h4><p>${esc(a.text ?? svc.descriere ?? '')}</p>
               ${(a.puncte ?? []).length ? `<ul class="ds-checks">${a.puncte.slice(0, 3).map(p => `<li>${icon('check', 15)}${esc(p)}</li>`).join('')}</ul>` : ''}
               <div class="ds-svc-foot">${to ? `<span class="ds-link">Află mai mult${icon('arrow', 16)}</span>` : ''}</div></div></${tag}>`;
@@ -328,7 +337,7 @@ const INNER = {
         const from = ctx.query('tarife', {scope: `servicii:${svc.id}`, where: t => t.serviciu_id === svc.id && t.pret != null, reason: `„de la” pentru ${svc.nume}`})
           .reduce((min, t) => min == null || t.pret < min.pret ? t : min, null);
         const n = ctx.count('servicii', svc.id, 'sarcini');
-        return `<a class="ds-card ds-svc" href="${esc(ctx.href(`ref:servicii:${svc.id}`))}" data-reveal><div class="ds-svc-media">${img(ctx.media(svc.imagine_id))}${n ? `<span class="ds-chip">${icon('check', 13)}${n} servicii incluse</span>` : ''}</div>
+        return `<a class="ds-card ds-svc" href="${esc(ctx.href(`ref:servicii:${svc.id}`))}" data-reveal><div class="ds-svc-media">${img(ctx.media(svc.imagine_id), {sizes: CARD_SIZES})}${n ? `<span class="ds-chip">${icon('check', 13)}${n} servicii incluse</span>` : ''}</div>
           <div class="ds-svc-body"><span class="ds-icon">${icon(svc.icon ?? 'sparkle', 26)}</span><h3 class="ds-h3">${esc(svc.nume)}</h3><p>${esc(svc.descriere ?? '')}</p>
             ${from ? `<div class="ds-from"><span>de la </span><strong>${priceHtml(ctx, {...from, pret_max: null})}</strong></div>` : ''}
             <div class="ds-svc-foot"><span class="ds-link">Vezi detalii${icon('arrow', 16)}</span></div></div></a>`;

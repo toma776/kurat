@@ -69,3 +69,14 @@ test('modificările făcute cât serverul era oprit se urcă la pornire (fără 
   assert.match(git(remote, 'show', '--name-only', '--format=%s', 'main'), /seed\/brain\.db/);
   sync.stop();
 });
+
+test('variantele de imagini: adresa variantei derivă din original, iar imaginile mici nu primesc variante', async () => {
+  const {variantUrl, pendingImages} = await import('../src/core/images.mjs');
+  assert.equal(variantUrl('/media/uploads/birou.webp?v=abc', 480), '/media/variants/480/birou.webp?v=abc');
+  assert.equal(variantUrl('/media/uploads/poza.jpg', 960), '/media/variants/960/poza.webp');
+  const dir = tmpDir();
+  fs.mkdirSync(path.join(dir, 'uploads'));
+  fs.writeFileSync(path.join(dir, 'uploads', 'mic.png'), Buffer.alloc(1000));
+  fs.writeFileSync(path.join(dir, 'uploads', 'mare.webp'), Buffer.alloc(60 * 1024));
+  assert.deepEqual(pendingImages(dir), ['mare.webp']);
+});

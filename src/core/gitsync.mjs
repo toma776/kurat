@@ -5,6 +5,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {execFile} from 'node:child_process';
 import {makeSeed} from './seed.mjs';
+import {makeVariants, findChrome} from './images.mjs';
 
 const PATHS = ['seed', 'media'];
 const git = (args, cwd) => new Promise(resolve => execFile('git', args, {cwd, windowsHide: true, timeout: 120_000},
@@ -38,6 +39,8 @@ export function startGitSync(db, {root = process.cwd(), log = console.log, quiet
     if (busy || sig === synced || Date.now() - seenAt < quietMs) return;
     busy = true; status.state = 'pushing';
     try {
+      // fotografiile noi sau înlocuite primesc variantele mici înainte de urcare (doar unde e Chrome, adică local)
+      if (findChrome()) await makeVariants(path.join(root, 'media')).catch(e => log(`sincronizare git: variante de imagini — ${e.message}`));
       makeSeed(db, path.join(root, 'seed/brain.db'));
       // doar dosarele care există: o cale lipsă ar face git add să eșueze și ar părea că nu e nimic de urcat
       const paths = PATHS.filter(p => fs.existsSync(path.join(root, p)));
