@@ -38,6 +38,12 @@ function head(ctx, s, {id, center = false, split = false, h = 'h2'} = {}) {
 const img = (f, {eager = false, alt} = {}) => f ? `<img src="${esc(f.src)}" alt="${esc(alt ?? f.alt)}" ${eager ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"'} decoding="async">` : '';
 const logoMark = (size = 38) => `<span class="mark" style="width:${size}px;height:${size}px">${icon('logo-mark', Math.round(size * .55))}</span>`;
 const logo = (h = 22, size = 38) => `<span class="ds-logo" aria-hidden="true">${logoMark(size)}${icon('logo-word', h, 'display: block;')}</span>`;
+// Linkurile din meniuri, fără Magazin cât timp nu are niciun produs publicat (revine singur la primul produs).
+function menuLinks(ctx, linkuri) {
+  const shop = ctx.pageAt('/shop', {reason: 'Magazinul apare în meniu doar cu produse'});
+  const empty = shop && !ctx.query('produse', {fields: ['status'], reason: 'Magazinul apare în meniu doar cu produse'}).length;
+  return (linkuri ?? []).map(i => ctx.link(i)).filter(l => l && !(empty && l.href === shop.href));
+}
 const initials = name => (name ?? '?').split(' ').slice(0, 2).map(w => w[0]).join('').toUpperCase();
 
 // Un număr declarat de Kurat (rating, clienți): pe site ca în original; în previzualizare marcat până are sursă.
@@ -49,7 +55,7 @@ export function header(ctx) {
   return ctx.layout('Antet', () => {
     const f = ctx.firma();
     const menu = ctx.query('meniuri', {where: m => m.cheie === 'principal', fields: ['cheie'], reason: 'meniul principal'})[0];
-    const items = (menu?.linkuri ?? []).map(i => ctx.link(i)).filter(Boolean);
+    const items = menuLinks(ctx, menu?.linkuri);
     const cta = ctx.pageAt('/contact', {reason: 'butonul „Cere o ofertă”'});
     const tel = ctx.href('tel:{telefon}'), phone = ctx.text('{telefon}');
     const cur = l => l.href === ctx.path ? ' aria-current="page"' : '';
@@ -68,7 +74,10 @@ export function header(ctx) {
 export function mobileBar(ctx) {
   return ctx.layout('Bara de acțiuni pe mobil', () => {
     const calc = ctx.path === '/' ? '#calculator' : ctx.pageAt('/contact', {reason: 'butonul „Cere o ofertă”'})?.href;
+    const f = ctx.firma();
+    // pe mobil, WhatsApp stă în bară (butonul plutitor se ascunde), ca să nu fie trei acțiuni care plutesc peste conținut
     return `<div class="ds-mbar" data-mbar aria-label="Acțiuni rapide"><a class="ds-btn ghost-light" href="${esc(ctx.href('tel:{telefon}'))}">${icon('phone', 18)}Sună</a>
+      ${f.whatsapp ? `<a class="ds-btn wa" target="_blank" rel="noopener" aria-label="Scrie-ne pe WhatsApp" href="${esc(ctx.href('https://wa.me/{whatsapp}'))}">${icon('whatsapp-fab', 24)}</a>` : ''}
       ${calc ? `<a class="ds-btn primary" href="${esc(calc)}">${ctx.path === '/' ? 'Calculează prețul' : 'Cere o ofertă'}</a>` : ''}</div>`;
   });
 }
@@ -82,7 +91,7 @@ export function footer(ctx) {
     return `<footer class="ds-footer"><div class="ds-wrap wide">
       <div class="ds-footer-grid"><div><a href="/" aria-label="${esc(f.nume)} — acasă" style="text-decoration:none">${logo(20, 36)}</a><p>${ctx.text(f.slogan)}</p>
         <div class="ds-badges">${f.anpc_sal ? `<a target="_blank" rel="noopener" aria-label="ANPC — Soluționarea Alternativă a Litigiilor" href="${esc(f.anpc_sal)}"><img src="/static/badges/sal.webp" width="500" height="124" alt="ANPC SAL" loading="lazy"></a>` : ''}${f.anpc_sol ? `<a target="_blank" rel="noopener" aria-label="Platforma europeană SOL" href="${esc(f.anpc_sol)}"><img src="/static/badges/sol.webp" width="500" height="124" alt="ANPC SOL" loading="lazy"></a>` : ''}</div></div>
-        ${menus.map(m => col(m.titlu.replace(/^Subsol — /, ''), (m.linkuri ?? []).map(i => ctx.link(i)).filter(Boolean).map(l => `<a href="${esc(l.href)}">${ctx.text(l.label)}</a>`))).join('')}
+        ${menus.map(m => col(m.titlu.replace(/^Subsol — /, ''), menuLinks(ctx, m.linkuri).map(l => `<a href="${esc(l.href)}">${ctx.text(l.label)}</a>`))).join('')}
         ${col('Contact', [`<a href="${esc(ctx.href('tel:{telefon}'))}">${ctx.text('{telefon}')}</a>`, `<a href="mailto:${esc(f.email)}">${esc(f.email)}</a>`])}</div>
       <div class="ds-footer-bottom"><span>© ${new Date().getFullYear()} ${esc(f.nume)}. Toate drepturile rezervate.${legal ? ` ${legal}.` : ''}</span></div>
       ${!f.cui || !f.reg_com || !f.denumire_legala ? ctx.gap('datele legale ale firmei', 'Denumirea legală, CUI și Nr. Reg. Com. sunt obligatorii pe un site comercial (Legea 365/2002) și cresc încrederea. Se completează în Date firmă.') : ''}

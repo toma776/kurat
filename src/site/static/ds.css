@@ -311,6 +311,7 @@ a.ds-contact-row:hover{background:var(--ds-bg-soft)}
 .ds-mbar{position:fixed;left:12px;right:12px;bottom:12px;z-index:45;display:none;gap:8px;padding:8px;border-radius:999px;background:rgba(11,22,35,.92);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);box-shadow:var(--ds-shadow-3);transform:translateY(140%);transition:transform .35s var(--ds-ease)}
 .ds-mbar.is-on{transform:none}
 .ds-mbar .ds-btn{--h:48px;flex:1;padding:0 14px;font-size:.95rem}
+.ds .ds-mbar .ds-btn.wa{flex:none;width:48px;padding:0;background:var(--green-600);color:#fff}
 
 /* ——— apariția la derulare (doar cu JS și fără „reduce motion”; altfel totul e vizibil) */
 .ds-js [data-reveal]{opacity:0;transform:translateY(18px);transition:opacity .7s var(--ds-ease),transform .7s var(--ds-ease)}
@@ -341,7 +342,7 @@ a.ds-contact-row:hover{background:var(--ds-bg-soft)}
 }
 @media (max-width:760px){
   .ds-mbar{display:flex}
-  body.ds .kf-fab{bottom:84px!important}
+  body.ds .kf-fab{display:none!important}
   .ds-header-act .ds-btn{display:none}
   .ds-footer{padding-bottom:110px}
 }
