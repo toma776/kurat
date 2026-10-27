@@ -15,7 +15,7 @@ const asset = name => {
   try { return `/static/${name}?v=${sha1(fs.readFileSync(new URL(`./static/${name}`, import.meta.url))).slice(0, 10)}`; }
   catch { return `/static/${name}`; }
 };
-const BASE = asset('kurat.css'), CSS = asset('site.css'), DSCSS = asset('ds.css'), JS = asset('site.js');
+const BASE = asset('base.css'), CSS = asset('site.css'), DSCSS = asset('ds.css'), JS = asset('site.js');
 
 // ———————————————————————————————————————————— rutare
 

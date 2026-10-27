@@ -26,7 +26,7 @@ test('ratingul declarat rămâne ca în original, fără recenzii Google și fă
   const {db, ana} = setup();
   const pub = serve(db, '/').html;
   assert.match(pub, /Garanție sau banii înapoi/);
-  assert.match(pub, /4\.9\/5/, 'ratingul Kurat, ca pe site-ul original');
+  assert.match(pub, /4,9\/5/, 'ratingul Kurat, ca pe site-ul original (cu virgulă zecimală)');
   assert.doesNotMatch(pub, /recenzii Google/);
   assert.doesNotMatch(pub, /AggregateRating/, 'nici în datele structurate');
   assert.match(pub, /1\.100\+/, 'cifrele rămân, ca până acum');
@@ -37,7 +37,7 @@ test('ratingul declarat rămâne ca în original, fără recenzii Google și fă
   ana.update('firma', ana.singleton('firma').id, {google_url: 'https://g.page/kurat', google_rating: 4.9, google_recenzii: 87});
   processEvents(db);
   const after = serve(db, '/').html;
-  assert.match(after, /4\.9\/5<\/strong><\/div><span><a href="https:\/\/g\.page\/kurat"[^>]*>87 recenzii Google<\/a>/);
+  assert.match(after, /4,9\/5<\/strong><\/div><span><a href="https:\/\/g\.page\/kurat"[^>]*>87 recenzii Google<\/a>/);
   assert.match(after, /"reviewCount":87/);
 });
 

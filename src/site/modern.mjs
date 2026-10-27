@@ -44,6 +44,12 @@ function menuLinks(ctx, linkuri) {
   const empty = shop && !ctx.query('produse', {fields: ['status'], reason: 'Magazinul apare în meniu doar cu produse'}).length;
   return (linkuri ?? []).map(i => ctx.link(i)).filter(l => l && !(empty && l.href === shop.href));
 }
+// Ratingul afișat: cel de pe Google când e confirmat (cu număr de recenzii și link), altfel cel declarat; mereu cu o zecimală (5,0).
+function ratingOf(ctx, f) {
+  const google = ['google_rating', 'google_recenzii', 'google_url'].every(k => ctx.claim('firma', f, k).state === 'ok');
+  const value = google ? f.google_rating : f.rating;
+  return {google, value, text: value == null ? '' : Number(value).toFixed(1).replace('.', ','), claim: google ? {state: 'ok'} : ctx.claim('firma', f, 'rating')};
+}
 const initials = name => (name ?? '?').split(' ').slice(0, 2).map(w => w[0]).join('').toUpperCase();
 
 // Un număr declarat de Kurat (rating, clienți): pe site ca în original; în previzualizare marcat până are sursă.
@@ -109,15 +115,15 @@ function homeHero(ctx, s, {first}) {
     const g = ['google_rating', 'google_recenzii', 'google_url'].map(k => ctx.claim('firma', f, k));
     const google = g.every(c => c.state === 'ok');
     const rating = google ? f.google_rating : f.rating;
-    const r = String(rating ?? '').replace(',', '.');
+    const r = ratingOf(ctx, f).text;
     const ratingItem = rating ? claimed(ctx, google ? {state: 'ok'} : ctx.claim('firma', f, 'rating'), `<div class="ds-trust-item"><div class="row">${stars(rating, 16)}<strong style="font-size:1.05rem">${r}/5</strong></div><span>${google ? `<a href="${esc(f.google_url)}" target="_blank" rel="noopener">${fmt(f.google_recenzii)} recenzii Google</a>` : 'rating clienți'}</span></div>`) : '';
     const stat = (k, label) => {
       const c = ctx.claim('firma', f, k);
       return c.value == null ? '' : claimed(ctx, c, `<div class="ds-trust-item"><strong>${fmt(c.value)}+</strong><span>${label}</span></div>`);
     };
     const trust = [ratingItem, stat('clienti_multumiti', 'clienți mulțumiți'), stat('locuinte_curatate', 'locuințe curățate'), stat('birouri_curatate', 'birouri curățate')].filter(Boolean);
-    // banda de sub hero: clienții din portofoliu, fără Google (logo-ul Google lângă rating s-ar citi ca recenzii Google, pe care încă nu le avem)
-    const logos = ctx.query('clienti', {where: c => c.in_portofoliu && c.logo_id && c.nume !== 'Google', fields: ['in_portofoliu', 'logo_id', 'nume', 'status'], order: (a, b) => (a.ordine ?? 99) - (b.ordine ?? 99), reason: 'logo-urile de sub hero'})
+    // banda de sub hero: clienții din portofoliu marcați pentru bandă (Clienți → „Apare în banda de logo-uri”; gol = da)
+    const logos = ctx.query('clienti', {where: c => c.in_portofoliu && c.logo_id && c.in_banda !== 0 && c.in_banda !== false, fields: ['in_portofoliu', 'logo_id', 'in_banda', 'status'], order: (a, b) => (a.ordine ?? 99) - (b.ordine ?? 99), reason: 'logo-urile de sub hero'})
       .map(c => ({c, m: ctx.media(c.logo_id, {reason: 'logo-ul clientului'})})).filter(x => x.m);
     return `<section class="ds-hero" aria-labelledby="hero-h"><div class="ds-wrap wide"><div class="ds-hero-grid">
       <div class="ds-hero-copy">${s.insigna ? `<span class="ds-pill"><span class="ico">${icon('shield', 13)}</span>${ctx.text(s.insigna)}</span>` : ''}
@@ -231,8 +237,8 @@ const HOME = {
         <blockquote>„${esc(t.text)}”</blockquote>
         <figcaption class="who"><span class="ava" aria-hidden="true" style="background:${esc(c?.culoare ?? '#0a54d1')}">${esc(initials(c?.nume))}</span><span><strong>${esc(c?.nume ?? '')}</strong><span>${who || 'Client Kurat'}${when ? ` · ${when}` : ''}</span>${missing}</span></figcaption></figure>`;
     };
-    const rc = ctx.claim('firma', f, 'rating');
-    const score = home && f.rating ? claimed(ctx, rc, `<div class="ds-score"><strong>${String(f.rating).replace(',', '.')}</strong><div><span class="ds-stars">${stars(f.rating, 18)}</span><span>${f.clienti_multumiti ? `${fmt(f.clienti_multumiti)}+ clienți mulțumiți` : 'din 5'}</span></div></div>`) : '';
+    const rt = ratingOf(ctx, f);
+    const score = home && rt.value ? claimed(ctx, rt.claim, `<div class="ds-score"><strong>${rt.text}</strong><div><span class="ds-stars">${stars(rt.value, 18)}</span><span>${rt.google ? `<a href="${esc(f.google_url)}" target="_blank" rel="noopener">${fmt(f.google_recenzii)} recenzii pe Google</a>` : f.clienti_multumiti ? `${fmt(f.clienti_multumiti)}+ clienți mulțumiți` : 'din 5'}</span></div></div>`) : '';
     return `<section id="recenzii" class="ds-section${home ? ' soft' : ''}" aria-labelledby="recenzii-h"><div class="ds-wrap"><div class="ds-head split" data-reveal><div>${s.eticheta ? `<span class="ds-eyebrow">${ctx.text(s.eticheta)}</span>` : ''}<h2 id="recenzii-h" class="ds-h2">${titleHtml(ctx, s)}</h2>${s.intro ? `<p class="ds-lead">${ctx.text(s.intro)}</p>` : ''}</div>${score}</div>
       <div class="ds-reviews">${items.map(card).join('')}</div>
       ${items.some(t => !t.autor) ? ctx.gap('cine vorbește în fiecare testimonial', 'Un citat cu nume, funcție și dată e mult mai credibil decât „Client Kurat”. Se completează la Testimoniale → Cine vorbește / Funcția / Data.') : ''}</div></section>`;
@@ -278,18 +284,27 @@ const addressOf = f => [f.adresa, [f.cod_postal, f.oras].filter(Boolean).join(' 
 function pageHero(ctx, s, {page, first}) {
   const h = first ? 'h1' : 'h2';
   const pic = ctx.media(s.imagine_id, {reason: 'imaginea din hero'});
-  const f = ctx.firma();
-  const stat = (k, label) => {
-    const c = ctx.claim('firma', f, k);
-    return c.value == null ? '' : claimed(ctx, c, `<div class="ds-trust-item"><strong>${fmt(c.value)}+</strong><span>${label}</span></div>`);
-  };
-  const stats = page.path === '/portofoliu' ? `<div class="ds-trust">${stat('clienti_multumiti', 'clienți mulțumiți')}${stat('locuinte_curatate', 'locuințe curățate')}${stat('birouri_curatate', 'birouri curățate')}</div>` : '';
   const copy = `<div class="ds-page-hero-copy">${s.eticheta ? `<span class="ds-eyebrow">${ctx.text(s.eticheta)}</span>` : ''}
     <${h} id="pg-h" class="ds-display">${titleHtml(ctx, s)}</${h}>${s.intro ? `<p class="ds-lead">${ctx.text(s.intro)}</p>` : ''}
-    ${actions(ctx, s.butoane, {size: 'lg'})}${stats}</div>`;
-  if (pic) return `<section class="ds-page-hero split" aria-labelledby="pg-h"><div class="ds-wrap wide"><div class="ds-split">${copy}
-    <div class="ds-page-media">${img(pic, {eager: first})}</div></div></div></section>`;
-  return `<section class="ds-page-hero" aria-labelledby="pg-h"><div class="ds-wrap">${copy}</div></section>`;
+    ${actions(ctx, s.butoane, {size: 'lg'})}</div>`;
+  // fără imagine, partea dreaptă primește dovezile (rating Google, cifre) și drumul spre calculator
+  const side = pic ? `<div class="ds-page-media">${img(pic, {eager: first})}</div>` : proofPanel(ctx);
+  return `<section class="ds-page-hero split" aria-labelledby="pg-h"><div class="ds-wrap"><div class="ds-split">${copy}${side}</div></div></section>`;
+}
+
+function proofPanel(ctx) {
+  const f = ctx.firma();
+  const google = ['google_rating', 'google_recenzii', 'google_url'].every(k => ctx.claim('firma', f, k).state === 'ok');
+  const stat = (k, label) => {
+    const c = ctx.claim('firma', f, k);
+    return c.value == null ? '' : claimed(ctx, c, `<div><strong>${fmt(c.value)}+</strong><span>${label}</span></div>`);
+  };
+  const stats = [stat('clienti_multumiti', 'clienți mulțumiți'), stat('locuinte_curatate', 'locuințe curățate'), stat('birouri_curatate', 'birouri curățate')].filter(Boolean);
+  if (!google && !stats.length) return '';
+  return `<aside class="ds-proof" aria-label="De ce Kurat">
+    ${google ? `<a class="ds-proof-rating" href="${esc(f.google_url)}" target="_blank" rel="noopener"><span class="score">${ratingOf(ctx, f).text}</span><span><span class="ds-stars">${stars(f.google_rating, 18)}</span><span class="src">${fmt(f.google_recenzii)} recenzii pe Google ${icon('external', 14)}</span></span></a>` : ''}
+    ${stats.length ? `<div class="ds-proof-stats">${stats.join('')}</div>` : ''}
+    <a class="ds-btn primary" href="/#calculator">${icon('calculator', 18)}Află prețul în 60 de secunde</a></aside>`;
 }
 
 // Banda de final, închisă la culoare: titlu, o frază, butonul principal și telefonul.
@@ -387,17 +402,19 @@ const INNER = {
 export function servicePageBody(ctx, svc) {
   const hub = ctx.pageAt('/servicii', {reason: 'firul de navigare'});
   const contact = ctx.pageAt('/contact', {reason: 'butonul „Cere o ofertă”'});
-  const pic = ctx.media(svc.imagine_id, {reason: 'imaginea serviciului'});
+  const media = ctx.media(svc.imagine_id, {reason: 'imaginea serviciului'});
+  // imaginea-substitut („Imagine în curând”) nu ține locul unei fotografii: până vine una, în dreapta stau dovezile
+  const pic = media && !/placeholder/i.test(media.src) ? media : null;
   const parts = [];
   let tint = false;
   const tone = () => (tint = !tint) ? ' soft' : '';
-  parts.push(`<section class="ds-page-hero${pic ? ' split' : ''}" aria-labelledby="sd-h"><div class="ds-wrap wide">
+  parts.push(`<section class="ds-page-hero split" aria-labelledby="sd-h"><div class="ds-wrap wide">
     ${hub ? `<nav aria-label="Breadcrumb"><ol class="ds-crumbs"><li><a href="/">Acasă</a></li><li aria-hidden="true">/</li><li><a href="${esc(hub.href)}">${ctx.text(hub.label)}</a></li><li aria-hidden="true">/</li><li><span aria-current="page">${esc(svc.nume)}</span></li></ol></nav>` : ''}
     <div class="ds-split"><div class="ds-page-hero-copy"><div class="ds-svc-hero-title"><span class="ds-icon">${icon(svc.icon ?? 'sparkle', 30)}</span><div>
       <h1 id="sd-h" class="ds-display">${esc(svc.nume)}</h1>${svc.descriere ? `<p class="ds-lead">${ctx.text(svc.descriere)}</p>` : ''}</div></div>
-      <div class="ds-actions">${contact ? `<a class="ds-btn primary lg" href="${esc(contact.href)}">Cere o ofertă${icon('arrow', 18)}</a>` : ''}<a class="ds-btn secondary lg" href="${esc(ctx.href('tel:{telefon}'))}">${icon('phone', 18)}${ctx.text('{telefon}')}</a></div>
+      <div class="ds-actions"><a class="ds-btn primary lg" href="${svc.tarif_mp != null ? `/?serviciu=${svc.id}#calculator` : '/#calculator'}">${icon('calculator', 18)}Calculează prețul</a>${contact ? `<a class="ds-btn secondary lg" href="${esc(contact.href)}">Cere o ofertă${icon('arrow', 18)}</a>` : ''}</div>
       ${svc.acopera?.length ? `<div class="ds-chips"><span>Acoperim:</span>${svc.acopera.map(a => `<span class="ds-chip">${esc(a)}</span>`).join('')}</div>` : ''}</div>
-      ${pic ? `<div class="ds-page-media" style="aspect-ratio:4/3">${img(pic, {eager: true})}</div>` : ''}</div></div></section>`);
+      ${pic ? `<div class="ds-page-media" style="aspect-ratio:4/3">${img(pic, {eager: true})}</div>` : proofPanel(ctx)}</div></div></section>`);
 
   const tasks = ctx.within('Ce includem', 'operațiunile serviciului', () => ctx.links('servicii', svc.id, 'sarcini'));
   if (tasks.length) {

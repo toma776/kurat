@@ -159,6 +159,8 @@ export const ENTITIES = [
       {key: 'site', label: 'Site', type: 'url'},
       {key: 'in_portofoliu', label: 'Apare în portofoliu', type: 'boolean'},
       {key: 'culoare', label: 'Culoare (inițialele din testimoniale)', type: 'text', max: 9},
+      // banda de sub hero arată doar logo-uri care se văd bine pe fundal deschis (în Portofoliu apar toate)
+      {key: 'in_banda', label: 'Apare în banda de logo-uri de pe homepage', type: 'boolean'},
       order
     ]
   },

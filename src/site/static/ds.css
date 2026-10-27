@@ -18,7 +18,7 @@
   /* suprafețe și linii */
   --ds-bg:#fff; --ds-bg-soft:var(--neutral-50); --ds-bg-tint:#f2f7ff;
   --ds-line:rgba(11,22,35,.07); --ds-line-strong:rgba(11,22,35,.12);
-  --ds-ink:var(--neutral-900); --ds-text:#3b4a5c; --ds-muted:#66768a;
+  --ds-ink:var(--neutral-900); --ds-text:#3b4a5c; --ds-muted:#56667a; /* ≥5:1 pe alb și pe fundalul nuanțat (WCAG AA pentru text mic) */
   /* raze */
   --ds-r-sm:12px; --ds-r-md:16px; --ds-r-lg:24px; --ds-r-xl:32px;
   /* umbre în straturi, foarte fine */
@@ -166,7 +166,7 @@ body.menu-open .kf-fab,body.menu-open .ds-mbar{display:none!important}
 .ds-logos ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:nowrap;align-items:center;justify-content:space-between;gap:var(--ds-5)}
 .ds-logos ul.dup{display:none}
 .ds-logos li{position:relative;flex:1 1 0;min-width:0;max-width:170px;height:76px}
-.ds-logos img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply;filter:grayscale(1) contrast(1.15);opacity:.75;transition:opacity .2s,filter .2s}
+.ds-logos img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply;filter:grayscale(1) contrast(1.2);opacity:.88;transition:opacity .2s,filter .2s}
 .ds-logos li:hover img{filter:none;opacity:1}
 @keyframes ds-marquee{to{transform:translateX(calc(-100% - var(--ds-6)))}}
 
@@ -404,7 +404,7 @@ a.ds-contact-row:hover{background:var(--ds-bg-soft)}
 /* zidul de logo-uri (Portofoliu) */
 .ds-logo-wall{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:var(--ds-4)}
 .ds-logo-wall li{position:relative;height:96px;border-radius:var(--ds-r-md);background:#fff;border:1px solid var(--ds-line);display:grid;place-items:center;padding:20px 24px}
-.ds-logo-wall img{position:absolute;inset:18px 28px;width:calc(100% - 56px);height:calc(100% - 36px);object-fit:contain;filter:grayscale(1);opacity:.75;transition:filter .2s,opacity .2s}
+.ds-logo-wall img{position:absolute;inset:18px 28px;width:calc(100% - 56px);height:calc(100% - 36px);object-fit:contain;filter:grayscale(1) contrast(1.15);opacity:.9;transition:filter .2s,opacity .2s}
 .ds-logo-wall li:hover img{filter:none;opacity:1}
 .ds-review .top{display:flex;align-items:center;justify-content:space-between;gap:var(--ds-4)}
 .ds-review .logo{position:relative;width:132px;height:36px}
@@ -480,3 +480,23 @@ textarea.ds-input{height:auto;min-height:140px;padding:14px 16px;line-height:1.5
 /* butonul WhatsApp: simbolul alb pe verde (regula generală .ds a{color:inherit} l-ar face închis) */
 .ds .kf-fab,.ds .kf-fab:hover{color:#fff}
 .ds .ds-mmenu-wa{color:var(--green-600)}
+
+/* calculatorul: corpul pasului, mai compact pe mobil, ca un pas să încapă pe un ecran */
+.k-calc-body{padding:28px}
+form[data-calc]{scroll-margin-top:92px}
+@media (max-width:600px){.k-calc-body{padding:18px}.k-calc-body .lk-choice{padding:12px 14px!important}}
+
+/* panoul de dovezi din hero-urile fără imagine (Servicii, Portofoliu, Contact) */
+.ds-proof{display:grid;gap:var(--ds-5);padding:clamp(24px,3vw,36px);border-radius:var(--ds-r-xl);background:#fff;border:1px solid var(--ds-line);box-shadow:var(--ds-shadow-3);max-width:460px;justify-self:end;width:100%}
+.ds-proof-rating{display:flex;align-items:center;gap:var(--ds-4);text-decoration:none;color:inherit;padding-bottom:var(--ds-5);border-bottom:1px solid var(--ds-line)}
+.ds-proof-rating .score{font:800 3.2rem/1 var(--font-display);letter-spacing:-.03em;color:var(--ds-ink)}
+.ds-proof-rating .src{display:inline-flex;align-items:center;gap:4px;margin-top:6px;font-size:var(--ds-small);font-weight:700;color:var(--brand-strong)}
+.ds-proof-rating>span:last-child{display:grid}
+.ds-proof-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--ds-4)}
+.ds-proof-stats strong{display:block;font:800 1.45rem/1.1 var(--font-display);color:var(--ds-ink);letter-spacing:-.02em}
+.ds-proof-stats span{display:block;font-size:.8rem;color:var(--ds-muted);line-height:1.35;margin-top:2px}
+.ds-proof .ds-btn{width:100%}
+@media (max-width:880px){.ds-proof{justify-self:stretch;max-width:none}}
+
+/* copiii grilelor de hero nu se lățesc peste coloană (pe mobil textul și panoul ieșeau din margine) */
+.ds-split>*,.ds-hero-grid>*{min-width:0}

@@ -89,6 +89,9 @@
     const cfg = JSON.parse($('script[type="application/json"]', form).textContent);
     const labels = {None: 'Fără mobilă', Little: 'Puțin mobilat', Full: 'Complet mobilat'};
     const state = {step: 0, service: null, area: 60, mult: cfg.mult[0]?.nivel ?? null, extras: new Set()};
+    // venit de pe pagina unui serviciu (/?serviciu=ID#calculator): serviciul e deja ales, pornim de la suprafață
+    const pre = +new URLSearchParams(location.search).get('serviciu');
+    if (cfg.services.some(x => x.id === pre)) { state.service = pre; state.step = 1; requestAnimationFrame(() => form.scrollIntoView({block: 'start'})); }
     const total = () => {
       const s = cfg.services.find(x => x.id === state.service);
       if (!s) return null;
@@ -115,23 +118,27 @@
       const [title, body] = steps[state.step], last = state.step === steps.length - 1, n = steps.length;
       view.innerHTML = `<div style="background: linear-gradient(160deg, var(--blue-600), var(--blue-500)); padding: 22px 28px; color: #fff;"><div style="display: flex; align-items: center; justify-content: space-between; gap: 12px;"><div style="font-family: var(--font-display); font-weight: 800; font-size: 18px;"> ${esc(title)} </div><div style="font-size: 12px; font-weight: 800; letter-spacing: 0.08em; opacity: 0.85; text-transform: uppercase; white-space: nowrap;"> Pasul ${state.step + 1} / ${n} </div></div>
         <div role="progressbar" aria-label="Progres calculator" aria-valuemin="1" aria-valuemax="${n}" aria-valuenow="${state.step + 1}" style="display: flex; gap: 6px; margin-top: 16px;">${steps.map((_, i) => `<div style="flex: 1; height: 4px; border-radius: 999px; background: ${i <= state.step ? '#fff' : 'rgba(255,255,255,0.28)'};"></div>`).join('')}</div></div>
-        <div style="padding: 28px;">${body()}${state.step ? estimate(total()) : ''}
+        <div class="k-calc-body">${body()}${state.step ? estimate(total()) : ''}
           <div style="display: flex; gap: 10px; margin-top: 24px;">${state.step ? `<button type="button" class="lk-btn-outline" data-back style="${BTN} padding: 0 20px; border: 1.5px solid var(--border-default); background: var(--surface-card); color: var(--text-strong);">← Înapoi</button>` : ''}
             <button type="${last ? 'submit' : 'button'}" class="lk-btn-brand" data-next style="flex: 1; ${BTN} border: none; background: var(--brand); color: #fff; box-shadow: var(--shadow-brand);"> ${last ? 'Trimite cererea' : 'Continuă →'} </button></div>
           <p class="form-msg" role="status" style="margin: 12px 0 0; font-weight: 700;"></p></div>`;
     };
+    // după schimbarea pasului, calculatorul rămâne la vedere (pe mobil, pasul nou poate începe deasupra ecranului)
+    let shown = state.step;
+    const go = () => { render(); if (state.step === shown) return; shown = state.step; const top = form.getBoundingClientRect().top; if (top < 0 || top > innerHeight * 0.6) form.scrollIntoView({block: 'start'}); };
     view.addEventListener('click', e => {
       const b = e.target.closest('button');
       if (!b) return;
-      if (b.dataset.svc) state.service = +b.dataset.svc;
-      if (b.dataset.mult) state.mult = b.dataset.mult;
+      // o alegere unică (serviciul, gradul de mobilare) trece singură la pasul următor
+      if (b.dataset.svc) { state.service = +b.dataset.svc; state.step = 1; return go(); }
+      if (b.dataset.mult) { state.mult = b.dataset.mult; state.step = 3; return go(); }
       if (b.dataset.extra) { const id = +b.dataset.extra; state.extras.has(id) ? state.extras.delete(id) : state.extras.add(id); }
       if ('back' in b.dataset) state.step--;
       if ('next' in b.dataset && b.type === 'button') {
         if (!steps[state.step][2]()) { $('.form-msg', view).textContent = state.step === 0 ? 'Alege tipul de curățenie.' : 'Completează pasul ca să continui.'; return; }
         state.step++;
       }
-      if (b.type !== 'submit') render();
+      if (b.type !== 'submit') go();
     });
     view.addEventListener('input', e => {
       if (!e.target.matches('[data-area]')) return;
