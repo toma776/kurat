@@ -47,8 +47,8 @@
 .ds-sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
 /* ——— tipografie */
-.ds-display{font-size:var(--ds-display);line-height:1.02;letter-spacing:-.035em;font-weight:800}
-.ds-h2{font-size:var(--ds-h2);line-height:1.08;letter-spacing:-.03em;font-weight:800}
+.ds-display{font-size:var(--ds-display);line-height:1.2;letter-spacing:-.035em;font-weight:800}
+.ds-h2{font-size:var(--ds-h2);line-height:1.16;letter-spacing:-.03em;font-weight:800}
 .ds-h3{font-size:var(--ds-h3);line-height:1.3;font-weight:700}
 .ds-lead{font-size:var(--ds-lead);line-height:1.6;color:var(--ds-text)}
 .ds-muted{color:var(--ds-muted)}
