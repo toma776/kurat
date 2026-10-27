@@ -1,5 +1,8 @@
 node_modules/
-# doar la rădăcină (§4, greșeala 20): /media/ nu trebuie să prindă src/media/
+# doar la rădăcină (§4, greșeala 20)
+# /data/ = baza de lucru și copiile de siguranță (pot conține utilizatori, sesiuni, cereri): nu intră în depozitul public.
+# Conținutul intră ca seed/brain.db (npm run seed, fără date personale), iar imaginile din /media/ intră cu totul.
 /data/
-/media/
 *.db-journal
+*.db-wal
+*.db-shm

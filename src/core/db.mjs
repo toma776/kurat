@@ -139,6 +139,9 @@ export function migrate(db) {
 
 export function openDb(file = process.env.BRAIN_DB ?? 'data/brain.db') {
   if (file !== ':memory:') fs.mkdirSync(path.dirname(path.resolve(file)), {recursive: true});
+  // un clone nou n-are data/brain.db: pornește din copia publică a conținutului (scripts/seed.mjs), dacă există
+  const seed = path.resolve('seed/brain.db');
+  if (file !== ':memory:' && path.resolve(file) === path.resolve('data/brain.db') && !fs.existsSync(file) && fs.existsSync(seed)) fs.copyFileSync(seed, file);
   const db = new DatabaseSync(file);
   db.exec('PRAGMA journal_mode = WAL; PRAGMA foreign_keys = ON; PRAGMA busy_timeout = 5000;');
   migrate(db);
