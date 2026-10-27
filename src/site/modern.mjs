@@ -58,9 +58,10 @@ export function header(ctx) {
       <nav class="ds-nav" aria-label="Principal">${items.map(l => `<a href="${esc(l.href)}"${cur(l)}>${ctx.text(l.label)}</a>`).join('')}</nav>
       <div class="ds-header-act"><a class="ds-phone" href="${esc(tel)}" aria-label="Sună-ne: ${phone}"><span class="ico">${icon('phone', 16)}</span><span class="num">${phone}</span></a>
         ${cta ? `<a class="ds-btn primary sm" href="${esc(cta.href)}">Cere o ofertă</a>` : ''}
-        <button type="button" class="ds-burger" aria-controls="ds-mmenu" aria-expanded="false" aria-label="Meniu" data-burger>${icon('menu', 22)}</button></div></div>
-      <nav id="ds-mmenu" class="ds-mmenu" aria-label="Meniu mobil" hidden>${items.map(l => `<a href="${esc(l.href)}"${cur(l)}>${ctx.text(l.label)}${icon('arrow', 18)}</a>`).join('')}
-        <div class="ds-actions"><a class="ds-btn secondary" href="${esc(tel)}">${icon('phone', 18)}${phone}</a>${cta ? `<a class="ds-btn primary" href="${esc(cta.href)}">Cere o ofertă</a>` : ''}</div></nav></header>`;
+        <button type="button" class="ds-burger" aria-controls="ds-mmenu" aria-expanded="false" aria-label="Meniu" data-burger><span class="i-open">${icon('menu', 22)}</span><span class="i-close">${icon('x', 20)}</span></button></div></div></header>
+      <nav id="ds-mmenu" class="ds-mmenu" aria-label="Meniu mobil" hidden><a href="/"${ctx.path === '/' ? ' aria-current="page"' : ''}>Acasă${icon('arrow', 18)}</a>${items.map(l => `<a href="${esc(l.href)}"${cur(l)}>${ctx.text(l.label)}${icon('arrow', 18)}</a>`).join('')}
+        <div class="ds-mmenu-foot">${cta ? `<a class="ds-btn primary lg" href="${esc(cta.href)}">Cere o ofertă${icon('arrow', 18)}</a>` : ''}<a class="ds-btn secondary lg" href="${esc(tel)}">${icon('phone', 18)}Sună: ${phone}</a>
+          ${f.whatsapp ? `<a class="ds-mmenu-wa" target="_blank" rel="noopener" href="${esc(ctx.href('https://wa.me/{whatsapp}'))}">${icon('whatsapp', 18)}Scrie-ne pe WhatsApp</a>` : ''}</div></nav>`;
   });
 }
 

@@ -120,11 +120,22 @@ a.ds-card:hover,.ds-card.hover:hover{transform:translateY(-4px);box-shadow:var(-
 .ds-phone{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--ds-ink);text-decoration:none;white-space:nowrap}
 .ds-phone .ico{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--brand-tint);color:var(--brand-strong)}
 .ds-burger{display:none;width:44px;height:44px;border-radius:12px;border:1px solid var(--ds-line-strong);background:#fff;color:var(--ds-ink);place-items:center;cursor:pointer}
-.ds-mmenu{border-top:1px solid var(--ds-line);background:#fff;padding:var(--ds-3) var(--ds-gutter) var(--ds-5);box-shadow:var(--ds-shadow-2)}
+/* meniul de pe mobil: panou pe tot ecranul, sub antet; linkuri mari, acțiunile jos, una sub alta */
+.ds-mmenu{position:fixed;left:0;right:0;top:76px;bottom:0;z-index:49;display:flex;flex-direction:column;overflow-y:auto;overscroll-behavior:contain;
+  background:#fff;border-top:1px solid var(--ds-line);padding:var(--ds-2) var(--ds-gutter) calc(var(--ds-6) + env(safe-area-inset-bottom))}
 .ds-mmenu[hidden]{display:none}
-.ds-mmenu a{display:flex;justify-content:space-between;align-items:center;padding:16px 4px;border-bottom:1px solid var(--ds-line);font:700 1.1rem var(--font-display);color:var(--ds-ink);text-decoration:none}
-.ds-mmenu .ds-actions{margin-top:var(--ds-5)}
-.ds-mmenu .ds-btn{flex:1}
+.ds-mmenu>a{display:flex;justify-content:space-between;align-items:center;gap:var(--ds-4);min-height:60px;padding:0 4px;border-bottom:1px solid var(--ds-line);
+  font:700 1.3rem/1.2 var(--font-display);letter-spacing:-.01em;color:var(--ds-ink);text-decoration:none}
+.ds-mmenu>a svg{flex:none;color:var(--ds-muted);transition:transform .2s var(--ds-ease)}
+.ds-mmenu>a:active svg{transform:translateX(3px)}
+.ds-mmenu>a[aria-current]{color:var(--brand)}.ds-mmenu>a[aria-current] svg{color:var(--brand)}
+.ds-mmenu-foot{margin-top:auto;padding-top:var(--ds-6);display:grid;gap:var(--ds-3)}
+.ds-mmenu-foot .ds-btn{width:100%;padding:0 18px}
+.ds-mmenu-wa{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px;font-weight:700;color:var(--green-600);text-decoration:none}
+.ds-burger .i-close{display:none}.ds-burger[aria-expanded=true] .i-open{display:none}.ds-burger[aria-expanded=true] .i-close{display:grid}
+.ds-burger span{display:grid;place-items:center}
+body.menu-open{overflow:hidden}
+body.menu-open .kf-fab,body.menu-open .ds-mbar{display:none!important}
 
 /* ——— hero */
 .ds-hero{position:relative;overflow:hidden;isolation:isolate;padding:clamp(40px,6vw,88px) 0 clamp(56px,7vw,96px)}
@@ -464,3 +475,7 @@ textarea.ds-input{height:auto;min-height:140px;padding:14px 16px;line-height:1.5
   .ds-svc-hero-title{flex-direction:column;gap:var(--ds-4)}
   .ds-page-hero .ds-actions,.ds-cta .ds-actions{width:100%}.ds-page-hero .ds-actions .ds-btn,.ds-cta .ds-actions .ds-btn{flex:1}
 }
+
+/* butonul WhatsApp: simbolul alb pe verde (regula generală .ds a{color:inherit} l-ar face închis) */
+.ds .kf-fab,.ds .kf-fab:hover{color:#fff}
+.ds .ds-mmenu-wa{color:var(--green-600)}

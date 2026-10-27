@@ -37,13 +37,18 @@
   }
 
   const burger = $('[data-burger]'), menu = $('#ds-mmenu') ?? $('#kh-mobile-menu');
-  burger?.addEventListener('click', () => {
-    const open = menu.hidden;
+  // meniul de pe mobil ocupă tot ecranul: pagina din spate nu se mai derulează, iar butoanele plutitoare se ascund
+  const setMenu = open => {
     menu.hidden = !open;
     burger.setAttribute('aria-expanded', String(open));
+    burger.setAttribute('aria-label', open ? 'Închide meniul' : 'Meniu');
+    document.body.classList.toggle('menu-open', open);
     hd?.classList.toggle('is-scrolled', open || window.scrollY > 8);
-  });
-  menu?.addEventListener('click', e => { if (e.target.closest('a')) { menu.hidden = true; burger.setAttribute('aria-expanded', 'false'); } });
+  };
+  burger?.addEventListener('click', () => setMenu(menu.hidden));
+  menu?.addEventListener('click', e => { if (e.target.closest('a')) setMenu(false); });
+  addEventListener('keydown', e => { if (e.key === 'Escape' && menu && !menu.hidden) { setMenu(false); burger.focus(); } });
+  addEventListener('resize', () => { if (menu && !menu.hidden && innerWidth > 1080) setMenu(false); });
 
   // trimiterea unei cereri (formularul de contact și calculatorul)
   async function sendLead(data, msgEl) {
