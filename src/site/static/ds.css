@@ -308,7 +308,7 @@ a.ds-contact-row:hover{background:var(--ds-bg-soft)}
 
 /* ——— răspuns la ecrane */
 @media (max-width:1080px){
-  .ds-nav{display:none}.ds-burger{display:grid}.ds-header-act .ds-phone span.num{display:none}
+  .ds-nav{display:none}.ds-burger{display:grid}.ds-header-act{margin-left:auto}.ds-header-act .ds-phone span.num{display:none}
   .ds-grid.c4,.ds-grid.c5{grid-template-columns:repeat(2,minmax(0,1fr))}
   .ds-values .ds-value:last-child{grid-column:span 2}
   .ds-steps{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:var(--ds-7)}.ds-steps::before{display:none}
