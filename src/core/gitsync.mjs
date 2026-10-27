@@ -26,7 +26,8 @@ export function startGitSync(db, {root = process.cwd(), log = console.log, quiet
   const stateFile = path.join(root, 'data', '.git-sync');
   let synced = fs.existsSync(stateFile) ? fs.readFileSync(stateFile, 'utf8') : null;
   let seen = signature(db), seenAt = Date.now(), busy = false;
-  if (synced == null) synced = seen; // prima pornire: starea de acum e deja în depozit (commit-ul inițial)
+  // fără stare salvată (prima pornire), nu presupunem nimic: după un minut reface copia și urcă doar dacă diferă de depozit
+  if (synced == null) synced = '';
   git(['remote', 'get-url', 'origin'], root).then(r => { if (r.ok) status.repoUrl = r.out.replace(/.git$/, '').replace(/^git@github.com:/, 'https://github.com/'); });
   status.previewUrl = process.env.BRAIN_PREVIEW_URL ?? null;
   Object.assign(status, {enabled: true, state: seen === synced ? 'ok' : 'pending', pendingSince: seen === synced ? null : Date.now()});

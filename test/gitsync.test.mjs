@@ -58,3 +58,14 @@ test('după o modificare în panou și un minut de liniște, seed/ și media/ se
   assert.equal(git(remote, 'rev-parse', 'main'), before);
   sync.stop();
 });
+
+test('modificările făcute cât serverul era oprit se urcă la pornire (fără stare salvată nu presupune că depozitul e la zi)', async () => {
+  const {root, remote, db} = sandbox();
+  createStore(db, {user: {name: 'Ana'}}).create('clienti', {nume: 'Făcută offline'}, {publish: true});
+  const before = git(remote, 'rev-parse', 'main');
+  const sync = startGitSync(db, {root, log: () => {}, quietMs: 0, everyMs: 3_600_000});
+  await sync.run();
+  assert.notEqual(git(remote, 'rev-parse', 'main'), before);
+  assert.match(git(remote, 'show', '--name-only', '--format=%s', 'main'), /seed\/brain\.db/);
+  sync.stop();
+});
