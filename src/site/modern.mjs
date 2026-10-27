@@ -406,6 +406,76 @@ const INNER = {
   }
 };
 
+// ———————————————————————————————————————————— „Ce includem”, cameră cu cameră
+// Planul unei locuințe sau al unui birou (după publicul serviciului). Camera unei operațiuni vine din câmpul „Grup” al legăturii
+// (Baie, Bucătărie…; mai multe, separate prin virgulă). Operațiunile fără cameră, sau cu o cameră care nu e pe plan, se fac peste tot.
+
+const PLANS = {
+  casa: {all: 'Toată locuința', label: 'Planul unei locuințe', doors: [[340, 198, 340, 224], [362, 190, 392, 190], [480, 300, 480, 328], [340, 300, 340, 328], [150, 230, 182, 230], [396, 370, 440, 370]], rooms: [
+    {key: 'living', name: 'Living', match: /living|sufragerie/i, r: [10, 10, 330, 220],
+      f: '<rect x="40" y="150" width="150" height="46" rx="12"/><rect x="40" y="132" width="150" height="22" rx="8"/><rect x="230" y="70" width="70" height="44" rx="6"/>'},
+    {key: 'dormitor', name: 'Dormitor', match: /dormitor/i, r: [340, 10, 250, 180],
+      f: '<rect x="440" y="62" width="120" height="96" rx="10"/><rect x="450" y="70" width="44" height="22" rx="6"/><rect x="506" y="70" width="44" height="22" rx="6"/>'},
+    {key: 'bucatarie', name: 'Bucătărie', match: /bucăt|bucat|oficiu/i, r: [10, 230, 200, 140], wet: true,
+      f: '<rect x="22" y="300" width="176" height="30" rx="4"/><circle cx="62" cy="315" r="8"/><circle cx="90" cy="315" r="8"/><rect x="140" y="304" width="40" height="22" rx="4"/>'},
+    {key: 'baie', name: 'Baie', match: /baie|băi|sanitar/i, r: [210, 230, 130, 140], wet: true,
+      f: '<rect x="222" y="292" width="62" height="64" rx="16"/><circle cx="314" cy="316" r="13"/>'},
+    {key: 'hol', name: 'Hol', match: /hol|intrare/i, r: [340, 190, 140, 180],
+      f: '<rect x="372" y="250" width="76" height="46" rx="8"/>'},
+    {key: 'balcon', name: 'Balcon', match: /balcon|teras/i, r: [480, 190, 110, 180],
+      f: '<circle cx="535" cy="300" r="18"/><circle cx="535" cy="300" r="7"/>'}
+  ]},
+  firma: {all: 'Tot spațiul', label: 'Planul unui birou', doors: [[360, 182, 360, 210], [440, 250, 476, 250], [360, 290, 360, 318], [150, 240, 184, 240], [520, 160, 552, 160], [500, 370, 546, 370]], rooms: [
+    {key: 'open', name: 'Open space', match: /birou|open|spațiu de lucru/i, r: [10, 10, 350, 230],
+      f: '<rect x="40" y="80" width="120" height="46" rx="6"/><rect x="200" y="80" width="120" height="46" rx="6"/><rect x="40" y="160" width="120" height="46" rx="6"/><rect x="200" y="160" width="120" height="46" rx="6"/>'},
+    {key: 'sedinte', name: 'Sală de ședințe', match: /ședinț|sedint|sală/i, r: [360, 10, 230, 150],
+      f: '<rect x="432" y="92" width="124" height="46" rx="23"/>'},
+    {key: 'receptie', name: 'Recepție', match: /recep/i, r: [360, 160, 230, 90],
+      f: '<rect x="420" y="212" width="110" height="22" rx="11"/>'},
+    {key: 'oficiu', name: 'Oficiu', match: /bucăt|bucat|oficiu/i, r: [10, 240, 200, 130], wet: true,
+      f: '<rect x="22" y="306" width="176" height="28" rx="4"/><rect x="150" y="310" width="34" height="20" rx="4"/>'},
+    {key: 'sanitar', name: 'Grup sanitar', match: /baie|băi|sanitar/i, r: [210, 240, 150, 130], wet: true,
+      f: '<circle cx="290" cy="340" r="14"/><circle cx="330" cy="340" r="14"/>'},
+    {key: 'hol', name: 'Hol și acces', match: /hol|intrare|acces/i, r: [360, 250, 230, 120],
+      f: '<rect x="430" y="296" width="96" height="34" rx="8"/>'}
+  ]}
+};
+
+function roomsSection(ctx, svc, tasks, toneCls) {
+  const plan = PLANS[svc.public === 'firma' ? 'firma' : 'casa'];
+  const rows = tasks.map(t => {
+    const grup = t._link.attrs?.grup ?? '';
+    const own = grup ? plan.rooms.filter(z => z.match.test(grup)) : [];
+    return {t, own};
+  });
+  const applies = (row, z) => !row.own.length || row.own.includes(z);
+  const count = z => rows.filter(row => applies(row, z)).length;
+  // pereți interiori subțiri, conturul exterior gros și rotunjit, goluri pentru uși, gresie fină în camerele umede
+  const svg = `<svg class="ds-plan" viewBox="0 0 600 380" aria-hidden="true"><defs>
+    <clipPath id="ds-plan-clip"><rect x="10" y="10" width="580" height="360" rx="18"/></clipPath>
+    <pattern id="ds-plan-tile" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16"/></pattern></defs>
+    <g clip-path="url(#ds-plan-clip)">${plan.rooms.map(z => {
+    const [x, y, w, h] = z.r;
+    // numărul stă lângă nume când încape, altfel dedesubt
+    const [bx, by] = 16 + z.name.length * 8.6 + 12 > w - 40 ? [x + 30, y + 54] : [x + w - 26, y + 26];
+    return `<g class="ds-plan-room" data-room="${z.key}"><rect class="w" x="${x}" y="${y}" width="${w}" height="${h}"/>${z.wet ? `<rect class="t" x="${x}" y="${y}" width="${w}" height="${h}"/>` : ''}<g class="f">${z.f}</g>
+      <text x="${x + 16}" y="${y + 30}">${esc(z.name)}</text><circle class="b" cx="${bx}" cy="${by}" r="13"/><text class="n" x="${bx}" y="${by + 4.5}">${count(z)}</text></g>`;
+  }).join('')}</g><rect class="ds-plan-shell" x="10" y="10" width="580" height="360" rx="18"/>
+    ${plan.doors.map(([x1, y1, x2, y2], i) => `<line class="ds-plan-door${i === plan.doors.length - 1 ? ' in' : ''}" x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}"/>`).join('')}</svg>`;
+  const chip = (key, name, n, on) => `<button type="button" class="ds-room-chip" data-room="${key}" aria-pressed="${on}">${esc(name)}<span>${n}</span></button>`;
+  const li = ({t, own}) => `<li data-in="${own.length ? own.map(z => z.key).join(' ') : '*'}">${icon('check-circle', 18)}<span>${esc(t.text)}${own.length ? `<em class="ds-room-tag">${esc(own.map(z => z.name).join(' · '))}</em>` : ''}</span></li>`;
+  return `<section class="ds-section${toneCls}" aria-labelledby="sd-include-h"><div class="ds-wrap">
+    <div class="ds-head split" data-reveal><div><span class="ds-eyebrow">${tasks.length} operațiuni incluse</span><h2 id="sd-include-h" class="ds-h2">Ce includem, cameră cu cameră</h2></div>
+      <p class="ds-lead">Alege o cameră din plan și vezi exact ce curățăm acolo.</p></div>
+    <div class="ds-rooms" data-rooms data-all="${esc(plan.all)}" data-reveal>
+      <div class="ds-card ds-rooms-plan">${svg}
+        <div class="ds-room-chips" role="group" aria-label="${esc(plan.label)}">${chip('*', plan.all, tasks.length, true)}${plan.rooms.map(z => chip(z.key, z.name, count(z), false)).join('')}</div></div>
+      <div class="ds-card ds-rooms-list" aria-live="polite"><div class="ds-rooms-head"><h3 data-room-title>${esc(plan.all)}</h3><span data-room-count>${tasks.length} operațiuni</span></div>
+        <ul class="ds-checks">${rows.map(li).join('')}</ul>
+        <p class="ds-rooms-note">${icon('sparkle', 16)}Operațiunile fără cameră se fac în fiecare încăpere.</p></div>
+    </div></div></section>`;
+}
+
 // ———————————————————————————————————————————— pagina unui serviciu
 
 export function servicePageBody(ctx, svc) {
@@ -426,15 +496,7 @@ export function servicePageBody(ctx, svc) {
       ${pic ? `<div class="ds-page-media" style="aspect-ratio:4/3">${img(pic, {eager: true})}</div>` : proofPanel(ctx)}</div></div></section>`);
 
   const tasks = ctx.within('Ce includem', 'operațiunile serviciului', () => ctx.links('servicii', svc.id, 'sarcini'));
-  if (tasks.length) {
-    const groups = [];
-    for (const t of tasks) { const g = t._link.attrs?.grup ?? ''; (groups.find(x => x.g === g) ?? groups[groups.push({g, items: []}) - 1]).items.push(t); }
-    const list = items => `<ul class="ds-checks">${items.map(t => `<li>${icon('check-circle', 18)}${esc(t.text)}</li>`).join('')}</ul>`;
-    const single = groups.length === 1 && !groups[0].g;
-    parts.push(`<section class="ds-section${tone()}" aria-labelledby="sd-include-h"><div class="ds-wrap"><div class="ds-head" data-reveal><span class="ds-eyebrow">${tasks.length} operațiuni incluse</span><h2 id="sd-include-h" class="ds-h2">Ce includem</h2></div>
-      <div class="ds-include${single ? ' single' : ''}">${single ? `<div class="ds-card" data-reveal>${list(groups[0].items)}</div>`
-        : groups.map(g => `<div class="ds-card" data-reveal><h3>${esc(g.g || 'General')}</h3>${list(g.items)}</div>`).join('')}</div></div></section>`);
-  }
+  if (tasks.length) parts.push(roomsSection(ctx, svc, tasks, tone()));
 
   const prices = ctx.within('Prețuri orientative', 'tarifele serviciului', () =>
     ctx.query('tarife', {scope: `servicii:${svc.id}`, where: t => t.serviciu_id === svc.id, order: (a, b) => (a.ordine ?? 0) - (b.ordine ?? 0)}));

@@ -510,3 +510,52 @@ form[data-calc],#formular{scroll-margin-top:92px}
 #calculator.ds-section{background:radial-gradient(70% 60% at 0% 0%,rgba(15,105,245,.12),rgba(15,105,245,0) 70%),linear-gradient(180deg,#eef4ff 0%,#f7faff 100%);border-top:1px solid rgba(15,105,245,.08);border-bottom:1px solid rgba(15,105,245,.08)}
 #calculator .ds-callcard{background:#fff;box-shadow:var(--ds-shadow-1)}
 #calculator+.ds-section.tight{padding-top:var(--ds-section-tight)}
+
+/* „Ce includem, cameră cu cameră”: planul interactiv de pe paginile de servicii */
+.ds-rooms{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:var(--ds-5);align-items:start}
+.ds-rooms-plan{padding:clamp(16px,2.4vw,28px);display:grid;gap:var(--ds-4);position:sticky;top:96px}
+.ds-plan{width:100%;height:auto;display:block}
+.ds-plan-room{cursor:pointer}
+.ds-plan-room .w{fill:#fbfcfe;stroke:#9fadbf;stroke-width:2.5;transition:fill .3s var(--ds-ease)}
+.ds-plan-room .t{fill:url(#ds-plan-tile);pointer-events:none}
+#ds-plan-tile path{fill:none;stroke:#e9eef5;stroke-width:1}
+.ds-plan-room .f *{fill:#eef2f7;stroke:none;transition:fill .3s var(--ds-ease)}
+.ds-plan-room text{font-family:var(--font-body);font-size:14px;font-weight:600;letter-spacing:.01em;fill:#5b6b80;pointer-events:none;transition:fill .3s}
+.ds-plan-room .b{fill:#fff;stroke:#dbe3ee;stroke-width:1.2;transition:fill .3s,stroke .3s}
+.ds-plan-room text.n{font-size:12px;font-weight:700;text-anchor:middle;fill:var(--blue-600)}
+.ds-plan-shell{fill:none;stroke:var(--ds-ink);stroke-width:6;pointer-events:none}
+.ds-plan-door{stroke:#fbfcfe;stroke-width:5;stroke-linecap:butt;pointer-events:none}
+.ds-plan-door.in{stroke:#fff;stroke-width:8}
+.ds-plan-room:hover .w{fill:var(--ds-bg-tint)}
+.ds-plan-room:hover .f *{fill:#e3ebf6}
+.ds-plan-room.on .w{fill:var(--blue-50)}
+.ds-plan-room.on .f *{fill:var(--blue-100)}
+.ds-plan-room.on text{fill:var(--blue-700)}
+.ds-plan-room.on .b{fill:var(--blue-600);stroke:var(--blue-600)}
+.ds-plan-room.on text.n{fill:#fff}
+.ds-rooms.filtered .ds-plan-room:not(.on) text{opacity:.5}
+.ds-rooms.filtered .ds-plan-room:not(.on) .f *{fill:#f1f4f8}
+.ds-room-chips{display:flex;flex-wrap:wrap;gap:8px}
+.ds-room-chip{font:inherit;font-size:.9rem;font-weight:600;display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;border:1px solid var(--ds-line-strong);background:#fff;color:var(--ds-ink);cursor:pointer;transition:background .2s,border-color .2s,color .2s}
+.ds-room-chip span{font-size:.78rem;min-width:22px;padding:2px 6px;border-radius:999px;background:var(--ds-bg-soft);color:var(--ds-muted);text-align:center}
+.ds-room-chip:hover{border-color:var(--blue-300)}
+.ds-room-chip[aria-pressed="true"]{background:var(--blue-600);border-color:var(--blue-600);color:#fff}
+.ds-room-chip[aria-pressed="true"] span{background:rgba(255,255,255,.2);color:#fff}
+.ds-rooms-list{padding:clamp(20px,3vw,36px)}
+.ds-rooms-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:var(--ds-5);padding-bottom:var(--ds-4);border-bottom:1px solid var(--ds-line)}
+.ds-rooms-head h3{font-size:1.3rem;margin:0}
+.ds-rooms-head span{color:var(--ds-muted);font-size:.9rem;font-weight:600;white-space:nowrap}
+.ds-rooms-list .ds-checks{gap:12px}
+.ds-rooms-list .ds-checks li[hidden]{display:none}
+.ds-rooms-list .ds-checks li.own{order:-1;font-weight:600;color:var(--ds-ink)}
+.ds-rooms-list .ds-checks li.own svg{color:var(--blue-600)}
+.ds-room-tag{display:inline-block;margin-left:8px;padding:1px 8px;border-radius:999px;background:var(--blue-50);color:var(--blue-700);font-style:normal;font-size:.74rem;font-weight:700;vertical-align:1px}
+.ds-rooms-list .ds-checks.swap li:not([hidden]){animation:ds-room-in .35s var(--ds-ease) both}
+@keyframes ds-room-in{from{opacity:0;transform:translateY(6px)}}
+.ds-rooms-note{display:flex;gap:8px;align-items:center;margin:var(--ds-5) 0 0;color:var(--ds-muted);font-size:.88rem}
+.ds-rooms-note svg{flex:none;color:var(--blue-500)}
+@media (max-width:880px){.ds-rooms{grid-template-columns:1fr}.ds-rooms-plan{position:static}}
+@media (max-width:600px){.ds-plan-room .b,.ds-plan-room text.n{display:none}.ds-plan-room text{font-size:21px}
+  .ds-room-chips{flex-wrap:nowrap;overflow-x:auto;margin:0 calc(-1 * clamp(16px,2.4vw,28px));padding:2px clamp(16px,2.4vw,28px) 6px;scrollbar-width:none;scroll-snap-type:x proximity}
+  .ds-room-chips::-webkit-scrollbar{display:none}.ds-room-chip{flex:none;scroll-snap-align:start}}
+@media (prefers-reduced-motion:reduce){.ds-rooms-list .ds-checks.swap li{animation:none}}

@@ -157,4 +157,30 @@
     });
     render();
   });
+
+  // „Ce includem, cameră cu cameră”: un clic pe o cameră (din plan sau din butoane) arată doar ce se face acolo; încă un clic, tot spațiul.
+  document.querySelectorAll('[data-rooms]').forEach(box => {
+    const list = $('.ds-checks', box), items = [...list.children];
+    const chips = [...box.querySelectorAll('.ds-room-chip')], rooms = [...box.querySelectorAll('.ds-plan-room')];
+    let active = '*';
+    const set = key => {
+      active = key === active && key !== '*' ? '*' : key;
+      const chip = chips.find(c => c.dataset.room === active);
+      chips.forEach(c => c.setAttribute('aria-pressed', String(c === chip)));
+      const row = chip.parentElement; // pe telefon butoanele stau pe un rând care se derulează: camera aleasă intră în vedere
+      if (row.scrollWidth > row.clientWidth) row.scrollTo({left: chip.offsetLeft - row.offsetLeft - 16, behavior: 'smooth'});
+      rooms.forEach(r => r.classList.toggle('on', r.dataset.room === active));
+      box.classList.toggle('filtered', active !== '*');
+      let n = 0;
+      items.forEach(li => {
+        const own = li.dataset.in.split(' '), show = active === '*' || li.dataset.in === '*' || own.includes(active);
+        li.hidden = !show; li.classList.toggle('own', active !== '*' && own.includes(active)); if (show) n++;
+      });
+      $('[data-room-title]', box).textContent = active === '*' ? box.dataset.all : chip.firstChild.textContent;
+      $('[data-room-count]', box).textContent = `${n} ${n === 1 ? 'operațiune' : 'operațiuni'}`;
+      list.classList.remove('swap'); void list.offsetWidth; list.classList.add('swap');
+    };
+    chips.forEach(c => c.addEventListener('click', () => set(c.dataset.room)));
+    rooms.forEach(r => r.addEventListener('click', () => set(r.dataset.room)));
+  });
 })();
