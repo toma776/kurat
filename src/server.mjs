@@ -2,6 +2,7 @@
 // Rulare: node src/server.mjs  (PORT, BRAIN_DB, MEDIA_DIR, BACKUP_DIR, CRON_KEY, SITE_ORIGIN, BRAIN_INDEXING, BRAIN_GIT_SYNC din mediu)
 import http from 'node:http';
 import fs from 'node:fs';
+import os from 'node:os';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import crypto from 'node:crypto';
@@ -106,6 +107,8 @@ export function createServer(db, {log = console.log, mediaDir = MEDIA_DIR, backu
   }
 
   async function lead(req, res) {
+    // pe Vercel baza e o copie temporară (/tmp): o cerere s-ar pierde, deci vizitatorul e trimis la telefon, nu i se spune „trimis”
+    if (process.env.VERCEL) return json(res, 503, {error: 'Formularul nu funcționează în această previzualizare. Sună-ne la 0742 293 391 sau scrie-ne pe WhatsApp.'});
     // scrierile venite din alt site sunt refuzate (§1.9)
     const origin = req.headers.origin;
     if (origin && new URL(origin).host !== req.headers.host) return json(res, 403, {error: 'Origine nepermisă.'});
@@ -181,15 +184,30 @@ export function createServer(db, {log = console.log, mediaDir = MEDIA_DIR, backu
 
 // ———————————————————————————————————————————— pornire
 
-if (process.argv[1] && fileURLToPath(import.meta.url) === path.resolve(process.argv[1])) {
-  const db = openDb(process.env.BRAIN_DB ?? 'data/brain.db');
+const isMain = !!process.argv[1] && fileURLToPath(import.meta.url) === path.resolve(process.argv[1]);
+const onVercel = !!process.env.VERCEL;
+let server = null;
+
+if (isMain || onVercel) {
+  // Vercel: discul e doar pentru citire, deci Brain-ul rulează dintr-o copie a conținutului public (seed/brain.db) în /tmp.
+  // Copia se reface la fiecare pornire a funcției, deci modificările făcute acolo nu rămân; locul de lucru e serverul local.
+  let dbFile = process.env.BRAIN_DB ?? 'data/brain.db';
+  if (onVercel && !process.env.BRAIN_DB) {
+    dbFile = path.join(os.tmpdir(), 'kurat-brain.db');
+    if (!fs.existsSync(dbFile)) fs.copyFileSync(new URL('../seed/brain.db', import.meta.url), dbFile);
+  }
+  const db = openDb(dbFile);
   const needScan = db.prepare("SELECT value FROM meta WHERE key = 'scan_needed'").get()?.value === '1'
     || !db.prepare('SELECT 1 FROM page_index LIMIT 1').get();
   if (needScan) { const t = Date.now(); const r = scan(db); console.log(`scan la pornire: ${r.rendered} pagini în ${Date.now() - t} ms, ${r.failed.length} eșecuri`); }
   const s = processEvents(db);
   if (s.events) console.log(`la pornire: ${s.events} evenimente procesate`);
   const port = +(process.env.PORT ?? 3000);
-  createServer(db, {autoBackup: true}).listen(port, () => console.log(`kurat.ro din Brain: http://localhost:${port}`));
+  server = createServer(db, {autoBackup: !onVercel, backupDir: onVercel ? path.join(os.tmpdir(), 'kurat-backups') : BACKUP_DIR});
+  server.listen(port, () => console.log(`kurat.ro din Brain: http://localhost:${port}`));
   // conținutul și imaginile ajung singure pe GitHub (doar serverul local; pe serverul clientului rămâne oprit)
-  if (process.env.BRAIN_GIT_SYNC === '1') startGitSync(db);
+  if (process.env.BRAIN_GIT_SYNC === '1' && !onVercel) startGitSync(db);
 }
+
+// Vercel caută serverul în exportul implicit (sau în apelul listen de mai sus)
+export default server;
