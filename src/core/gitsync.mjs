@@ -1,4 +1,4 @@
-// Sincronizarea automată cu GitHub: după ce conținutul sau imaginile se schimbă în panou și e liniște un minut,
+// Sincronizarea automată cu GitHub: după ce conținutul sau imaginile se schimbă în panou și e liniște 15 secunde,
 // serverul reface copia publică (seed/brain.db, fără date personale) și urcă DOAR seed/ și media/ în depozit.
 // Codul nu intră niciodată în aceste commit-uri. Pornește doar cu BRAIN_GIT_SYNC=1 (serverul local din .claude/launch.json).
 import fs from 'node:fs';
@@ -22,12 +22,12 @@ const signature = db => {
 const status = {enabled: false, state: 'off', lastPushAt: null, lastMsg: null, lastError: null, pendingSince: null};
 export const gitSyncStatus = () => ({...status});
 
-export function startGitSync(db, {root = process.cwd(), log = console.log, quietMs = 60_000, everyMs = 15_000} = {}) {
+export function startGitSync(db, {root = process.cwd(), log = console.log, quietMs = 15_000, everyMs = 5_000} = {}) {
   if (!fs.existsSync(path.join(root, '.git'))) { log('sincronizare git: dosarul nu e un depozit git, oprită'); return null; }
   const stateFile = path.join(root, 'data', '.git-sync');
   let synced = fs.existsSync(stateFile) ? fs.readFileSync(stateFile, 'utf8') : null;
   let seen = signature(db), seenAt = Date.now(), busy = false;
-  // fără stare salvată (prima pornire), nu presupunem nimic: după un minut reface copia și urcă doar dacă diferă de depozit
+  // fără stare salvată (prima pornire), nu presupunem nimic: după 15 secunde reface copia și urcă doar dacă diferă de depozit
   if (synced == null) synced = '';
   git(['remote', 'get-url', 'origin'], root).then(r => { if (r.ok) status.repoUrl = r.out.replace(/.git$/, '').replace(/^git@github.com:/, 'https://github.com/'); });
   status.previewUrl = process.env.BRAIN_PREVIEW_URL ?? null;

@@ -72,7 +72,7 @@ function syncBox() {
   const time = s => new Date(s).toLocaleTimeString('ro-RO', {hour: '2-digit', minute: '2-digit'});
   const [dot, title, detail] = {
     ok: ['', 'GitHub și Vercel: la zi', g.lastPushAt ? `ultima urcare la ${time(g.lastPushAt)}` : 'nicio modificare nouă'],
-    pending: ['warn', 'Modificări de urcat', 'pleacă singure după un minut fără alte modificări'],
+    pending: ['warn', 'Modificări de urcat', 'pleacă singure după 15 secunde fără alte modificări'],
     pushing: ['warn', 'Se urcă pe GitHub…', 'Vercel publică apoi automat'],
     error: ['bad', 'Urcarea a eșuat', 'reîncerc singur; detalii în jurnalul serverului']
   }[g.state] ?? ['', 'Sincronizare', ''];
