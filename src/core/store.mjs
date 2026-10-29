@@ -1,6 +1,6 @@
 import path from 'node:path';
 import {tx, afterCommit} from './db.mjs';
-import {ENTITIES, entity, fieldsOf, titleOf, pathOf, relTable, RESERVED} from '../registry/entities.mjs';
+import {ENTITIES, entity, fieldsOf, titleOf, pathOf, relTable, relation, RESERVED} from '../registry/entities.mjs';
 import {nowIso, slugify, fold, same, sha1} from './util.mjs';
 import {sanitizeContent, tokenizeValues, valueTokens} from './content.mjs';
 
@@ -225,7 +225,7 @@ export function createStore(db, {user = {name: 'Sistem'}} = {}) {
       const after = get(key, id);
       audit('create', key, id, titleOf(key, after), Object.fromEntries(Object.keys(cols).map(k => [k, [null, after[k]]])));
       manualProvenance(key, id, Object.keys(cols));
-      if (e.noStatus || after.status === 'published') emit('create', key, id, null, snap(key, after));
+      if (e.noStatus || after.status === 'published') { emit('create', key, id, null, snap(key, after)); autoPlace(key, id); }
       return id;
     });
   }
@@ -267,6 +267,8 @@ export function createStore(db, {user = {name: 'Sistem'}} = {}) {
           autoRedirect(before.paths[0], a.paths[0], key, id);
         if (e.noStatus || before.status === 'published' || a.status === 'published') emit('update', key, id, before, a);
       }
+      // prima publicare a unei ciorne noi: intră în listele unde apar celelalte de același tip
+      if (publish && !e.noStatus && current.published_at == null) autoPlace(key, id);
       return {changed, draft: false};
     });
   }
@@ -370,6 +372,25 @@ export function createStore(db, {user = {name: 'Sistem'}} = {}) {
     });
   }
 
+  // O înregistrare nouă, la prima publicare, intră singură în listele secțiunilor care afișează deja înregistrări de același
+  // tip (la sfârșit): o întrebare nouă apare unde apar celelalte întrebări, un client nou unde apar ceilalți clienți.
+  // Câmpul poate restrânge (`autoAdd`, de ex. serviciile după public). O scoatere manuală ulterioară rămâne: retragerea
+  // și republicarea nu o readaugă. Listele deținute (secțiunile unei pagini, operațiunile unui serviciu) nu se ating.
+  function autoPlace(key, id) {
+    const rec = get(key, id), placed = [];
+    for (const oe of ENTITIES) for (const f of oe.fields) {
+      if (f.type !== 'refs' || f.target !== key || f.owned) continue;
+      if ((f.autoAdd && !f.autoAdd(rec)) || (f.only && !f.only(rec))) continue;
+      for (const {src_id} of db.prepare(`SELECT DISTINCT src_id FROM ${relTable(oe, f)}`).all()) {
+        const cur = links(oe.key, src_id, f.key);
+        if (!cur.length || cur.some(l => l.dst_id === id) || (f.max && cur.length >= f.max)) continue;
+        setLinks(oe.key, src_id, f.key, [...cur.map(l => ({id: l.dst_id, status: l.status, confidence: l.confidence, source_id: l.source_id, note: l.note, attrs: l.attrs})), {id}]);
+        placed.push({key: oe.key, id: src_id, field: f.key});
+      }
+    }
+    return placed;
+  }
+
   // Cine trimite spre o înregistrare (relațiile inverse), fără legăturile deținute (`owned`).
   function usedBy(key, id) {
     const out = [];
@@ -383,22 +404,51 @@ export function createStore(db, {user = {name: 'Sistem'}} = {}) {
     return out;
   }
 
-  // Ce e folosit nu se șterge (§2.3); ștergerea rămâne în Istoric, cu instantaneul pentru revenire.
+  // La ștergere, cine trimite spre înregistrare urmează regula relației (registru, „La ștergere”): o listă își scoate
+  // legătura, un câmp opțional se golește — fiecare cu istoricul lui, iar paginile se refac, deci înregistrarea dispare
+  // de pe site. Blochează doar relațiile obligatorii (tariful unui serviciu, autorul unui testimonial), ca să nu rămână
+  // conținut fără sens; acolo spunem exact ce trebuie mutat sau șters întâi. Ștergerea rămâne în Istoric, pentru revenire.
   function remove(key, id) {
     const e = entity(key);
     return tx(db, () => {
       const current = get(key, id);
       if (!current) throw Object.assign(new Error(`${key}:${id} nu există`), {status: 404});
-      const blockers = usedBy(key, id).filter(u => !u.owned);
+      const users = usedBy(key, id).filter(u => !u.owned).map(u => ({...u, rule: relation(`${u.key}.${u.field}`)?.onTargetDelete ?? 'blochează'}));
+      const blockers = users.filter(u => u.rule === 'blochează');
+      if (blockers.length) {
+        const names = blockers.slice(0, 3).map(b => `„${titleOf(b.key, get(b.key, b.id))}” (${entity(b.key).one ?? entity(b.key).label})`).join(', ');
+        throw Object.assign(new ValidationError([['', `Nu se poate șterge: ${names}${blockers.length > 3 ? ` și încă ${blockers.length - 3}` : ''} depind obligatoriu de ea. Mută-le la altă înregistrare sau șterge-le întâi.`]]), {blockers});
+      }
       const onPages = db.prepare(`SELECT COUNT(DISTINCT path) n FROM page_deps WHERE entity = ? AND entity_id = ? AND kind IN ('page','direct','list','link')`).get(key, id).n;
-      if (blockers.length) throw Object.assign(new ValidationError([['', `E folosit de ${blockers.length} înregistrări (${blockers.slice(0, 3).map(b => `${b.key}:${b.id}`).join(', ')}…). Scoate întâi legăturile.`]]), {blockers});
+      const unlinked = [];
+      for (const u of users) {
+        setInverse(key, id, u.key, u.field, {remove: u.id});
+        unlinked.push({key: u.key, id: u.id, field: u.field, title: titleOf(u.key, get(u.key, u.id))});
+      }
+      // trimiterile scrise în conținut: butoanele și linkurile de meniu (ref:tip:id) se scot din listă,
+      // iar linkurile din text (<a data-ref>) rămân doar text — altfel ar trimite spre o pagină care nu mai există
+      const refHref = new RegExp(`^ref:${key}:${id}(?!\\d)`);
+      const refLink = new RegExp(`<a\\b[^>]*\\sdata-ref="${key}:${id}"[^>]*>([\\s\\S]*?)<\\/a>`, 'g');
+      for (const oe of ENTITIES) {
+        const lf = oe.fields.filter(x => x.type === 'links'), tf = oe.fields.filter(x => ['text', 'textarea', 'richtext'].includes(x.type));
+        if (!lf.length && !tf.length) continue;
+        for (const {id: rid} of db.prepare(`SELECT id FROM ${oe.table}`).all()) {
+          if (oe.key === key && rid === id) continue;
+          const rec = get(oe.key, rid), patch = {};
+          for (const x of lf) if (Array.isArray(rec[x.key]) && rec[x.key].some(it => refHref.test(it.href ?? ''))) patch[x.key] = rec[x.key].filter(it => !refHref.test(it.href ?? ''));
+          for (const x of tf) if (typeof rec[x.key] === 'string' && rec[x.key].includes(`data-ref="${key}:${id}"`)) patch[x.key] = rec[x.key].replace(refLink, '$1');
+          if (!Object.keys(patch).length) continue;
+          update(oe.key, rid, patch, {publish: true});
+          unlinked.push({key: oe.key, id: rid, field: Object.keys(patch).join(', '), title: titleOf(oe.key, rec)});
+        }
+      }
       const before = snap(key, current);
       const linkSnap = Object.fromEntries(e.fields.filter(f => f.type === 'refs').map(f => [f.key, links(key, id, f.key)]));
-      audit('delete', key, id, titleOf(key, current), {snapshot: [current, null], links: [linkSnap, null], onPages: [onPages, 0]});
+      audit('delete', key, id, titleOf(key, current), {snapshot: [current, null], links: [linkSnap, null], onPages: [onPages, 0], ...(unlinked.length ? {unlinked: [unlinked, null]} : {})});
       db.prepare(`DELETE FROM ${e.table} WHERE id = ?`).run(id);
       db.prepare('DELETE FROM provenance WHERE entity = ? AND entity_id = ?').run(key, id);
       if (e.noStatus || current.status === 'published') emit('delete', key, id, before, null);
-      return {deleted: true};
+      return {deleted: true, unlinked};
     });
   }
   // Editarea din capătul invers (§2.2): adaugă sau scoate această înregistrare din câmpul `field` al lui `srcKey:srcId`.

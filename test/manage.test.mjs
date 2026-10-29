@@ -141,11 +141,12 @@ test('blocare optimistă: o salvare peste o versiune veche dă 409 și spune cin
   assert.match(r.body.error, /editor/);
 });
 
-test('ce e folosit nu se șterge; ștergerea rămâne în Istoric', async () => {
+test('ce depinde obligatoriu de o înregistrare o ține pe loc; ștergerea rămâne în Istoric', async () => {
   const c = id('clients', "nume = 'Lensa'");
   const r = await call('admin', 'DELETE', `/entities/clienti/${c}`);
   assert.equal(r.status, 422);
-  assert.match(r.body.error, /folosit/);
+  assert.match(r.body.error, /depind obligatoriu de ea/, 'testimonialele Lensa au nevoie de client');
+  assert.match(r.body.error, /Testimonial/);
   const fresh = (await call('admin', 'POST', '/entities/valori', {data: {titlu: 'De șters'}, publish: true})).body.id;
   assert.equal((await call('admin', 'DELETE', `/entities/valori/${fresh}`)).status, 200);
   assert.equal(db.prepare("SELECT action FROM audit_log WHERE entity = 'valori' AND entity_id = ? ORDER BY id DESC").get(fresh).action, 'delete');

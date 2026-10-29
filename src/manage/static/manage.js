@@ -124,7 +124,7 @@
     try { await api('POST', `/entities/${page.key}/${page.id}/discard-draft`); reloadSoon(0); } catch (e) { toast(e.message); }
   });
   $('[data-delete]')?.addEventListener('click', async () => {
-    if (!await ask(`Ștergi „${page.title}”? Rămâne în Istoric.`, {ok: 'Șterge', danger: true})) return;
+    if (!await ask(`Ștergi „${page.title}”? Dispare de peste tot de pe site: din secțiuni, meniuri, butoane și linkurile din texte. Rămâne în Istoric, de unde o poți readuce.`, {ok: 'Șterge', danger: true})) return;
     try { await api('DELETE', `/entities/${page.key}/${page.id}`); location.href = `/manage/entitati/${page.key}/`; } catch (e) { toast(e.message, 8000); }
   });
 
