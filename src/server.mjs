@@ -166,7 +166,7 @@ export function createServer(db, {log = console.log, mediaDir = MEDIA_DIR, backu
         return orig ? sendFile(req, res, path.join(up, orig)) : send(res, 404, '');
       }
       if (p.startsWith('/media/')) { const f = inside(mediaDir, p.slice(7)); return f ? sendFile(req, res, f, {immutable: url.searchParams.has('v')}) : send(res, 404, ''); }
-      if (p === '/favicon.ico') return sendFile(req, res, path.join(STATIC_DIR, 'favicon.ico'));
+      if (p === '/favicon.ico' || p === '/favicon.svg' || p === '/apple-touch-icon.png') return sendFile(req, res, path.join(STATIC_DIR, p.slice(1)));
       if (p === '/sitemap.xml') return indexing() ? sitemap(res) : send(res, 404, '');
       // fără indexare, robots.txt lasă roboții să citească paginile (ca să vadă noindex și să le scoată din index) și nu anunță harta site-ului
       if (p === '/robots.txt') return send(res, 200, indexing() ? `User-agent: *\nAllow: /\nDisallow: /manage/\nDisallow: /api/\n\nSitemap: ${ORIGIN}/sitemap.xml\n`

@@ -92,7 +92,7 @@ export function shell(db, user, {title, active = '', body, scripts = [], data = 
   const item = (href, key, icon, label, extra = '') => `<a href="${href}"${active === key ? ' aria-current="page"' : ''}>${ico(icon)}<span class="lbl">${label}</span>${extra}</a>`;
   const n = v => v ? `<span class="n">${v}</span>` : '';
   return `<!doctype html><html lang="ro"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>${esc(title)} — Brain Kurat</title><meta name="robots" content="noindex"><link rel="icon" href="/static/favicon.ico"><link rel="stylesheet" href="${CSS}"></head>
+<title>${esc(title)} — Brain Kurat</title><meta name="robots" content="noindex"><link rel="icon" href="/static/favicon.ico" sizes="48x48"><link rel="icon" href="/static/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/static/apple-touch-icon.png"><link rel="stylesheet" href="${CSS}"></head>
 <body data-user="${esc(user.name)}" data-user-id="${user.id ?? ''}">
 <div class="app"><aside class="side"><a class="brand" href="/manage/"><span class="mark">${KMARK}</span><span><b>Kurat</b><small>Brain · administrare</small></span></a>
 <nav class="nav" aria-label="Panou">

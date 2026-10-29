@@ -69,7 +69,7 @@ function doc(ctx, {title, description, body, extraHead = ''}) {
 <title>${esc(fullTitle)}</title>${description ? `<meta name="description" content="${esc(description)}">` : ''}
 ${process.env.BRAIN_INDEXING === '1' ? '' : '<meta name="robots" content="noindex, nofollow, noarchive">\n'}<link rel="canonical" href="https://kurat.ro${esc(ctx.path === '/' ? '/' : ctx.path)}">
 <meta property="og:title" content="${esc(fullTitle)}">${description ? `<meta property="og:description" content="${esc(description)}">` : ''}<meta property="og:locale" content="ro_RO">
-<link rel="icon" href="/static/favicon.ico"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" href="/static/favicon.ico" sizes="48x48"><link rel="icon" href="/static/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/static/apple-touch-icon.png"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="${BASE}"><link rel="stylesheet" href="${CSS}"><link rel="stylesheet" href="${DSCSS}"><meta name="theme-color" content="#0a54d1">${ld}${extraHead}</head><body class="ds">
 ${ctx.preview ? '<div class="preview-bar">Previzualizare — conținut nepublicat</div>' : ''}<a class="skip" href="#main">Sari la conținut</a>
 ${head}<main id="main">${body}</main>${foot}${fab}${bar}<script src="${JS}" defer></script></body></html>`;
