@@ -12,6 +12,18 @@
     return out;
   }
   const toast = (msg, ms = 4000) => { const t = document.createElement('div'); t.className = 'toast'; t.textContent = msg; document.body.append(t); setTimeout(() => t.remove(), ms); };
+  // Confirmare în pagină, nu confirm() al browserului: unele browsere (panoul din aplicație, ferestre încorporate) îl blochează
+  // și întorc „nu” fără să arate nimic — butonul pare că nu face nimic.
+  const ask = (msg, {ok = 'Confirmă', danger = false} = {}) => new Promise(resolve => {
+    const d = document.createElement('dialog');
+    d.className = 'ask';
+    d.innerHTML = `<p></p><div class="ask-actions"><button type="button" class="btn ghost" value="no">Anulează</button><button type="button" class="btn ${danger ? 'danger' : 'primary'}" value="yes"></button></div>`;
+    $('p', d).textContent = msg; $('[value=yes]', d).textContent = ok;
+    const done = v => { d.close(); d.remove(); resolve(v); };
+    d.addEventListener('click', e => { const b = e.target.closest('button'); if (b) done(b.value === 'yes'); else if (e.target === d) done(false); });
+    d.addEventListener('cancel', e => { e.preventDefault(); done(false); });
+    document.body.append(d); d.showModal(); $('[value=yes]', d).focus();
+  });
   const flash = (el, msg, ok = true) => { if (!el) return toast(msg); el.textContent = msg; el.className = `form-msg ${ok ? 'ok' : 'err'}`; };
   const reloadSoon = (ms = 500) => setTimeout(() => location.reload(), ms);
   const fail = (el) => e => {
@@ -104,15 +116,15 @@
   // ———————————————————————— stare, ciornă, ștergere
   $$('[data-status]').forEach(b => b.addEventListener('click', async () => {
     const s = b.dataset.status;
-    if (s !== 'published' && !confirm(s === 'archived' ? 'Arhivezi? Pagina dispare de pe site.' : 'Retragi de pe site? Pagina dispare până la o nouă publicare.')) return;
+    if (s !== 'published' && !await ask(s === 'archived' ? 'Arhivezi? Pagina dispare de pe site.' : 'Retragi de pe site? Pagina dispare până la o nouă publicare.')) return;
     try { await api('POST', `/entities/${page.key}/${page.id}/status`, {status: s}); toast('Gata — se propagă.'); reloadSoon(); } catch (e) { toast(e.message); }
   }));
   $('[data-discard]')?.addEventListener('click', async () => {
-    if (!confirm('Renunți la ciornă? Rămâne versiunea publicată.')) return;
+    if (!await ask('Renunți la ciornă? Rămâne versiunea publicată.')) return;
     try { await api('POST', `/entities/${page.key}/${page.id}/discard-draft`); reloadSoon(0); } catch (e) { toast(e.message); }
   });
   $('[data-delete]')?.addEventListener('click', async () => {
-    if (!confirm(`Ștergi „${page.title}”? Rămâne în Istoric.`)) return;
+    if (!await ask(`Ștergi „${page.title}”? Rămâne în Istoric.`, {ok: 'Șterge', danger: true})) return;
     try { await api('DELETE', `/entities/${page.key}/${page.id}`); location.href = `/manage/entitati/${page.key}/`; } catch (e) { toast(e.message, 8000); }
   });
 
@@ -194,7 +206,7 @@
     catch (e) { toast(e.message); }
   }));
   $$('[data-revert]').forEach(b => b.addEventListener('click', async () => {
-    if (!confirm('Readu valoarea veche? Se publică imediat.')) return;
+    if (!await ask('Readu valoarea veche? Se publică imediat.')) return;
     try { await api('POST', `/history/${b.dataset.revert}/revert`, {field: b.dataset.field}); reloadSoon(0); } catch (e) { toast(e.message); }
   }));
   $$('[data-retry]').forEach(b => b.addEventListener('click', async () => {
@@ -215,7 +227,7 @@
     $$('[data-bulk]', sec).forEach(b => b.addEventListener('click', async () => {
       const pairs = $$('tr[data-src]', sec).filter(tr => $('[data-pick]', tr)?.checked).map(tr => ({src: +tr.dataset.src, dst: +tr.dataset.dst}));
       if (!pairs.length) return toast('Alege cel puțin o legătură.');
-      if (b.dataset.bulk === 'remove' && !confirm(`Scoți ${pairs.length} legături? Nu vor mai fi propuse din aceeași dovadă.`)) return;
+      if (b.dataset.bulk === 'remove' && !await ask(`Scoți ${pairs.length} legături? Nu vor mai fi propuse din aceeași dovadă.`)) return;
       try { const r = await api('POST', `/inferred/${sec.dataset.relation}`, {action: b.dataset.bulk, pairs}); flash($('.form-msg', sec), `${r.changed} legături ${b.dataset.bulk === 'confirm' ? 'confirmate' : 'scoase'} — o singură propagare.`); reloadSoon(1200); }
       catch (e) { fail($('.form-msg', sec))(e); }
     }));
@@ -227,7 +239,7 @@
     try { await api('POST', `/entities/${page.key}/${page.id}/validate`, {comment: e.target.comment.value || null}); reloadSoon(0); } catch (err) { toast(err.message); }
   });
   $$('[data-merge]').forEach(b => b.addEventListener('click', async () => {
-    if (!confirm(`Unești „${b.dataset.mergeTitle}” în „${page.title}”? Tot ce trimitea spre ea va trimite aici, iar ea va fi ștearsă (rămâne în Istoric).`)) return;
+    if (!await ask(`Unești „${b.dataset.mergeTitle}” în „${page.title}”? Tot ce trimitea spre ea va trimite aici, iar ea va fi ștearsă (rămâne în Istoric).`)) return;
     try { const r = await api('POST', `/entities/${page.key}/${page.id}/merge`, {duplicates: [+b.dataset.merge]}); toast(`Unit. ${r.touched.length} înregistrări actualizate — se propagă.`); reloadSoon(1200); }
     catch (err) { toast(err.message, 7000); }
   }));
@@ -271,7 +283,7 @@
     catch (err) { fail(msg)(err); }
   });
   $('[data-media-delete]')?.addEventListener('click', async () => {
-    if (!confirm('Ștergi fișierul din bibliotecă?')) return;
+    if (!await ask('Ștergi fișierul din bibliotecă?', {ok: 'Șterge', danger: true})) return;
     try { await api('DELETE', `/media/${page.media}`); location.href = '/manage/media/'; } catch (err) { toast(err.message, 7000); }
   });
 
@@ -284,7 +296,7 @@
     catch (err) { fail(msg)(err); btn.disabled = false; }
   });
   $$('[data-restore]').forEach(b => b.addEventListener('click', async () => {
-    if (!confirm(`Restaurezi copia din ${b.dataset.restoreAt}? Conținutul de acum e înlocuit (se face întâi o copie a lui), iar toate paginile se refac.`)) return;
+    if (!await ask(`Restaurezi copia din ${b.dataset.restoreAt}? Conținutul de acum e înlocuit (se face întâi o copie a lui), iar toate paginile se refac.`)) return;
     b.disabled = true; toast('Se restaurează…', 10000);
     try { const r = await api('POST', `/backups/${b.dataset.restore}/restore`, {confirm: true}); toast(`Restaurat (${r.restored} tabele, ${r.media} fișiere). Paginile se refac.`, 6000); reloadSoon(1500); }
     catch (err) { toast(err.message, 8000); b.disabled = false; }
@@ -293,7 +305,7 @@
   if (ru) dropzone(ru, async ([f]) => {
     const msg = $('.form-msg', ru);
     if (!f) return;
-    if (!confirm(`Restaurezi din „${f.name}”? Conținutul de acum e înlocuit (se face întâi o copie a lui).`)) return;
+    if (!await ask(`Restaurezi din „${f.name}”? Conținutul de acum e înlocuit (se face întâi o copie a lui).`)) return;
     flash(msg, 'Se încarcă și se verifică…');
     try {
       const res = await fetch('/api/manage/backups/restore-upload?confirm=1', {method: 'POST', body: f, headers: {'content-type': 'application/gzip'}, credentials: 'same-origin'});

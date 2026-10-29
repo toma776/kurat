@@ -248,3 +248,9 @@ a.stat:hover{border-color:var(--brand);transform:translateY(-1px)}
   .main{padding:18px 16px 48px}.cat-grid,.grid3{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}
   .search input,input[type=search]{min-width:0;width:100%}.row .meta .when{display:none}
 }
+
+/* confirmarea din pagină (înlocuiește confirm() al browserului) */
+dialog.ask{border:0;border-radius:14px;padding:22px 22px 18px;max-width:420px;width:calc(100% - 32px);box-shadow:var(--shadow-lg);color:var(--text);background:var(--panel,#fff)}
+dialog.ask::backdrop{background:rgba(15,23,42,.45)}
+dialog.ask p{margin:0 0 18px;font-size:15px;line-height:1.5;color:var(--ink)}
+.ask-actions{display:flex;justify-content:flex-end;gap:8px}
