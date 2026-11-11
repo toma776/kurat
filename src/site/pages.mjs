@@ -9,6 +9,7 @@ import {SECTIONS, whatsappFab} from './theme.mjs';
 // Kurat DS 2 pe tot site-ul; secțiunile originale (theme.mjs) rămân doar ca rezervă pentru un tip de secțiune nou, încă nedesenat
 import {SECTIONS as DS, header, footer, mobileBar, servicePageBody} from './modern.mjs';
 import {icon} from './icons.mjs';
+import {v2Page} from './v2.mjs';
 
 // CSS și JS versionate după conținut: o modificare ajunge imediat la vizitatori, iar fișierul se poate ține în cache un an.
 const asset = name => {
@@ -30,6 +31,8 @@ export function renderPath(db, path, {preview = false, overlay = null} = {}) {
   let r;
   if ((r = row(entity('pagini').table, 'path = ?', path))) {
     const page = ctx.page('pagini', r.id);
+    // homepage-ul: varianta orientată pe drumul de cumpărare (v2), din aceleași secțiuni
+    if (page && path === '/') return {status: 200, html: v2Page(ctx, page, {head: structuredData(ctx)}), title: page.meta_title ?? page.titlu, owner: {key: 'pagini', id: page.id}, ctx};
     if (page) return {status: 200, html: composedPage(ctx, page), title: page.meta_title ?? page.titlu, owner: {key: 'pagini', id: page.id}, ctx};
   }
   let m;
@@ -41,6 +44,8 @@ export function renderPath(db, path, {preview = false, overlay = null} = {}) {
     const p = ctx.page('produse', r.id);
     if (p) return {status: 200, html: productPage(ctx, p), title: p.nume, owner: {key: 'produse', id: p.id}, ctx};
   }
+  // /v2 a fost propunerea de homepage; acum e homepage-ul, deci adresa veche duce acolo
+  if (path === '/v2') return {status: 301, location: '/', ctx};
   return {status: 404, html: notFound(ctx), title: 'Pagina nu există', ctx};
 }
 

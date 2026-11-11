@@ -33,7 +33,9 @@ test('scanarea randează toate cele 12 pagini publice și scrie dependențele', 
   assert.equal(db.prepare('SELECT COUNT(*) n FROM page_index WHERE error IS NULL').get().n, 12);
   // componentele comune: o singură copie a dependențelor, un singur rând pe pagină
   assert.ok(db.prepare("SELECT COUNT(*) n FROM page_deps WHERE path = '#layout:Antet'").get().n > 0);
-  assert.equal(db.prepare("SELECT COUNT(*) n FROM page_deps WHERE kind = 'layout' AND component = 'Antet'").get().n, 12);
+  // homepage-ul are antetul lui (cu firul pașilor), celelalte 11 pagini antetul comun
+  assert.equal(db.prepare("SELECT COUNT(*) n FROM page_deps WHERE kind = 'layout' AND component = 'Antet'").get().n, 11);
+  assert.equal(db.prepare("SELECT COUNT(*) n FROM page_deps WHERE kind = 'layout' AND component = 'Antet homepage'").get().n, 1);
 });
 
 test('§5.1 — schimb telefonul în Date firmă: toate paginile se refac, numărul vechi dispare de peste tot', () => {
@@ -48,7 +50,7 @@ test('§5.1 — schimb telefonul în Date firmă: toate paginile se refac, numă
     assert.match(h, /tel:\+40722000111/);
   }
   // și în textele cu {telefon} (pasul „Ne contactezi”)
-  assert.match(html('/'), /Comandă serviciul dorit la 0722 000 111/);
+  assert.match(html('/'), /Preferi să vorbim\? 0722 000 111/);
 });
 
 test('§5.2 — schimb un preț: se refac DOAR paginile care îl afișează', () => {

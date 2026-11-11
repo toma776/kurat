@@ -22,7 +22,7 @@ test('un serviciu șters dispare din cardurile homepage-ului, din meniu și din 
   const faq = ana.list('intrebari')[0];
   ana.update('intrebari', faq.id, {raspuns: `<p>Vezi <a data-ref="servicii:${svc.id}">serviciul nostru</a> pentru detalii.</p>`}, {publish: true});
   processEvents(db);
-  const cards = () => (serve(db, "/").html.match(/class="ds-card ds-svc"/g) ?? []).length;
+  const cards = () => (serve(db, "/").html.match(/class="v2-bento-card/g) ?? []).length;
   const before = cards();
 
   const r = ana.remove('servicii', svc.id);

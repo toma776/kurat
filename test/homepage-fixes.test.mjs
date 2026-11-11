@@ -1,4 +1,4 @@
-// Corecturile țintite pe homepage-ul actual (structura rămâne aceeași): TVA pentru persoane fizice, ratingul cu sursă,
+// Homepage-ul (v2, drumul de cumpărare) și corecturile țintite păstrate din varianta anterioară: TVA pentru persoane fizice, ratingul cu sursă,
 // o singură formulare a garanției, testimoniale cu persoana care vorbește.
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
@@ -14,12 +14,19 @@ const setup = () => {
   return {...s, ana: createStore(s.db, {user: {name: 'Ana', email: 'ana@kurat.ro'}})};
 };
 
-test('structura homepage-ului rămâne aceeași, fără comutator', () => {
+test('homepage-ul urmează drumul de cumpărare: alegi, afli prețul, verifici, rezervi', () => {
   const {db} = setup();
   const html = serve(db, '/').html;
-  assert.doesNotMatch(html, /aud-radio|data-aud=/);
-  for (const t of ['Tot ce ține de curat', 'De ce să alegi Kurat', 'Valorile care ne ghidează', 'Curățenie în 4 pași', 'Oferta ta în 60 de secunde', 'Peste 1.100 de clienți mulțumiți', 'Tot ce trebuie să știi'])
+  const at = id => html.indexOf(`id="${id}"`);
+  for (const id of ['alege', 'calculator', 'incredere', 'rezerva']) assert.ok(at(id) > 0, id);
+  assert.ok(at('alege') < at('calculator') && at('calculator') < at('incredere') && at('incredere') < at('rezerva'), 'în ordinea drumului');
+  // ancora veche #calculator (din butoanele din Brain și din paginile de serviciu) duce tot la calculator
+  assert.match(html, /<section id="calculator"/);
+  for (const t of ['Oferta ta în 60 de secunde', 'Peste 1.100 de clienți mulțumiți', 'Garanție sau banii înapoi'])
     assert.match(html, new RegExp(t), t);
+  assert.match(html, /"@type":"FAQPage"/, 'întrebările frecvente, și în datele structurate');
+  assert.match(html, /aria-label="Principal"/, 'meniul principal spre celelalte pagini');
+  assert.equal(serve(db, '/v2').status, 301, 'adresa propunerii duce la homepage');
 });
 
 test('ratingul declarat rămâne ca în original, fără recenzii Google și fără date structurate; în previzualizare e marcat, cu golul explicat', () => {
@@ -37,7 +44,7 @@ test('ratingul declarat rămâne ca în original, fără recenzii Google și fă
   ana.update('firma', ana.singleton('firma').id, {google_url: 'https://g.page/kurat', google_rating: 4.9, google_recenzii: 87});
   processEvents(db);
   const after = serve(db, '/').html;
-  assert.match(after, /4,9\/5<\/strong><\/div><span><a href="https:\/\/g\.page\/kurat"[^>]*>87 recenzii Google<\/a>/);
+  assert.match(after, /<a href="https:\/\/g\.page\/kurat"[^>]*class="v2-glass g1"><strong>4,9\/5<\/strong><span>.*?<small>87 recenzii Google<\/small>/);
   assert.match(after, /"reviewCount":87/);
 });
 
@@ -60,7 +67,7 @@ test('garanția: o singură formulare, din politica din Brain, odată publicată
   ana.create('garantie', {titlu: 'Garanția Kurat', rezumat: 'Ne anunți în 48 de ore și refacem gratuit; dacă nici atunci nu ești mulțumit, îți dăm banii înapoi.'}, {publish: true});
   processEvents(db);
   const html = serve(db, '/').html;
-  assert.match(html, />Garanția Kurat<\/h2>\s*<p[^>]*>Ne anunți în 48 de ore și refacem gratuit/);
+  assert.match(html, />Garanția Kurat<\/h3>\s*<p[^>]*>Ne anunți în 48 de ore și refacem gratuit/);
   assert.doesNotMatch(renderPath(db, '/', {preview: true}).html, /o singură formulare a garanției/);
 });
 
